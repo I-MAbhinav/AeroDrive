@@ -1,8 +1,9 @@
 {
-  "name": "cloud-storage-app",
+  "name": "aerodrive",
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "homepage": "https://i-mabhinav.github.io/AeroDrive",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
