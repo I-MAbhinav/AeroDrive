@@ -1,0 +1,3 @@
+[submodule "cloud-storage-app"]
+	path = cloud-storage-app
+	url = https://github.com/I-MAbhinav/cloud-storage-app.git
