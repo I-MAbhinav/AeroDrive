@@ -1,0 +1,9 @@
+type FileRecord @model @auth(rules: [{allow: owner, ownerField: "owner"}])
+{
+  key: String!
+  name: String!
+  size: Int
+  lastModified: String
+  type: String!
+  folderPath: String!
+}
