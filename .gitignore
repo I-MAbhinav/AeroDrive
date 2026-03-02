@@ -1,10 +1,1 @@
-node_modules
-dist
-dist-ssr
-*.local
-.env
-.env.*
-.DS_Store
-.amplify
-amplify_outputs.json
-walkthrough_CloudApp.md
+node_modules/
