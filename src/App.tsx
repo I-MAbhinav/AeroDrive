@@ -1,13 +1,9 @@
 import { Authenticator } from '@aws-amplify/ui-react';
 import '@aws-amplify/ui-react/styles.css';
-import { Amplify } from 'aws-amplify';
 import { useState } from 'react';
-import outputs from '../amplify_outputs.json';
 import Sidebar from './components/Sidebar';
 import Topbar from './components/Topbar';
-import MainArea from './components/MainArea.tsx';
-
-Amplify.configure(outputs);
+import MainArea from './components/MainArea';
 
 function App() {
   const [currentView, setCurrentView] = useState('drive');
