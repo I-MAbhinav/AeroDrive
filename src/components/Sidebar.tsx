@@ -1,4 +1,4 @@
-import { Cloud, Folder, Clock, Star, Trash2, HardDrive } from 'lucide-react';
+import { Cloud, Folder, Clock, Star, Trash2, HardDrive, X } from 'lucide-react';
 import { useState, useEffect } from 'react';
 import { generateClient } from 'aws-amplify/data';
 import type { Schema } from '../../amplify/data/resource';
@@ -16,9 +16,11 @@ const formatSize = (bytes: number) => {
 interface SidebarProps {
   currentView: string;
   setCurrentView: (view: string) => void;
+  isOpen?: boolean;
+  setIsOpen?: (isOpen: boolean) => void;
 }
 
-const Sidebar = ({ currentView, setCurrentView }: SidebarProps) => {
+const Sidebar = ({ currentView, setCurrentView, isOpen, setIsOpen }: SidebarProps) => {
   const [usedStorage, setUsedStorage] = useState(0);
   const TOTAL_STORAGE = 10 * 1024 * 1024 * 1024; // 10 GB
 
@@ -39,31 +41,49 @@ const Sidebar = ({ currentView, setCurrentView }: SidebarProps) => {
 
   const percentage = Math.min((usedStorage / TOTAL_STORAGE) * 100, 100).toFixed(1);
 
+  const handleNavClick = (view: string) => {
+    setCurrentView(view);
+    if (setIsOpen && window.innerWidth <= 768) {
+        setIsOpen(false);
+    }
+  };
+
   return (
-    <aside className="sidebar">
-      <div className="logo-container">
-        <Cloud className="logo-icon" size={28} />
-        <span>AeroDrive</span>
+    <aside className={`sidebar ${isOpen ? 'open' : ''}`}>
+      <div className="logo-container" style={{ display: 'flex', justifyContent: 'space-between', width: '100%' }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
+            <Cloud className="logo-icon" size={28} />
+            <span>AeroDrive</span>
+        </div>
+        {isOpen && setIsOpen && (
+            <button 
+                onClick={() => setIsOpen(false)} 
+                style={{ background: 'transparent', border: 'none', color: 'var(--text-secondary)', cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center' }}
+                className="hamburger-btn" // Reusing the visual hide/show states or we can just render conditionally but lucide X is fine.
+            >
+                <X size={24} />
+            </button>
+        )}
       </div>
 
       <nav className="nav-menu">
-        <a href="#" className={`nav-item ${currentView === 'drive' ? 'active' : ''}`} onClick={(e) => { e.preventDefault(); setCurrentView('drive'); }}>
+        <a href="#" className={`nav-item ${currentView === 'drive' ? 'active' : ''}`} onClick={(e) => { e.preventDefault(); handleNavClick('drive'); }}>
           <HardDrive />
           <span>My Drive</span>
         </a>
-        <a href="#" className={`nav-item ${currentView === 'folders' ? 'active' : ''}`} onClick={(e) => { e.preventDefault(); setCurrentView('folders'); }}>
+        <a href="#" className={`nav-item ${currentView === 'folders' ? 'active' : ''}`} onClick={(e) => { e.preventDefault(); handleNavClick('folders'); }}>
           <Folder />
           <span>Folders</span>
         </a>
-        <a href="#" className={`nav-item ${currentView === 'recent' ? 'active' : ''}`} onClick={(e) => { e.preventDefault(); setCurrentView('recent'); }}>
+        <a href="#" className={`nav-item ${currentView === 'recent' ? 'active' : ''}`} onClick={(e) => { e.preventDefault(); handleNavClick('recent'); }}>
           <Clock />
           <span>Recent</span>
         </a>
-        <a href="#" className={`nav-item ${currentView === 'starred' ? 'active' : ''}`} onClick={(e) => { e.preventDefault(); setCurrentView('starred'); }}>
+        <a href="#" className={`nav-item ${currentView === 'starred' ? 'active' : ''}`} onClick={(e) => { e.preventDefault(); handleNavClick('starred'); }}>
           <Star />
           <span>Starred</span>
         </a>
-        <a href="#" className={`nav-item ${currentView === 'trash' ? 'active' : ''}`} onClick={(e) => { e.preventDefault(); setCurrentView('trash'); }}>
+        <a href="#" className={`nav-item ${currentView === 'trash' ? 'active' : ''}`} onClick={(e) => { e.preventDefault(); handleNavClick('trash'); }}>
           <Trash2 />
           <span>Trash</span>
         </a>

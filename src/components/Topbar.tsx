@@ -1,4 +1,4 @@
-import { Search, Bell, Settings, Plus, LogOut, X } from 'lucide-react';
+import { Search, Bell, Settings, Plus, LogOut, X, Menu } from 'lucide-react';
 import { useState, useEffect } from 'react';
 import type { AuthUser } from 'aws-amplify/auth';
 
@@ -7,9 +7,10 @@ interface TopbarProps {
     user?: AuthUser;
     searchQuery: string;
     setSearchQuery: (query: string) => void;
+    setIsSidebarOpen: (isOpen: boolean) => void;
 }
 
-const Topbar = ({ signOut, user, searchQuery, setSearchQuery }: TopbarProps) => {
+const Topbar = ({ signOut, user, searchQuery, setSearchQuery, setIsSidebarOpen }: TopbarProps) => {
     const [isSettingsOpen, setIsSettingsOpen] = useState(false);
     const [isProfileOpen, setIsProfileOpen] = useState(false);
     const [isDarkMode, setIsDarkMode] = useState(() => {
@@ -33,6 +34,14 @@ const Topbar = ({ signOut, user, searchQuery, setSearchQuery }: TopbarProps) => 
 
     return (
         <header className="topbar">
+            {/* Hamburger menu for mobile */}
+            <button 
+                className="hamburger-btn" 
+                onClick={() => setIsSidebarOpen(true)}
+            >
+                <Menu size={24} />
+            </button>
+
             <div className="search-container">
                 <Search className="search-icon" />
                 <input

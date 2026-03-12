@@ -8,15 +8,36 @@ import MainArea from './components/MainArea';
 function App() {
   const [currentView, setCurrentView] = useState('drive');
   const [searchQuery, setSearchQuery] = useState('');
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
   return (
     <Authenticator.Provider>
       <Authenticator variation="modal">
         {({ signOut, user }) => (
           <div className="app-container">
-            <Sidebar currentView={currentView} setCurrentView={setCurrentView} />
+            {/* Sidebar Overlay for Mobile */}
+            {isSidebarOpen && (
+              <div 
+                className="sidebar-overlay" 
+                onClick={() => setIsSidebarOpen(false)}
+              />
+            )}
+            
+            <Sidebar 
+              currentView={currentView} 
+              setCurrentView={setCurrentView} 
+              isOpen={isSidebarOpen}
+              setIsOpen={setIsSidebarOpen}
+            />
+            
             <div className="main-wrapper">
-              <Topbar signOut={signOut} user={user} searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
+              <Topbar 
+                signOut={signOut} 
+                user={user} 
+                searchQuery={searchQuery} 
+                setSearchQuery={setSearchQuery}
+                setIsSidebarOpen={setIsSidebarOpen}
+              />
               <MainArea currentView={currentView} searchQuery={searchQuery} />
             </div>
 

@@ -440,3 +440,89 @@ body {
 .settings-option input[type="checkbox"]:checked::before {
   transform: translateX(20px);
 }
+
+/* Mobile Responsive Adjustments */
+@media (max-width: 768px) {
+  .app-container {
+    position: relative;
+  }
+
+  /* Sidebar behavior on mobile */
+  .sidebar {
+    position: absolute;
+    top: 0;
+    left: -260px; /* Hidden by default */
+    z-index: 50;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    transition: left 0.3s ease;
+  }
+
+  .sidebar.open {
+    left: 0;
+  }
+
+  /* Overlay behind open sidebar */
+  .sidebar-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 40; /* Below sidebar, above content */
+    backdrop-filter: blur(2px);
+    transition: opacity 0.3s ease;
+  }
+
+  /* Adjust topbar for mobile */
+  .topbar {
+    padding: 0 1rem;
+    gap: 0.5rem;
+  }
+  
+  .hamburger-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    border: none;
+    color: var(--text-primary);
+    cursor: pointer;
+    padding: 0.5rem;
+    margin-right: 0.5rem;
+  }
+
+  /* Hide textual part of buttons to save space */
+  .topbar .btn-primary span {
+    display: none;
+  }
+  .topbar .btn-primary {
+    padding: 0.5rem;
+    border-radius: 50%;
+  }
+
+  /* Shrink search bar */
+  .search-container {
+    width: 100%;
+    max-width: none;
+    flex-grow: 1;
+  }
+
+  /* Content area adjustments */
+  .content-area {
+    padding: 1rem;
+  }
+  
+  /* Make grid 2 columns or 1 column on extremely small screens */
+  .content-area > div[style*="display: grid"] {
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)) !important;
+    gap: 1rem !important;
+  }
+}
+
+/* Hide hamburger menu by default on desktop */
+@media (min-width: 769px) {
+  .hamburger-btn {
+    display: none;
+  }
+}
