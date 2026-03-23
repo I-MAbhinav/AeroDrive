@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Menu, X, Cloud, Shield, Zap, Server, Users } from 'lucide-react';
+import { Menu, X, Cloud, Shield, Zap, Server } from 'lucide-react';
 
 interface LandingPageProps {
   onLoginClick: () => void;
@@ -27,7 +27,7 @@ const LandingPage = ({ onLoginClick }: LandingPageProps) => {
             <Cloud className="logo-icon" size={28} />
             <span>AeroDrive</span>
           </div>
-          
+
           <div className={`landing-nav-links ${isMobileMenuOpen ? 'open' : ''}`}>
             <button onClick={() => scrollToSection('about')} className="landing-nav-item">About</button>
             <button onClick={() => scrollToSection('how-it-works')} className="landing-nav-item">How it Works</button>
@@ -48,7 +48,7 @@ const LandingPage = ({ onLoginClick }: LandingPageProps) => {
         <div className="hero-content fade-in">
           <h1 className="hero-title">Your Files, Always With You.</h1>
           <p className="hero-subtitle">
-            AeroDrive is a fast, secure, and modern cloud storage solution designed for everyone. 
+            AeroDrive is a fast, secure, and modern cloud storage solution designed for everyone.
             Store, manage, and access your photos, documents, and videos from anywhere in the world.
           </p>
           <button onClick={onLoginClick} className="btn-primary hero-btn">
@@ -65,7 +65,7 @@ const LandingPage = ({ onLoginClick }: LandingPageProps) => {
             <div className="feature-icon-wrapper"><Zap className="feature-icon" size={32} /></div>
             <h3>AWS Amplify</h3>
             <p>
-              We use AWS Amplify to provide a robust, scalable backend. It handles seamless user authentication, 
+              We use AWS Amplify to provide a robust, scalable backend. It handles seamless user authentication,
               ensuring your login is both fast and completely secure. It acts as the bridge connecting our app to the cloud.
             </p>
           </div>
@@ -73,7 +73,7 @@ const LandingPage = ({ onLoginClick }: LandingPageProps) => {
             <div className="feature-icon-wrapper"><Server className="feature-icon" size={32} /></div>
             <h3>AWS S3 Storage</h3>
             <p>
-              Under the hood, your files are safely stored in Amazon Simple Storage Service (S3). 
+              Under the hood, your files are safely stored in Amazon Simple Storage Service (S3).
               S3 offers industry-leading durability, meaning your files are redundantly backed up and always protected against loss.
             </p>
           </div>
@@ -81,7 +81,7 @@ const LandingPage = ({ onLoginClick }: LandingPageProps) => {
             <div className="feature-icon-wrapper"><Shield className="feature-icon" size={32} /></div>
             <h3>End-to-End Security</h3>
             <p>
-              By combining Amplify's authentication rules and S3's secure storage policies, AeroDrive ensures 
+              By combining Amplify's authentication rules and S3's secure storage policies, AeroDrive ensures
               that only YOU can access your files. Your data privacy is our top priority.
             </p>
           </div>
@@ -125,19 +125,24 @@ const LandingPage = ({ onLoginClick }: LandingPageProps) => {
         <div className="team-grid">
           {/* PLACEHOLDERS for Team Members */}
           <div className="team-card glass-panel">
-            <div className="team-avatar"><Users size={40} /></div>
+            <img src="https://i.pravatar.cc/150?img=68" alt="Abhinav Shakya" className="team-avatar" />
             <h3>Abhinav Shakya</h3>
             <p>Lead Developer</p>
           </div>
           <div className="team-card glass-panel">
-            <div className="team-avatar"><Users size={40} /></div>
-            <h3>[Team Member 2]</h3>
-            <p>Developer</p>
+            <img src="https://i.pravatar.cc/150?img=32" alt="Team Member 2" className="team-avatar" />
+            <h3>[Harshit Saharan]</h3>
+            <p>Frontend Developer</p>
           </div>
           <div className="team-card glass-panel">
-            <div className="team-avatar"><Users size={40} /></div>
-            <h3>[Team Member 3]</h3>
-            <p>Developer</p>
+            <img src="https://i.pravatar.cc/150?img=47" alt="Team Member 3" className="team-avatar" />
+            <h3>[Aman Arora]</h3>
+            <p>Backend Developer</p>
+          </div>
+          <div className="team-card glass-panel">
+            <img src="https://i.pravatar.cc/150?img=12" alt="Team Member 4" className="team-avatar" />
+            <h3>[Jasleen Kaur]</h3>
+            <p>UI/UX Designer</p>
           </div>
         </div>
       </section>

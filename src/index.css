@@ -777,6 +777,7 @@ body {
   justify-content: center;
   margin: 0 auto 1rem auto;
   color: var(--accent);
+  object-fit: cover;
 }
 
 .team-card h3 {
