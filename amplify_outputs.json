@@ -1,9 +1,9 @@
 {
   "auth": {
-    "user_pool_id": "ap-south-1_B2tlrTHHp",
+    "user_pool_id": "ap-south-1_b9Z9wv37w",
     "aws_region": "ap-south-1",
-    "user_pool_client_id": "336qpt2e26c42vv7qrg0vmghc9",
-    "identity_pool_id": "ap-south-1:2efb98fc-d64c-4caa-9231-0528144dbb30",
+    "user_pool_client_id": "4f6oikdv0gc94l1uejlnhm5k8t",
+    "identity_pool_id": "ap-south-1:1c96f592-9e0c-4c3e-b938-afeb917972a2",
     "mfa_methods": [],
     "standard_required_attributes": [
       "email"
@@ -26,7 +26,7 @@
     "unauthenticated_identities_enabled": true
   },
   "data": {
-    "url": "https://gkwev75shvggdm3wl3xhjnlm3i.appsync-api.ap-south-1.amazonaws.com/graphql",
+    "url": "https://bcp2pe7ymndv3pnpca7t3gqocy.appsync-api.ap-south-1.amazonaws.com/graphql",
     "aws_region": "ap-south-1",
     "default_authorization_type": "AMAZON_COGNITO_USER_POOLS",
     "authorization_types": [
@@ -144,11 +144,11 @@
   },
   "storage": {
     "aws_region": "ap-south-1",
-    "bucket_name": "amplify-cloudstorageapp-a-cloudstorageappfilesbuck-fp7kmdbufhw6",
+    "bucket_name": "amplify-aerodrive-abhi-sa-cloudstorageappfilesbuck-yj5vtj8g3yf7",
     "buckets": [
       {
         "name": "cloudStorageAppFiles",
-        "bucket_name": "amplify-cloudstorageapp-a-cloudstorageappfilesbuck-fp7kmdbufhw6",
+        "bucket_name": "amplify-aerodrive-abhi-sa-cloudstorageappfilesbuck-yj5vtj8g3yf7",
         "aws_region": "ap-south-1",
         "paths": {
           "private/${cognito-identity.amazonaws.com:sub}/*": {

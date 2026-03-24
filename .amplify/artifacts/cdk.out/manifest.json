@@ -1,19 +1,19 @@
 {
   "version": "48.0.0",
   "artifacts": {
-    "amplify-cloudstorageapp-Abhi-sandbox-781317f32d.assets": {
+    "amplify-aerodrive-Abhi-sandbox-7f301cb65c.assets": {
       "type": "cdk:asset-manifest",
       "properties": {
-        "file": "amplify-cloudstorageapp-Abhi-sandbox-781317f32d.assets.json",
+        "file": "amplify-aerodrive-Abhi-sandbox-7f301cb65c.assets.json",
         "requiresBootstrapStackVersion": 6,
         "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
       }
     },
-    "amplify-cloudstorageapp-Abhi-sandbox-781317f32d": {
+    "amplify-aerodrive-Abhi-sandbox-7f301cb65c": {
       "type": "aws:cloudformation:stack",
       "environment": "aws://unknown-account/unknown-region",
       "properties": {
-        "templateFile": "amplify-cloudstorageapp-Abhi-sandbox-781317f32d.template.json",
+        "templateFile": "amplify-aerodrive-Abhi-sandbox-7f301cb65c.template.json",
         "terminationProtection": false,
         "tags": {
           "amplify:deployment-type": "sandbox",
@@ -22,11 +22,11 @@
         "validateOnSynth": false,
         "assumeRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-deploy-role-${AWS::AccountId}-${AWS::Region}",
         "cloudFormationExecutionRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-cfn-exec-role-${AWS::AccountId}-${AWS::Region}",
-        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/8ff8739bc9f02722c630b26d62bc2ba4f595fcb0e15ccc69cf30792bece1070d.json",
+        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/c0dc377c10ea5f5e93cde28fba33b608cd1b20c2d332f0ff1fb0a534faa1229d.json",
         "requiresBootstrapStackVersion": 6,
         "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version",
         "additionalDependencies": [
-          "amplify-cloudstorageapp-Abhi-sandbox-781317f32d.assets"
+          "amplify-aerodrive-Abhi-sandbox-7f301cb65c.assets"
         ],
         "lookupRole": {
           "arn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-lookup-role-${AWS::AccountId}-${AWS::Region}",
@@ -35,10 +35,10 @@
         }
       },
       "dependencies": [
-        "amplify-cloudstorageapp-Abhi-sandbox-781317f32d.assets"
+        "amplify-aerodrive-Abhi-sandbox-7f301cb65c.assets"
       ],
       "metadata": {
-        "/amplify-cloudstorageapp-Abhi-sandbox-781317f32d": [
+        "/amplify-aerodrive-Abhi-sandbox-7f301cb65c": [
           {
             "type": "aws:cdk:stack-tags",
             "data": [
@@ -53,247 +53,247 @@
             ]
           }
         ],
-        "/amplify-cloudstorageapp-Abhi-sandbox-781317f32d/deploymentType": [
+        "/amplify-aerodrive-Abhi-sandbox-7f301cb65c/deploymentType": [
           {
             "type": "aws:cdk:logicalId",
             "data": "deploymentType"
           }
         ],
-        "/amplify-cloudstorageapp-Abhi-sandbox-781317f32d/region": [
+        "/amplify-aerodrive-Abhi-sandbox-7f301cb65c/region": [
           {
             "type": "aws:cdk:logicalId",
             "data": "region"
           }
         ],
-        "/amplify-cloudstorageapp-Abhi-sandbox-781317f32d/auth/amplifyAuth/UserPool/Resource": [
+        "/amplify-aerodrive-Abhi-sandbox-7f301cb65c/auth/amplifyAuth/UserPool/Resource": [
           {
             "type": "aws:cdk:logicalId",
             "data": "amplifyAuthUserPool4BA7F805"
           }
         ],
-        "/amplify-cloudstorageapp-Abhi-sandbox-781317f32d/auth/amplifyAuth/UserPoolAppClient/Resource": [
+        "/amplify-aerodrive-Abhi-sandbox-7f301cb65c/auth/amplifyAuth/UserPoolAppClient/Resource": [
           {
             "type": "aws:cdk:logicalId",
             "data": "amplifyAuthUserPoolAppClient2626C6F8"
           }
         ],
-        "/amplify-cloudstorageapp-Abhi-sandbox-781317f32d/auth/amplifyAuth/IdentityPool": [
+        "/amplify-aerodrive-Abhi-sandbox-7f301cb65c/auth/amplifyAuth/IdentityPool": [
           {
             "type": "aws:cdk:logicalId",
             "data": "amplifyAuthIdentityPool3FDE84CC"
           }
         ],
-        "/amplify-cloudstorageapp-Abhi-sandbox-781317f32d/auth/amplifyAuth/authenticatedUserRole/Resource": [
+        "/amplify-aerodrive-Abhi-sandbox-7f301cb65c/auth/amplifyAuth/authenticatedUserRole/Resource": [
           {
             "type": "aws:cdk:logicalId",
             "data": "amplifyAuthauthenticatedUserRoleD8DA3689"
           }
         ],
-        "/amplify-cloudstorageapp-Abhi-sandbox-781317f32d/auth/amplifyAuth/unauthenticatedUserRole/Resource": [
+        "/amplify-aerodrive-Abhi-sandbox-7f301cb65c/auth/amplifyAuth/unauthenticatedUserRole/Resource": [
           {
             "type": "aws:cdk:logicalId",
             "data": "amplifyAuthunauthenticatedUserRole2B524D9E"
           }
         ],
-        "/amplify-cloudstorageapp-Abhi-sandbox-781317f32d/auth/amplifyAuth/IdentityPoolRoleAttachment": [
+        "/amplify-aerodrive-Abhi-sandbox-7f301cb65c/auth/amplifyAuth/IdentityPoolRoleAttachment": [
           {
             "type": "aws:cdk:logicalId",
             "data": "amplifyAuthIdentityPoolRoleAttachment045F17C8"
           }
         ],
-        "/amplify-cloudstorageapp-Abhi-sandbox-781317f32d/auth/CDKMetadata/Default": [
+        "/amplify-aerodrive-Abhi-sandbox-7f301cb65c/auth/CDKMetadata/Default": [
           {
             "type": "aws:cdk:logicalId",
             "data": "CDKMetadata"
           }
         ],
-        "/amplify-cloudstorageapp-Abhi-sandbox-781317f32d/auth/CDKMetadata/Condition": [
+        "/amplify-aerodrive-Abhi-sandbox-7f301cb65c/auth/CDKMetadata/Condition": [
           {
             "type": "aws:cdk:logicalId",
             "data": "CDKMetadataAvailable"
           }
         ],
-        "/amplify-cloudstorageapp-Abhi-sandbox-781317f32d/auth/amplifycloudstorageappAbhisandbox781317f32dauthamplifyAuthUserPoolA8EF3AE0Ref": [
+        "/amplify-aerodrive-Abhi-sandbox-7f301cb65c/auth/amplifyaerodriveAbhisandbox7f301cb65cauthamplifyAuthUserPoolC75A5366Ref": [
           {
             "type": "aws:cdk:logicalId",
-            "data": "amplifycloudstorageappAbhisandbox781317f32dauthamplifyAuthUserPoolA8EF3AE0Ref"
+            "data": "amplifyaerodriveAbhisandbox7f301cb65cauthamplifyAuthUserPoolC75A5366Ref"
           }
         ],
-        "/amplify-cloudstorageapp-Abhi-sandbox-781317f32d/auth/amplifycloudstorageappAbhisandbox781317f32dauthamplifyAuthUserPoolAppClient2190391CRef": [
+        "/amplify-aerodrive-Abhi-sandbox-7f301cb65c/auth/amplifyaerodriveAbhisandbox7f301cb65cauthamplifyAuthUserPoolAppClientA944EA61Ref": [
           {
             "type": "aws:cdk:logicalId",
-            "data": "amplifycloudstorageappAbhisandbox781317f32dauthamplifyAuthUserPoolAppClient2190391CRef"
+            "data": "amplifyaerodriveAbhisandbox7f301cb65cauthamplifyAuthUserPoolAppClientA944EA61Ref"
           }
         ],
-        "/amplify-cloudstorageapp-Abhi-sandbox-781317f32d/auth/amplifycloudstorageappAbhisandbox781317f32dauthamplifyAuthIdentityPool6A03462ERef": [
+        "/amplify-aerodrive-Abhi-sandbox-7f301cb65c/auth/amplifyaerodriveAbhisandbox7f301cb65cauthamplifyAuthIdentityPool71050EF5Ref": [
           {
             "type": "aws:cdk:logicalId",
-            "data": "amplifycloudstorageappAbhisandbox781317f32dauthamplifyAuthIdentityPool6A03462ERef"
+            "data": "amplifyaerodriveAbhisandbox7f301cb65cauthamplifyAuthIdentityPool71050EF5Ref"
           }
         ],
-        "/amplify-cloudstorageapp-Abhi-sandbox-781317f32d/auth/amplifycloudstorageappAbhisandbox781317f32dauthamplifyAuthauthenticatedUserRole3815BE0CRef": [
+        "/amplify-aerodrive-Abhi-sandbox-7f301cb65c/auth/amplifyaerodriveAbhisandbox7f301cb65cauthamplifyAuthauthenticatedUserRoleFC0CB81FRef": [
           {
             "type": "aws:cdk:logicalId",
-            "data": "amplifycloudstorageappAbhisandbox781317f32dauthamplifyAuthauthenticatedUserRole3815BE0CRef"
+            "data": "amplifyaerodriveAbhisandbox7f301cb65cauthamplifyAuthauthenticatedUserRoleFC0CB81FRef"
           }
         ],
-        "/amplify-cloudstorageapp-Abhi-sandbox-781317f32d/auth/amplifycloudstorageappAbhisandbox781317f32dauthamplifyAuthunauthenticatedUserRoleB654AF4ERef": [
+        "/amplify-aerodrive-Abhi-sandbox-7f301cb65c/auth/amplifyaerodriveAbhisandbox7f301cb65cauthamplifyAuthunauthenticatedUserRoleAAF80E1DRef": [
           {
             "type": "aws:cdk:logicalId",
-            "data": "amplifycloudstorageappAbhisandbox781317f32dauthamplifyAuthunauthenticatedUserRoleB654AF4ERef"
+            "data": "amplifyaerodriveAbhisandbox7f301cb65cauthamplifyAuthunauthenticatedUserRoleAAF80E1DRef"
           }
         ],
-        "/amplify-cloudstorageapp-Abhi-sandbox-781317f32d/auth.NestedStack/auth.NestedStackResource": [
+        "/amplify-aerodrive-Abhi-sandbox-7f301cb65c/auth.NestedStack/auth.NestedStackResource": [
           {
             "type": "aws:cdk:logicalId",
             "data": "auth179371D7"
           }
         ],
-        "/amplify-cloudstorageapp-Abhi-sandbox-781317f32d/userPoolId": [
+        "/amplify-aerodrive-Abhi-sandbox-7f301cb65c/userPoolId": [
           {
             "type": "aws:cdk:logicalId",
             "data": "userPoolId"
           }
         ],
-        "/amplify-cloudstorageapp-Abhi-sandbox-781317f32d/webClientId": [
+        "/amplify-aerodrive-Abhi-sandbox-7f301cb65c/webClientId": [
           {
             "type": "aws:cdk:logicalId",
             "data": "webClientId"
           }
         ],
-        "/amplify-cloudstorageapp-Abhi-sandbox-781317f32d/identityPoolId": [
+        "/amplify-aerodrive-Abhi-sandbox-7f301cb65c/identityPoolId": [
           {
             "type": "aws:cdk:logicalId",
             "data": "identityPoolId"
           }
         ],
-        "/amplify-cloudstorageapp-Abhi-sandbox-781317f32d/authRegion": [
+        "/amplify-aerodrive-Abhi-sandbox-7f301cb65c/authRegion": [
           {
             "type": "aws:cdk:logicalId",
             "data": "authRegion"
           }
         ],
-        "/amplify-cloudstorageapp-Abhi-sandbox-781317f32d/allowUnauthenticatedIdentities": [
+        "/amplify-aerodrive-Abhi-sandbox-7f301cb65c/allowUnauthenticatedIdentities": [
           {
             "type": "aws:cdk:logicalId",
             "data": "allowUnauthenticatedIdentities"
           }
         ],
-        "/amplify-cloudstorageapp-Abhi-sandbox-781317f32d/signupAttributes": [
+        "/amplify-aerodrive-Abhi-sandbox-7f301cb65c/signupAttributes": [
           {
             "type": "aws:cdk:logicalId",
             "data": "signupAttributes"
           }
         ],
-        "/amplify-cloudstorageapp-Abhi-sandbox-781317f32d/usernameAttributes": [
+        "/amplify-aerodrive-Abhi-sandbox-7f301cb65c/usernameAttributes": [
           {
             "type": "aws:cdk:logicalId",
             "data": "usernameAttributes"
           }
         ],
-        "/amplify-cloudstorageapp-Abhi-sandbox-781317f32d/verificationMechanisms": [
+        "/amplify-aerodrive-Abhi-sandbox-7f301cb65c/verificationMechanisms": [
           {
             "type": "aws:cdk:logicalId",
             "data": "verificationMechanisms"
           }
         ],
-        "/amplify-cloudstorageapp-Abhi-sandbox-781317f32d/passwordPolicyMinLength": [
+        "/amplify-aerodrive-Abhi-sandbox-7f301cb65c/passwordPolicyMinLength": [
           {
             "type": "aws:cdk:logicalId",
             "data": "passwordPolicyMinLength"
           }
         ],
-        "/amplify-cloudstorageapp-Abhi-sandbox-781317f32d/passwordPolicyRequirements": [
+        "/amplify-aerodrive-Abhi-sandbox-7f301cb65c/passwordPolicyRequirements": [
           {
             "type": "aws:cdk:logicalId",
             "data": "passwordPolicyRequirements"
           }
         ],
-        "/amplify-cloudstorageapp-Abhi-sandbox-781317f32d/mfaConfiguration": [
+        "/amplify-aerodrive-Abhi-sandbox-7f301cb65c/mfaConfiguration": [
           {
             "type": "aws:cdk:logicalId",
             "data": "mfaConfiguration"
           }
         ],
-        "/amplify-cloudstorageapp-Abhi-sandbox-781317f32d/mfaTypes": [
+        "/amplify-aerodrive-Abhi-sandbox-7f301cb65c/mfaTypes": [
           {
             "type": "aws:cdk:logicalId",
             "data": "mfaTypes"
           }
         ],
-        "/amplify-cloudstorageapp-Abhi-sandbox-781317f32d/passwordlessOptions": [
+        "/amplify-aerodrive-Abhi-sandbox-7f301cb65c/passwordlessOptions": [
           {
             "type": "aws:cdk:logicalId",
             "data": "passwordlessOptions"
           }
         ],
-        "/amplify-cloudstorageapp-Abhi-sandbox-781317f32d/socialProviders": [
+        "/amplify-aerodrive-Abhi-sandbox-7f301cb65c/socialProviders": [
           {
             "type": "aws:cdk:logicalId",
             "data": "socialProviders"
           }
         ],
-        "/amplify-cloudstorageapp-Abhi-sandbox-781317f32d/oauthCognitoDomain": [
+        "/amplify-aerodrive-Abhi-sandbox-7f301cb65c/oauthCognitoDomain": [
           {
             "type": "aws:cdk:logicalId",
             "data": "oauthCognitoDomain"
           }
         ],
-        "/amplify-cloudstorageapp-Abhi-sandbox-781317f32d/oauthScope": [
+        "/amplify-aerodrive-Abhi-sandbox-7f301cb65c/oauthScope": [
           {
             "type": "aws:cdk:logicalId",
             "data": "oauthScope"
           }
         ],
-        "/amplify-cloudstorageapp-Abhi-sandbox-781317f32d/oauthRedirectSignIn": [
+        "/amplify-aerodrive-Abhi-sandbox-7f301cb65c/oauthRedirectSignIn": [
           {
             "type": "aws:cdk:logicalId",
             "data": "oauthRedirectSignIn"
           }
         ],
-        "/amplify-cloudstorageapp-Abhi-sandbox-781317f32d/oauthRedirectSignOut": [
+        "/amplify-aerodrive-Abhi-sandbox-7f301cb65c/oauthRedirectSignOut": [
           {
             "type": "aws:cdk:logicalId",
             "data": "oauthRedirectSignOut"
           }
         ],
-        "/amplify-cloudstorageapp-Abhi-sandbox-781317f32d/oauthResponseType": [
+        "/amplify-aerodrive-Abhi-sandbox-7f301cb65c/oauthResponseType": [
           {
             "type": "aws:cdk:logicalId",
             "data": "oauthResponseType"
           }
         ],
-        "/amplify-cloudstorageapp-Abhi-sandbox-781317f32d/oauthClientId": [
+        "/amplify-aerodrive-Abhi-sandbox-7f301cb65c/oauthClientId": [
           {
             "type": "aws:cdk:logicalId",
             "data": "oauthClientId"
           }
         ],
-        "/amplify-cloudstorageapp-Abhi-sandbox-781317f32d/groups": [
+        "/amplify-aerodrive-Abhi-sandbox-7f301cb65c/groups": [
           {
             "type": "aws:cdk:logicalId",
             "data": "groups"
           }
         ],
-        "/amplify-cloudstorageapp-Abhi-sandbox-781317f32d/data/amplifyData/GraphQLAPI/Resource": [
+        "/amplify-aerodrive-Abhi-sandbox-7f301cb65c/data/amplifyData/GraphQLAPI/Resource": [
           {
             "type": "aws:cdk:logicalId",
             "data": "amplifyDataGraphQLAPI42A6FA33"
           }
         ],
-        "/amplify-cloudstorageapp-Abhi-sandbox-781317f32d/data/amplifyData/GraphQLAPI/TransformerSchema": [
+        "/amplify-aerodrive-Abhi-sandbox-7f301cb65c/data/amplifyData/GraphQLAPI/TransformerSchema": [
           {
             "type": "aws:cdk:logicalId",
             "data": "amplifyDataGraphQLAPITransformerSchemaFF50A789"
           }
         ],
-        "/amplify-cloudstorageapp-Abhi-sandbox-781317f32d/data/amplifyData/GraphQLAPI/NONE_DS": [
+        "/amplify-aerodrive-Abhi-sandbox-7f301cb65c/data/amplifyData/GraphQLAPI/NONE_DS": [
           {
             "type": "graphqltransformer:resourceName",
             "data": "NONE_DS"
           }
         ],
-        "/amplify-cloudstorageapp-Abhi-sandbox-781317f32d/data/amplifyData/GraphQLAPI/NONE_DS/Resource": [
+        "/amplify-aerodrive-Abhi-sandbox-7f301cb65c/data/amplifyData/GraphQLAPI/NONE_DS/Resource": [
           {
             "type": "aws:cdk:logicalId",
             "data": "amplifyDataGraphQLAPINONEDS684BF699"
@@ -303,139 +303,139 @@
             "data": "NONE_DS"
           }
         ],
-        "/amplify-cloudstorageapp-Abhi-sandbox-781317f32d/data/amplifyData/AmplifyTableManager/AmplifyManagedTableIsCompleteRole/Resource": [
+        "/amplify-aerodrive-Abhi-sandbox-7f301cb65c/data/amplifyData/AmplifyTableManager/AmplifyManagedTableIsCompleteRole/Resource": [
           {
             "type": "aws:cdk:logicalId",
             "data": "AmplifyManagedTableIsCompleteRoleF825222C"
           }
         ],
-        "/amplify-cloudstorageapp-Abhi-sandbox-781317f32d/data/amplifyData/AmplifyTableManager/AmplifyManagedTableOnEventRole/Resource": [
+        "/amplify-aerodrive-Abhi-sandbox-7f301cb65c/data/amplifyData/AmplifyTableManager/AmplifyManagedTableOnEventRole/Resource": [
           {
             "type": "aws:cdk:logicalId",
             "data": "AmplifyManagedTableOnEventRoleB4E71DEA"
           }
         ],
-        "/amplify-cloudstorageapp-Abhi-sandbox-781317f32d/data/amplifyData/AmplifyTableManager/AmplifyManagedTableOnEventRole/DefaultPolicy/Resource": [
+        "/amplify-aerodrive-Abhi-sandbox-7f301cb65c/data/amplifyData/AmplifyTableManager/AmplifyManagedTableOnEventRole/DefaultPolicy/Resource": [
           {
             "type": "aws:cdk:logicalId",
             "data": "AmplifyManagedTableOnEventRoleDefaultPolicyF6DABCB6"
           }
         ],
-        "/amplify-cloudstorageapp-Abhi-sandbox-781317f32d/data/amplifyData/AmplifyTableManager/TableManagerCustomProvider/framework-onEvent/Resource": [
+        "/amplify-aerodrive-Abhi-sandbox-7f301cb65c/data/amplifyData/AmplifyTableManager/TableManagerCustomProvider/framework-onEvent/Resource": [
           {
             "type": "aws:cdk:logicalId",
             "data": "TableManagerCustomProviderframeworkonEvent1DFC2ECC"
           }
         ],
-        "/amplify-cloudstorageapp-Abhi-sandbox-781317f32d/data/amplifyData/AmplifyTableManager/TableManagerCustomProvider/framework-isComplete/Resource": [
+        "/amplify-aerodrive-Abhi-sandbox-7f301cb65c/data/amplifyData/AmplifyTableManager/TableManagerCustomProvider/framework-isComplete/Resource": [
           {
             "type": "aws:cdk:logicalId",
             "data": "TableManagerCustomProviderframeworkisComplete2E51021B"
           }
         ],
-        "/amplify-cloudstorageapp-Abhi-sandbox-781317f32d/data/amplifyData/AmplifyTableManager/AmplifyTableWaiterStateMachine/Role/Resource": [
+        "/amplify-aerodrive-Abhi-sandbox-7f301cb65c/data/amplifyData/AmplifyTableManager/AmplifyTableWaiterStateMachine/Role/Resource": [
           {
             "type": "aws:cdk:logicalId",
             "data": "AmplifyTableWaiterStateMachineRole470BE899"
           }
         ],
-        "/amplify-cloudstorageapp-Abhi-sandbox-781317f32d/data/amplifyData/AmplifyTableManager/AmplifyTableWaiterStateMachine/Role/DefaultPolicy/Resource": [
+        "/amplify-aerodrive-Abhi-sandbox-7f301cb65c/data/amplifyData/AmplifyTableManager/AmplifyTableWaiterStateMachine/Role/DefaultPolicy/Resource": [
           {
             "type": "aws:cdk:logicalId",
             "data": "AmplifyTableWaiterStateMachineRoleDefaultPolicy89F3836A"
           }
         ],
-        "/amplify-cloudstorageapp-Abhi-sandbox-781317f32d/data/amplifyData/AmplifyTableManager/AmplifyTableWaiterStateMachine/Resource": [
+        "/amplify-aerodrive-Abhi-sandbox-7f301cb65c/data/amplifyData/AmplifyTableManager/AmplifyTableWaiterStateMachine/Resource": [
           {
             "type": "aws:cdk:logicalId",
             "data": "AmplifyTableWaiterStateMachine060600BC"
           }
         ],
-        "/amplify-cloudstorageapp-Abhi-sandbox-781317f32d/data/amplifyData/AmplifyTableManager/CDKMetadata/Default": [
+        "/amplify-aerodrive-Abhi-sandbox-7f301cb65c/data/amplifyData/AmplifyTableManager/CDKMetadata/Default": [
           {
             "type": "aws:cdk:logicalId",
             "data": "CDKMetadata"
           }
         ],
-        "/amplify-cloudstorageapp-Abhi-sandbox-781317f32d/data/amplifyData/AmplifyTableManager/CDKMetadata/Condition": [
+        "/amplify-aerodrive-Abhi-sandbox-7f301cb65c/data/amplifyData/AmplifyTableManager/CDKMetadata/Condition": [
           {
             "type": "aws:cdk:logicalId",
             "data": "CDKMetadataAvailable"
           }
         ],
-        "/amplify-cloudstorageapp-Abhi-sandbox-781317f32d/data/amplifyData/AmplifyTableManager/reference-to-amplifycloudstorageappAbhisandbox781317f32ddataamplifyDataGraphQLAPIB9A7220FApiId": [
+        "/amplify-aerodrive-Abhi-sandbox-7f301cb65c/data/amplifyData/AmplifyTableManager/reference-to-amplifyaerodriveAbhisandbox7f301cb65cdataamplifyDataGraphQLAPIE9497DA6ApiId": [
           {
             "type": "aws:cdk:logicalId",
-            "data": "referencetoamplifycloudstorageappAbhisandbox781317f32ddataamplifyDataGraphQLAPIB9A7220FApiId"
+            "data": "referencetoamplifyaerodriveAbhisandbox7f301cb65cdataamplifyDataGraphQLAPIE9497DA6ApiId"
           }
         ],
-        "/amplify-cloudstorageapp-Abhi-sandbox-781317f32d/data/amplifyData/AmplifyTableManager/amplifycloudstorageappAbhisandbox781317f32ddataamplifyDataAmplifyTableManagerTableManagerCustomProviderframeworkonEventB1C07CE8Arn": [
+        "/amplify-aerodrive-Abhi-sandbox-7f301cb65c/data/amplifyData/AmplifyTableManager/amplifyaerodriveAbhisandbox7f301cb65cdataamplifyDataAmplifyTableManagerTableManagerCustomProviderframeworkonEvent3BFD0B76Arn": [
           {
             "type": "aws:cdk:logicalId",
-            "data": "amplifycloudstorageappAbhisandbox781317f32ddataamplifyDataAmplifyTableManagerTableManagerCustomProviderframeworkonEventB1C07CE8Arn"
+            "data": "amplifyaerodriveAbhisandbox7f301cb65cdataamplifyDataAmplifyTableManagerTableManagerCustomProviderframeworkonEvent3BFD0B76Arn"
           }
         ],
-        "/amplify-cloudstorageapp-Abhi-sandbox-781317f32d/data/amplifyData/AmplifyTableManager.NestedStack/AmplifyTableManager.NestedStackResource": [
+        "/amplify-aerodrive-Abhi-sandbox-7f301cb65c/data/amplifyData/AmplifyTableManager.NestedStack/AmplifyTableManager.NestedStackResource": [
           {
             "type": "aws:cdk:logicalId",
             "data": "amplifyDataAmplifyTableManagerNestedStackAmplifyTableManagerNestedStackResource86290833"
           }
         ],
-        "/amplify-cloudstorageapp-Abhi-sandbox-781317f32d/data/amplifyData/FileRecord/DynamoDBModelTableReadIOPS": [
+        "/amplify-aerodrive-Abhi-sandbox-7f301cb65c/data/amplifyData/FileRecord/DynamoDBModelTableReadIOPS": [
           {
             "type": "aws:cdk:logicalId",
             "data": "DynamoDBModelTableReadIOPS"
           }
         ],
-        "/amplify-cloudstorageapp-Abhi-sandbox-781317f32d/data/amplifyData/FileRecord/DynamoDBModelTableWriteIOPS": [
+        "/amplify-aerodrive-Abhi-sandbox-7f301cb65c/data/amplifyData/FileRecord/DynamoDBModelTableWriteIOPS": [
           {
             "type": "aws:cdk:logicalId",
             "data": "DynamoDBModelTableWriteIOPS"
           }
         ],
-        "/amplify-cloudstorageapp-Abhi-sandbox-781317f32d/data/amplifyData/FileRecord/DynamoDBBillingMode": [
+        "/amplify-aerodrive-Abhi-sandbox-7f301cb65c/data/amplifyData/FileRecord/DynamoDBBillingMode": [
           {
             "type": "aws:cdk:logicalId",
             "data": "DynamoDBBillingMode"
           }
         ],
-        "/amplify-cloudstorageapp-Abhi-sandbox-781317f32d/data/amplifyData/FileRecord/DynamoDBEnablePointInTimeRecovery": [
+        "/amplify-aerodrive-Abhi-sandbox-7f301cb65c/data/amplifyData/FileRecord/DynamoDBEnablePointInTimeRecovery": [
           {
             "type": "aws:cdk:logicalId",
             "data": "DynamoDBEnablePointInTimeRecovery"
           }
         ],
-        "/amplify-cloudstorageapp-Abhi-sandbox-781317f32d/data/amplifyData/FileRecord/DynamoDBEnableServerSideEncryption": [
+        "/amplify-aerodrive-Abhi-sandbox-7f301cb65c/data/amplifyData/FileRecord/DynamoDBEnableServerSideEncryption": [
           {
             "type": "aws:cdk:logicalId",
             "data": "DynamoDBEnableServerSideEncryption"
           }
         ],
-        "/amplify-cloudstorageapp-Abhi-sandbox-781317f32d/data/amplifyData/FileRecord/HasEnvironmentParameter": [
+        "/amplify-aerodrive-Abhi-sandbox-7f301cb65c/data/amplifyData/FileRecord/HasEnvironmentParameter": [
           {
             "type": "aws:cdk:logicalId",
             "data": "HasEnvironmentParameter"
           }
         ],
-        "/amplify-cloudstorageapp-Abhi-sandbox-781317f32d/data/amplifyData/FileRecord/ShouldUsePayPerRequestBilling": [
+        "/amplify-aerodrive-Abhi-sandbox-7f301cb65c/data/amplifyData/FileRecord/ShouldUsePayPerRequestBilling": [
           {
             "type": "aws:cdk:logicalId",
             "data": "ShouldUsePayPerRequestBilling"
           }
         ],
-        "/amplify-cloudstorageapp-Abhi-sandbox-781317f32d/data/amplifyData/FileRecord/ShouldUsePointInTimeRecovery": [
+        "/amplify-aerodrive-Abhi-sandbox-7f301cb65c/data/amplifyData/FileRecord/ShouldUsePointInTimeRecovery": [
           {
             "type": "aws:cdk:logicalId",
             "data": "ShouldUsePointInTimeRecovery"
           }
         ],
-        "/amplify-cloudstorageapp-Abhi-sandbox-781317f32d/data/amplifyData/FileRecord/FileRecordTable": [
+        "/amplify-aerodrive-Abhi-sandbox-7f301cb65c/data/amplifyData/FileRecord/FileRecordTable": [
           {
             "type": "graphqltransformer:resourceName",
             "data": "FileRecord"
           }
         ],
-        "/amplify-cloudstorageapp-Abhi-sandbox-781317f32d/data/amplifyData/FileRecord/FileRecordTable/Default/Default": [
+        "/amplify-aerodrive-Abhi-sandbox-7f301cb65c/data/amplifyData/FileRecord/FileRecordTable/Default/Default": [
           {
             "type": "aws:cdk:logicalId",
             "data": "FileRecordTable"
@@ -445,31 +445,31 @@
             "data": "FileRecord"
           }
         ],
-        "/amplify-cloudstorageapp-Abhi-sandbox-781317f32d/data/amplifyData/FileRecord/CustomTableFileRecordTable": [
+        "/amplify-aerodrive-Abhi-sandbox-7f301cb65c/data/amplifyData/FileRecord/CustomTableFileRecordTable": [
           {
             "type": "graphqltransformer:resourceName",
             "data": "FileRecord"
           }
         ],
-        "/amplify-cloudstorageapp-Abhi-sandbox-781317f32d/data/amplifyData/FileRecord/GetAttFileRecordTableStreamArn": [
+        "/amplify-aerodrive-Abhi-sandbox-7f301cb65c/data/amplifyData/FileRecord/GetAttFileRecordTableStreamArn": [
           {
             "type": "aws:cdk:logicalId",
             "data": "GetAttFileRecordTableStreamArn"
           }
         ],
-        "/amplify-cloudstorageapp-Abhi-sandbox-781317f32d/data/amplifyData/FileRecord/GetAttFileRecordTableName": [
+        "/amplify-aerodrive-Abhi-sandbox-7f301cb65c/data/amplifyData/FileRecord/GetAttFileRecordTableName": [
           {
             "type": "aws:cdk:logicalId",
             "data": "GetAttFileRecordTableName"
           }
         ],
-        "/amplify-cloudstorageapp-Abhi-sandbox-781317f32d/data/amplifyData/FileRecord/FileRecordIAMRole": [
+        "/amplify-aerodrive-Abhi-sandbox-7f301cb65c/data/amplifyData/FileRecord/FileRecordIAMRole": [
           {
             "type": "graphqltransformer:resourceName",
             "data": "FileRecordIAMRole"
           }
         ],
-        "/amplify-cloudstorageapp-Abhi-sandbox-781317f32d/data/amplifyData/FileRecord/FileRecordIAMRole/Resource": [
+        "/amplify-aerodrive-Abhi-sandbox-7f301cb65c/data/amplifyData/FileRecord/FileRecordIAMRole/Resource": [
           {
             "type": "aws:cdk:logicalId",
             "data": "FileRecordIAMRoleE373B141"
@@ -479,13 +479,13 @@
             "data": "FileRecordIAMRole"
           }
         ],
-        "/amplify-cloudstorageapp-Abhi-sandbox-781317f32d/data/amplifyData/FileRecord/FileRecordDataSource": [
+        "/amplify-aerodrive-Abhi-sandbox-7f301cb65c/data/amplifyData/FileRecord/FileRecordDataSource": [
           {
             "type": "graphqltransformer:resourceName",
             "data": "FileRecordTable"
           }
         ],
-        "/amplify-cloudstorageapp-Abhi-sandbox-781317f32d/data/amplifyData/FileRecord/FileRecordDataSource/Resource": [
+        "/amplify-aerodrive-Abhi-sandbox-7f301cb65c/data/amplifyData/FileRecord/FileRecordDataSource/Resource": [
           {
             "type": "aws:cdk:logicalId",
             "data": "FileRecordDataSource"
@@ -495,7 +495,7 @@
             "data": "FileRecordTable"
           }
         ],
-        "/amplify-cloudstorageapp-Abhi-sandbox-781317f32d/data/amplifyData/FileRecord/QuerygetFileRecordauth0Function/QuerygetFileRecordauth0Function.AppSyncFunction": [
+        "/amplify-aerodrive-Abhi-sandbox-7f301cb65c/data/amplifyData/FileRecord/QuerygetFileRecordauth0Function/QuerygetFileRecordauth0Function.AppSyncFunction": [
           {
             "type": "aws:cdk:logicalId",
             "data": "QuerygetFileRecordauth0FunctionQuerygetFileRecordauth0FunctionAppSyncFunction39C162AC"
@@ -505,7 +505,7 @@
             "data": "QuerygetFileRecordauth0Function"
           }
         ],
-        "/amplify-cloudstorageapp-Abhi-sandbox-781317f32d/data/amplifyData/FileRecord/QuerygetFileRecordpostAuth0Function/QuerygetFileRecordpostAuth0Function.AppSyncFunction": [
+        "/amplify-aerodrive-Abhi-sandbox-7f301cb65c/data/amplifyData/FileRecord/QuerygetFileRecordpostAuth0Function/QuerygetFileRecordpostAuth0Function.AppSyncFunction": [
           {
             "type": "aws:cdk:logicalId",
             "data": "QuerygetFileRecordpostAuth0FunctionQuerygetFileRecordpostAuth0FunctionAppSyncFunction6463FFB7"
@@ -515,7 +515,7 @@
             "data": "QuerygetFileRecordpostAuth0Function"
           }
         ],
-        "/amplify-cloudstorageapp-Abhi-sandbox-781317f32d/data/amplifyData/FileRecord/QueryGetFileRecordDataResolverFn/QueryGetFileRecordDataResolverFn.AppSyncFunction": [
+        "/amplify-aerodrive-Abhi-sandbox-7f301cb65c/data/amplifyData/FileRecord/QueryGetFileRecordDataResolverFn/QueryGetFileRecordDataResolverFn.AppSyncFunction": [
           {
             "type": "aws:cdk:logicalId",
             "data": "QueryGetFileRecordDataResolverFnQueryGetFileRecordDataResolverFnAppSyncFunction7060C37B"
@@ -525,7 +525,7 @@
             "data": "QueryGetFileRecordDataResolverFn"
           }
         ],
-        "/amplify-cloudstorageapp-Abhi-sandbox-781317f32d/data/amplifyData/FileRecord/queryGetFileRecordResolver": [
+        "/amplify-aerodrive-Abhi-sandbox-7f301cb65c/data/amplifyData/FileRecord/queryGetFileRecordResolver": [
           {
             "type": "aws:cdk:logicalId",
             "data": "GetFileRecordResolver"
@@ -535,7 +535,7 @@
             "data": "Query.getFileRecord"
           }
         ],
-        "/amplify-cloudstorageapp-Abhi-sandbox-781317f32d/data/amplifyData/FileRecord/QuerylistFileRecordsauth0Function/QuerylistFileRecordsauth0Function.AppSyncFunction": [
+        "/amplify-aerodrive-Abhi-sandbox-7f301cb65c/data/amplifyData/FileRecord/QuerylistFileRecordsauth0Function/QuerylistFileRecordsauth0Function.AppSyncFunction": [
           {
             "type": "aws:cdk:logicalId",
             "data": "QuerylistFileRecordsauth0FunctionQuerylistFileRecordsauth0FunctionAppSyncFunction862D37FD"
@@ -545,7 +545,7 @@
             "data": "QuerylistFileRecordsauth0Function"
           }
         ],
-        "/amplify-cloudstorageapp-Abhi-sandbox-781317f32d/data/amplifyData/FileRecord/QuerylistFileRecordspostAuth0Function/QuerylistFileRecordspostAuth0Function.AppSyncFunction": [
+        "/amplify-aerodrive-Abhi-sandbox-7f301cb65c/data/amplifyData/FileRecord/QuerylistFileRecordspostAuth0Function/QuerylistFileRecordspostAuth0Function.AppSyncFunction": [
           {
             "type": "aws:cdk:logicalId",
             "data": "QuerylistFileRecordspostAuth0FunctionQuerylistFileRecordspostAuth0FunctionAppSyncFunction544212F8"
@@ -555,7 +555,7 @@
             "data": "QuerylistFileRecordspostAuth0Function"
           }
         ],
-        "/amplify-cloudstorageapp-Abhi-sandbox-781317f32d/data/amplifyData/FileRecord/QueryListFileRecordsDataResolverFn/QueryListFileRecordsDataResolverFn.AppSyncFunction": [
+        "/amplify-aerodrive-Abhi-sandbox-7f301cb65c/data/amplifyData/FileRecord/QueryListFileRecordsDataResolverFn/QueryListFileRecordsDataResolverFn.AppSyncFunction": [
           {
             "type": "aws:cdk:logicalId",
             "data": "QueryListFileRecordsDataResolverFnQueryListFileRecordsDataResolverFnAppSyncFunction006151BB"
@@ -565,7 +565,7 @@
             "data": "QueryListFileRecordsDataResolverFn"
           }
         ],
-        "/amplify-cloudstorageapp-Abhi-sandbox-781317f32d/data/amplifyData/FileRecord/queryListFileRecordsResolver": [
+        "/amplify-aerodrive-Abhi-sandbox-7f301cb65c/data/amplifyData/FileRecord/queryListFileRecordsResolver": [
           {
             "type": "aws:cdk:logicalId",
             "data": "ListFileRecordResolver"
@@ -575,7 +575,7 @@
             "data": "Query.listFileRecords"
           }
         ],
-        "/amplify-cloudstorageapp-Abhi-sandbox-781317f32d/data/amplifyData/FileRecord/MutationcreateFileRecordinit0Function/MutationcreateFileRecordinit0Function.AppSyncFunction": [
+        "/amplify-aerodrive-Abhi-sandbox-7f301cb65c/data/amplifyData/FileRecord/MutationcreateFileRecordinit0Function/MutationcreateFileRecordinit0Function.AppSyncFunction": [
           {
             "type": "aws:cdk:logicalId",
             "data": "MutationcreateFileRecordinit0FunctionMutationcreateFileRecordinit0FunctionAppSyncFunction1531750C"
@@ -585,7 +585,7 @@
             "data": "MutationcreateFileRecordinit0Function"
           }
         ],
-        "/amplify-cloudstorageapp-Abhi-sandbox-781317f32d/data/amplifyData/FileRecord/MutationcreateFileRecordauth0Function/MutationcreateFileRecordauth0Function.AppSyncFunction": [
+        "/amplify-aerodrive-Abhi-sandbox-7f301cb65c/data/amplifyData/FileRecord/MutationcreateFileRecordauth0Function/MutationcreateFileRecordauth0Function.AppSyncFunction": [
           {
             "type": "aws:cdk:logicalId",
             "data": "MutationcreateFileRecordauth0FunctionMutationcreateFileRecordauth0FunctionAppSyncFunctionDAC159F2"
@@ -595,7 +595,7 @@
             "data": "MutationcreateFileRecordauth0Function"
           }
         ],
-        "/amplify-cloudstorageapp-Abhi-sandbox-781317f32d/data/amplifyData/FileRecord/MutationcreateFileRecordpostAuth0Function/MutationcreateFileRecordpostAuth0Function.AppSyncFunction": [
+        "/amplify-aerodrive-Abhi-sandbox-7f301cb65c/data/amplifyData/FileRecord/MutationcreateFileRecordpostAuth0Function/MutationcreateFileRecordpostAuth0Function.AppSyncFunction": [
           {
             "type": "aws:cdk:logicalId",
             "data": "MutationcreateFileRecordpostAuth0FunctionMutationcreateFileRecordpostAuth0FunctionAppSyncFunction57C2C02B"
@@ -605,7 +605,7 @@
             "data": "MutationcreateFileRecordpostAuth0Function"
           }
         ],
-        "/amplify-cloudstorageapp-Abhi-sandbox-781317f32d/data/amplifyData/FileRecord/MutationCreateFileRecordDataResolverFn/MutationCreateFileRecordDataResolverFn.AppSyncFunction": [
+        "/amplify-aerodrive-Abhi-sandbox-7f301cb65c/data/amplifyData/FileRecord/MutationCreateFileRecordDataResolverFn/MutationCreateFileRecordDataResolverFn.AppSyncFunction": [
           {
             "type": "aws:cdk:logicalId",
             "data": "MutationCreateFileRecordDataResolverFnMutationCreateFileRecordDataResolverFnAppSyncFunction4423A66D"
@@ -615,7 +615,7 @@
             "data": "MutationCreateFileRecordDataResolverFn"
           }
         ],
-        "/amplify-cloudstorageapp-Abhi-sandbox-781317f32d/data/amplifyData/FileRecord/mutationCreateFileRecordResolver": [
+        "/amplify-aerodrive-Abhi-sandbox-7f301cb65c/data/amplifyData/FileRecord/mutationCreateFileRecordResolver": [
           {
             "type": "aws:cdk:logicalId",
             "data": "CreateFileRecordResolver"
@@ -625,7 +625,7 @@
             "data": "Mutation.createFileRecord"
           }
         ],
-        "/amplify-cloudstorageapp-Abhi-sandbox-781317f32d/data/amplifyData/FileRecord/MutationupdateFileRecordinit0Function/MutationupdateFileRecordinit0Function.AppSyncFunction": [
+        "/amplify-aerodrive-Abhi-sandbox-7f301cb65c/data/amplifyData/FileRecord/MutationupdateFileRecordinit0Function/MutationupdateFileRecordinit0Function.AppSyncFunction": [
           {
             "type": "aws:cdk:logicalId",
             "data": "MutationupdateFileRecordinit0FunctionMutationupdateFileRecordinit0FunctionAppSyncFunction6989E85E"
@@ -635,7 +635,7 @@
             "data": "MutationupdateFileRecordinit0Function"
           }
         ],
-        "/amplify-cloudstorageapp-Abhi-sandbox-781317f32d/data/amplifyData/FileRecord/MutationupdateFileRecordauth0Function/MutationupdateFileRecordauth0Function.AppSyncFunction": [
+        "/amplify-aerodrive-Abhi-sandbox-7f301cb65c/data/amplifyData/FileRecord/MutationupdateFileRecordauth0Function/MutationupdateFileRecordauth0Function.AppSyncFunction": [
           {
             "type": "aws:cdk:logicalId",
             "data": "MutationupdateFileRecordauth0FunctionMutationupdateFileRecordauth0FunctionAppSyncFunctionF7DA8AFA"
@@ -645,7 +645,7 @@
             "data": "MutationupdateFileRecordauth0Function"
           }
         ],
-        "/amplify-cloudstorageapp-Abhi-sandbox-781317f32d/data/amplifyData/FileRecord/MutationupdateFileRecordpostAuth0Function/MutationupdateFileRecordpostAuth0Function.AppSyncFunction": [
+        "/amplify-aerodrive-Abhi-sandbox-7f301cb65c/data/amplifyData/FileRecord/MutationupdateFileRecordpostAuth0Function/MutationupdateFileRecordpostAuth0Function.AppSyncFunction": [
           {
             "type": "aws:cdk:logicalId",
             "data": "MutationupdateFileRecordpostAuth0FunctionMutationupdateFileRecordpostAuth0FunctionAppSyncFunction50F2ED5B"
@@ -655,7 +655,7 @@
             "data": "MutationupdateFileRecordpostAuth0Function"
           }
         ],
-        "/amplify-cloudstorageapp-Abhi-sandbox-781317f32d/data/amplifyData/FileRecord/MutationUpdateFileRecordDataResolverFn/MutationUpdateFileRecordDataResolverFn.AppSyncFunction": [
+        "/amplify-aerodrive-Abhi-sandbox-7f301cb65c/data/amplifyData/FileRecord/MutationUpdateFileRecordDataResolverFn/MutationUpdateFileRecordDataResolverFn.AppSyncFunction": [
           {
             "type": "aws:cdk:logicalId",
             "data": "MutationUpdateFileRecordDataResolverFnMutationUpdateFileRecordDataResolverFnAppSyncFunctionAB8BDD6A"
@@ -665,7 +665,7 @@
             "data": "MutationUpdateFileRecordDataResolverFn"
           }
         ],
-        "/amplify-cloudstorageapp-Abhi-sandbox-781317f32d/data/amplifyData/FileRecord/mutationUpdateFileRecordResolver": [
+        "/amplify-aerodrive-Abhi-sandbox-7f301cb65c/data/amplifyData/FileRecord/mutationUpdateFileRecordResolver": [
           {
             "type": "aws:cdk:logicalId",
             "data": "UpdateFileRecordResolver"
@@ -675,7 +675,7 @@
             "data": "Mutation.updateFileRecord"
           }
         ],
-        "/amplify-cloudstorageapp-Abhi-sandbox-781317f32d/data/amplifyData/FileRecord/MutationdeleteFileRecordauth0Function/MutationdeleteFileRecordauth0Function.AppSyncFunction": [
+        "/amplify-aerodrive-Abhi-sandbox-7f301cb65c/data/amplifyData/FileRecord/MutationdeleteFileRecordauth0Function/MutationdeleteFileRecordauth0Function.AppSyncFunction": [
           {
             "type": "aws:cdk:logicalId",
             "data": "MutationdeleteFileRecordauth0FunctionMutationdeleteFileRecordauth0FunctionAppSyncFunctionFD8A4ACF"
@@ -685,7 +685,7 @@
             "data": "MutationdeleteFileRecordauth0Function"
           }
         ],
-        "/amplify-cloudstorageapp-Abhi-sandbox-781317f32d/data/amplifyData/FileRecord/MutationdeleteFileRecordpostAuth0Function/MutationdeleteFileRecordpostAuth0Function.AppSyncFunction": [
+        "/amplify-aerodrive-Abhi-sandbox-7f301cb65c/data/amplifyData/FileRecord/MutationdeleteFileRecordpostAuth0Function/MutationdeleteFileRecordpostAuth0Function.AppSyncFunction": [
           {
             "type": "aws:cdk:logicalId",
             "data": "MutationdeleteFileRecordpostAuth0FunctionMutationdeleteFileRecordpostAuth0FunctionAppSyncFunctionF27AE68E"
@@ -695,7 +695,7 @@
             "data": "MutationdeleteFileRecordpostAuth0Function"
           }
         ],
-        "/amplify-cloudstorageapp-Abhi-sandbox-781317f32d/data/amplifyData/FileRecord/MutationDeleteFileRecordDataResolverFn/MutationDeleteFileRecordDataResolverFn.AppSyncFunction": [
+        "/amplify-aerodrive-Abhi-sandbox-7f301cb65c/data/amplifyData/FileRecord/MutationDeleteFileRecordDataResolverFn/MutationDeleteFileRecordDataResolverFn.AppSyncFunction": [
           {
             "type": "aws:cdk:logicalId",
             "data": "MutationDeleteFileRecordDataResolverFnMutationDeleteFileRecordDataResolverFnAppSyncFunctionBBEE89D5"
@@ -705,7 +705,7 @@
             "data": "MutationDeleteFileRecordDataResolverFn"
           }
         ],
-        "/amplify-cloudstorageapp-Abhi-sandbox-781317f32d/data/amplifyData/FileRecord/mutationDeleteFileRecordResolver": [
+        "/amplify-aerodrive-Abhi-sandbox-7f301cb65c/data/amplifyData/FileRecord/mutationDeleteFileRecordResolver": [
           {
             "type": "aws:cdk:logicalId",
             "data": "DeleteFileRecordResolver"
@@ -715,7 +715,7 @@
             "data": "Mutation.deleteFileRecord"
           }
         ],
-        "/amplify-cloudstorageapp-Abhi-sandbox-781317f32d/data/amplifyData/FileRecord/SubscriptiononCreateFileRecordauth0Function/SubscriptiononCreateFileRecordauth0Function.AppSyncFunction": [
+        "/amplify-aerodrive-Abhi-sandbox-7f301cb65c/data/amplifyData/FileRecord/SubscriptiononCreateFileRecordauth0Function/SubscriptiononCreateFileRecordauth0Function.AppSyncFunction": [
           {
             "type": "aws:cdk:logicalId",
             "data": "SubscriptiononCreateFileRecordauth0FunctionSubscriptiononCreateFileRecordauth0FunctionAppSyncFunction0824A5CD"
@@ -725,7 +725,7 @@
             "data": "SubscriptiononCreateFileRecordauth0Function"
           }
         ],
-        "/amplify-cloudstorageapp-Abhi-sandbox-781317f32d/data/amplifyData/FileRecord/SubscriptiononCreateFileRecordpostAuth0Function/SubscriptiononCreateFileRecordpostAuth0Function.AppSyncFunction": [
+        "/amplify-aerodrive-Abhi-sandbox-7f301cb65c/data/amplifyData/FileRecord/SubscriptiononCreateFileRecordpostAuth0Function/SubscriptiononCreateFileRecordpostAuth0Function.AppSyncFunction": [
           {
             "type": "aws:cdk:logicalId",
             "data": "SubscriptiononCreateFileRecordpostAuth0FunctionSubscriptiononCreateFileRecordpostAuth0FunctionAppSyncFunction59E5134E"
@@ -735,7 +735,7 @@
             "data": "SubscriptiononCreateFileRecordpostAuth0Function"
           }
         ],
-        "/amplify-cloudstorageapp-Abhi-sandbox-781317f32d/data/amplifyData/FileRecord/SubscriptionOnCreateFileRecordDataResolverFn/SubscriptionOnCreateFileRecordDataResolverFn.AppSyncFunction": [
+        "/amplify-aerodrive-Abhi-sandbox-7f301cb65c/data/amplifyData/FileRecord/SubscriptionOnCreateFileRecordDataResolverFn/SubscriptionOnCreateFileRecordDataResolverFn.AppSyncFunction": [
           {
             "type": "aws:cdk:logicalId",
             "data": "SubscriptionOnCreateFileRecordDataResolverFnSubscriptionOnCreateFileRecordDataResolverFnAppSyncFunctionC6A54E78"
@@ -745,7 +745,7 @@
             "data": "SubscriptionOnCreateFileRecordDataResolverFn"
           }
         ],
-        "/amplify-cloudstorageapp-Abhi-sandbox-781317f32d/data/amplifyData/FileRecord/subscriptionOnCreateFileRecordResolver": [
+        "/amplify-aerodrive-Abhi-sandbox-7f301cb65c/data/amplifyData/FileRecord/subscriptionOnCreateFileRecordResolver": [
           {
             "type": "aws:cdk:logicalId",
             "data": "SubscriptiononCreateFileRecordResolver"
@@ -755,7 +755,7 @@
             "data": "Subscription.onCreateFileRecord"
           }
         ],
-        "/amplify-cloudstorageapp-Abhi-sandbox-781317f32d/data/amplifyData/FileRecord/SubscriptiononUpdateFileRecordauth0Function/SubscriptiononUpdateFileRecordauth0Function.AppSyncFunction": [
+        "/amplify-aerodrive-Abhi-sandbox-7f301cb65c/data/amplifyData/FileRecord/SubscriptiononUpdateFileRecordauth0Function/SubscriptiononUpdateFileRecordauth0Function.AppSyncFunction": [
           {
             "type": "aws:cdk:logicalId",
             "data": "SubscriptiononUpdateFileRecordauth0FunctionSubscriptiononUpdateFileRecordauth0FunctionAppSyncFunction75A5D9F0"
@@ -765,7 +765,7 @@
             "data": "SubscriptiononUpdateFileRecordauth0Function"
           }
         ],
-        "/amplify-cloudstorageapp-Abhi-sandbox-781317f32d/data/amplifyData/FileRecord/SubscriptiononUpdateFileRecordpostAuth0Function/SubscriptiononUpdateFileRecordpostAuth0Function.AppSyncFunction": [
+        "/amplify-aerodrive-Abhi-sandbox-7f301cb65c/data/amplifyData/FileRecord/SubscriptiononUpdateFileRecordpostAuth0Function/SubscriptiononUpdateFileRecordpostAuth0Function.AppSyncFunction": [
           {
             "type": "aws:cdk:logicalId",
             "data": "SubscriptiononUpdateFileRecordpostAuth0FunctionSubscriptiononUpdateFileRecordpostAuth0FunctionAppSyncFunction05C07AB1"
@@ -775,7 +775,7 @@
             "data": "SubscriptiononUpdateFileRecordpostAuth0Function"
           }
         ],
-        "/amplify-cloudstorageapp-Abhi-sandbox-781317f32d/data/amplifyData/FileRecord/SubscriptionOnUpdateFileRecordDataResolverFn/SubscriptionOnUpdateFileRecordDataResolverFn.AppSyncFunction": [
+        "/amplify-aerodrive-Abhi-sandbox-7f301cb65c/data/amplifyData/FileRecord/SubscriptionOnUpdateFileRecordDataResolverFn/SubscriptionOnUpdateFileRecordDataResolverFn.AppSyncFunction": [
           {
             "type": "aws:cdk:logicalId",
             "data": "SubscriptionOnUpdateFileRecordDataResolverFnSubscriptionOnUpdateFileRecordDataResolverFnAppSyncFunction016BA76D"
@@ -785,7 +785,7 @@
             "data": "SubscriptionOnUpdateFileRecordDataResolverFn"
           }
         ],
-        "/amplify-cloudstorageapp-Abhi-sandbox-781317f32d/data/amplifyData/FileRecord/subscriptionOnUpdateFileRecordResolver": [
+        "/amplify-aerodrive-Abhi-sandbox-7f301cb65c/data/amplifyData/FileRecord/subscriptionOnUpdateFileRecordResolver": [
           {
             "type": "aws:cdk:logicalId",
             "data": "SubscriptiononUpdateFileRecordResolver"
@@ -795,7 +795,7 @@
             "data": "Subscription.onUpdateFileRecord"
           }
         ],
-        "/amplify-cloudstorageapp-Abhi-sandbox-781317f32d/data/amplifyData/FileRecord/SubscriptiononDeleteFileRecordauth0Function/SubscriptiononDeleteFileRecordauth0Function.AppSyncFunction": [
+        "/amplify-aerodrive-Abhi-sandbox-7f301cb65c/data/amplifyData/FileRecord/SubscriptiononDeleteFileRecordauth0Function/SubscriptiononDeleteFileRecordauth0Function.AppSyncFunction": [
           {
             "type": "aws:cdk:logicalId",
             "data": "SubscriptiononDeleteFileRecordauth0FunctionSubscriptiononDeleteFileRecordauth0FunctionAppSyncFunctionE7C2C257"
@@ -805,7 +805,7 @@
             "data": "SubscriptiononDeleteFileRecordauth0Function"
           }
         ],
-        "/amplify-cloudstorageapp-Abhi-sandbox-781317f32d/data/amplifyData/FileRecord/SubscriptiononDeleteFileRecordpostAuth0Function/SubscriptiononDeleteFileRecordpostAuth0Function.AppSyncFunction": [
+        "/amplify-aerodrive-Abhi-sandbox-7f301cb65c/data/amplifyData/FileRecord/SubscriptiononDeleteFileRecordpostAuth0Function/SubscriptiononDeleteFileRecordpostAuth0Function.AppSyncFunction": [
           {
             "type": "aws:cdk:logicalId",
             "data": "SubscriptiononDeleteFileRecordpostAuth0FunctionSubscriptiononDeleteFileRecordpostAuth0FunctionAppSyncFunction59A700AD"
@@ -815,7 +815,7 @@
             "data": "SubscriptiononDeleteFileRecordpostAuth0Function"
           }
         ],
-        "/amplify-cloudstorageapp-Abhi-sandbox-781317f32d/data/amplifyData/FileRecord/SubscriptionOnDeleteFileRecordDataResolverFn/SubscriptionOnDeleteFileRecordDataResolverFn.AppSyncFunction": [
+        "/amplify-aerodrive-Abhi-sandbox-7f301cb65c/data/amplifyData/FileRecord/SubscriptionOnDeleteFileRecordDataResolverFn/SubscriptionOnDeleteFileRecordDataResolverFn.AppSyncFunction": [
           {
             "type": "aws:cdk:logicalId",
             "data": "SubscriptionOnDeleteFileRecordDataResolverFnSubscriptionOnDeleteFileRecordDataResolverFnAppSyncFunction2807A3AC"
@@ -825,7 +825,7 @@
             "data": "SubscriptionOnDeleteFileRecordDataResolverFn"
           }
         ],
-        "/amplify-cloudstorageapp-Abhi-sandbox-781317f32d/data/amplifyData/FileRecord/subscriptionOnDeleteFileRecordResolver": [
+        "/amplify-aerodrive-Abhi-sandbox-7f301cb65c/data/amplifyData/FileRecord/subscriptionOnDeleteFileRecordResolver": [
           {
             "type": "aws:cdk:logicalId",
             "data": "SubscriptiononDeleteFileRecordResolver"
@@ -835,7 +835,7 @@
             "data": "Subscription.onDeleteFileRecord"
           }
         ],
-        "/amplify-cloudstorageapp-Abhi-sandbox-781317f32d/data/amplifyData/FileRecord/FileRecordOwnerDataResolverFn/FileRecordOwnerDataResolverFn.AppSyncFunction": [
+        "/amplify-aerodrive-Abhi-sandbox-7f301cb65c/data/amplifyData/FileRecord/FileRecordOwnerDataResolverFn/FileRecordOwnerDataResolverFn.AppSyncFunction": [
           {
             "type": "aws:cdk:logicalId",
             "data": "FileRecordOwnerDataResolverFnFileRecordOwnerDataResolverFnAppSyncFunctionCF483681"
@@ -845,7 +845,7 @@
             "data": "FileRecordOwnerDataResolverFn"
           }
         ],
-        "/amplify-cloudstorageapp-Abhi-sandbox-781317f32d/data/amplifyData/FileRecord/fileRecordOwnerResolver": [
+        "/amplify-aerodrive-Abhi-sandbox-7f301cb65c/data/amplifyData/FileRecord/fileRecordOwnerResolver": [
           {
             "type": "aws:cdk:logicalId",
             "data": "FileRecordownerResolver"
@@ -855,139 +855,139 @@
             "data": "FileRecord.owner"
           }
         ],
-        "/amplify-cloudstorageapp-Abhi-sandbox-781317f32d/data/amplifyData/FileRecord/CDKMetadata/Default": [
+        "/amplify-aerodrive-Abhi-sandbox-7f301cb65c/data/amplifyData/FileRecord/CDKMetadata/Default": [
           {
             "type": "aws:cdk:logicalId",
             "data": "CDKMetadata"
           }
         ],
-        "/amplify-cloudstorageapp-Abhi-sandbox-781317f32d/data/amplifyData/FileRecord/CDKMetadata/Condition": [
+        "/amplify-aerodrive-Abhi-sandbox-7f301cb65c/data/amplifyData/FileRecord/CDKMetadata/Condition": [
           {
             "type": "aws:cdk:logicalId",
             "data": "CDKMetadataAvailable"
           }
         ],
-        "/amplify-cloudstorageapp-Abhi-sandbox-781317f32d/data/amplifyData/FileRecord/reference-to-amplifycloudstorageappAbhisandbox781317f32ddataamplifyDataAmplifyTableManagerNestedStackAmplifyTableManagerNestedStackResource2D77F53EOutputs.amplifycloudstorageappAbhisandbox781317f32ddataamplifyDataAmplifyTableManagerTableManagerCustomProviderframeworkonEventB1C07CE8Arn": [
+        "/amplify-aerodrive-Abhi-sandbox-7f301cb65c/data/amplifyData/FileRecord/reference-to-amplifyaerodriveAbhisandbox7f301cb65cdataamplifyDataAmplifyTableManagerNestedStackAmplifyTableManagerNestedStackResourceCB7B9255Outputs.amplifyaerodriveAbhisandbox7f301cb65cdataamplifyDataAmplifyTableManagerTableManagerCustomProviderframeworkonEvent3BFD0B76Arn": [
           {
             "type": "aws:cdk:logicalId",
-            "data": "referencetoamplifycloudstorageappAbhisandbox781317f32ddataamplifyDataAmplifyTableManagerNestedStackAmplifyTableManagerNestedStackResource2D77F53EOutputsamplifycloudstorageappAbhisandbox781317f32ddataamplifyDataAmplifyTableManagerTableManage3666B48B"
+            "data": "referencetoamplifyaerodriveAbhisandbox7f301cb65cdataamplifyDataAmplifyTableManagerNestedStackAmplifyTableManagerNestedStackResourceCB7B9255OutputsamplifyaerodriveAbhisandbox7f301cb65cdataamplifyDataAmplifyTableManagerTableManagerCustomProviBDB18BF9"
           }
         ],
-        "/amplify-cloudstorageapp-Abhi-sandbox-781317f32d/data/amplifyData/FileRecord/reference-to-amplifycloudstorageappAbhisandbox781317f32ddataamplifyDataGraphQLAPIB9A7220FApiId": [
+        "/amplify-aerodrive-Abhi-sandbox-7f301cb65c/data/amplifyData/FileRecord/reference-to-amplifyaerodriveAbhisandbox7f301cb65cdataamplifyDataGraphQLAPIE9497DA6ApiId": [
           {
             "type": "aws:cdk:logicalId",
-            "data": "referencetoamplifycloudstorageappAbhisandbox781317f32ddataamplifyDataGraphQLAPIB9A7220FApiId"
+            "data": "referencetoamplifyaerodriveAbhisandbox7f301cb65cdataamplifyDataGraphQLAPIE9497DA6ApiId"
           }
         ],
-        "/amplify-cloudstorageapp-Abhi-sandbox-781317f32d/data/amplifyData/FileRecord/reference-to-amplifycloudstorageappAbhisandbox781317f32ddataamplifyDataGraphQLAPINONEDS5507F8EFName": [
+        "/amplify-aerodrive-Abhi-sandbox-7f301cb65c/data/amplifyData/FileRecord/reference-to-amplifyaerodriveAbhisandbox7f301cb65cdataamplifyDataGraphQLAPINONEDS8ECAFBF9Name": [
           {
             "type": "aws:cdk:logicalId",
-            "data": "referencetoamplifycloudstorageappAbhisandbox781317f32ddataamplifyDataGraphQLAPINONEDS5507F8EFName"
+            "data": "referencetoamplifyaerodriveAbhisandbox7f301cb65cdataamplifyDataGraphQLAPINONEDS8ECAFBF9Name"
           }
         ],
-        "/amplify-cloudstorageapp-Abhi-sandbox-781317f32d/data/amplifyData/FileRecord/reference-to-amplifycloudstorageappAbhisandbox781317f32dauthNestedStackauthNestedStackResource0E7FE14AOutputs.amplifycloudstorageappAbhisandbox781317f32dauthamplifyAuthauthenticatedUserRole3815BE0CRef": [
+        "/amplify-aerodrive-Abhi-sandbox-7f301cb65c/data/amplifyData/FileRecord/reference-to-amplifyaerodriveAbhisandbox7f301cb65cauthNestedStackauthNestedStackResource36F42F00Outputs.amplifyaerodriveAbhisandbox7f301cb65cauthamplifyAuthauthenticatedUserRoleFC0CB81FRef": [
           {
             "type": "aws:cdk:logicalId",
-            "data": "referencetoamplifycloudstorageappAbhisandbox781317f32dauthNestedStackauthNestedStackResource0E7FE14AOutputsamplifycloudstorageappAbhisandbox781317f32dauthamplifyAuthauthenticatedUserRole3815BE0CRef"
+            "data": "referencetoamplifyaerodriveAbhisandbox7f301cb65cauthNestedStackauthNestedStackResource36F42F00OutputsamplifyaerodriveAbhisandbox7f301cb65cauthamplifyAuthauthenticatedUserRoleFC0CB81FRef"
           }
         ],
-        "/amplify-cloudstorageapp-Abhi-sandbox-781317f32d/data/amplifyData/FileRecord/reference-to-amplifycloudstorageappAbhisandbox781317f32dauthNestedStackauthNestedStackResource0E7FE14AOutputs.amplifycloudstorageappAbhisandbox781317f32dauthamplifyAuthunauthenticatedUserRoleB654AF4ERef": [
+        "/amplify-aerodrive-Abhi-sandbox-7f301cb65c/data/amplifyData/FileRecord/reference-to-amplifyaerodriveAbhisandbox7f301cb65cauthNestedStackauthNestedStackResource36F42F00Outputs.amplifyaerodriveAbhisandbox7f301cb65cauthamplifyAuthunauthenticatedUserRoleAAF80E1DRef": [
           {
             "type": "aws:cdk:logicalId",
-            "data": "referencetoamplifycloudstorageappAbhisandbox781317f32dauthNestedStackauthNestedStackResource0E7FE14AOutputsamplifycloudstorageappAbhisandbox781317f32dauthamplifyAuthunauthenticatedUserRoleB654AF4ERef"
+            "data": "referencetoamplifyaerodriveAbhisandbox7f301cb65cauthNestedStackauthNestedStackResource36F42F00OutputsamplifyaerodriveAbhisandbox7f301cb65cauthamplifyAuthunauthenticatedUserRoleAAF80E1DRef"
           }
         ],
-        "/amplify-cloudstorageapp-Abhi-sandbox-781317f32d/data/amplifyData/FileRecord/reference-to-amplifycloudstorageappAbhisandbox781317f32dauthNestedStackauthNestedStackResource0E7FE14AOutputs.amplifycloudstorageappAbhisandbox781317f32dauthamplifyAuthIdentityPool6A03462ERef": [
+        "/amplify-aerodrive-Abhi-sandbox-7f301cb65c/data/amplifyData/FileRecord/reference-to-amplifyaerodriveAbhisandbox7f301cb65cauthNestedStackauthNestedStackResource36F42F00Outputs.amplifyaerodriveAbhisandbox7f301cb65cauthamplifyAuthIdentityPool71050EF5Ref": [
           {
             "type": "aws:cdk:logicalId",
-            "data": "referencetoamplifycloudstorageappAbhisandbox781317f32dauthNestedStackauthNestedStackResource0E7FE14AOutputsamplifycloudstorageappAbhisandbox781317f32dauthamplifyAuthIdentityPool6A03462ERef"
+            "data": "referencetoamplifyaerodriveAbhisandbox7f301cb65cauthNestedStackauthNestedStackResource36F42F00OutputsamplifyaerodriveAbhisandbox7f301cb65cauthamplifyAuthIdentityPool71050EF5Ref"
           }
         ],
-        "/amplify-cloudstorageapp-Abhi-sandbox-781317f32d/data/amplifyData/FileRecord.NestedStack/FileRecord.NestedStackResource": [
+        "/amplify-aerodrive-Abhi-sandbox-7f301cb65c/data/amplifyData/FileRecord.NestedStack/FileRecord.NestedStackResource": [
           {
             "type": "aws:cdk:logicalId",
             "data": "amplifyDataFileRecordNestedStackFileRecordNestedStackResource42008618"
           }
         ],
-        "/amplify-cloudstorageapp-Abhi-sandbox-781317f32d/data/amplifyData/AmplifyCodegenAssets/AmplifyCodegenAssetsBucket/Resource": [
+        "/amplify-aerodrive-Abhi-sandbox-7f301cb65c/data/amplifyData/AmplifyCodegenAssets/AmplifyCodegenAssetsBucket/Resource": [
           {
             "type": "aws:cdk:logicalId",
             "data": "amplifyDataAmplifyCodegenAssetsAmplifyCodegenAssetsBucket9CCB4ACA"
           }
         ],
-        "/amplify-cloudstorageapp-Abhi-sandbox-781317f32d/data/amplifyData/AmplifyCodegenAssets/AmplifyCodegenAssetsBucket/Policy/Resource": [
+        "/amplify-aerodrive-Abhi-sandbox-7f301cb65c/data/amplifyData/AmplifyCodegenAssets/AmplifyCodegenAssetsBucket/Policy/Resource": [
           {
             "type": "aws:cdk:logicalId",
             "data": "amplifyDataAmplifyCodegenAssetsAmplifyCodegenAssetsBucketPolicyF1C1C548"
           }
         ],
-        "/amplify-cloudstorageapp-Abhi-sandbox-781317f32d/data/amplifyData/AmplifyCodegenAssets/AmplifyCodegenAssetsBucket/AutoDeleteObjectsCustomResource/Default": [
+        "/amplify-aerodrive-Abhi-sandbox-7f301cb65c/data/amplifyData/AmplifyCodegenAssets/AmplifyCodegenAssetsBucket/AutoDeleteObjectsCustomResource/Default": [
           {
             "type": "aws:cdk:logicalId",
             "data": "amplifyDataAmplifyCodegenAssetsAmplifyCodegenAssetsBucketAutoDeleteObjectsCustomResource437F26F5"
           }
         ],
-        "/amplify-cloudstorageapp-Abhi-sandbox-781317f32d/data/amplifyData/AmplifyCodegenAssets/AmplifyCodegenAssetsDeployment/AwsCliLayer/Resource": [
+        "/amplify-aerodrive-Abhi-sandbox-7f301cb65c/data/amplifyData/AmplifyCodegenAssets/AmplifyCodegenAssetsDeployment/AwsCliLayer/Resource": [
           {
             "type": "aws:cdk:logicalId",
             "data": "amplifyDataAmplifyCodegenAssetsAmplifyCodegenAssetsDeploymentAwsCliLayerE322F905"
           }
         ],
-        "/amplify-cloudstorageapp-Abhi-sandbox-781317f32d/data/amplifyData/AmplifyCodegenAssets/AmplifyCodegenAssetsDeployment/CustomResource-1536MiB/Default": [
+        "/amplify-aerodrive-Abhi-sandbox-7f301cb65c/data/amplifyData/AmplifyCodegenAssets/AmplifyCodegenAssetsDeployment/CustomResource-1536MiB/Default": [
           {
             "type": "aws:cdk:logicalId",
             "data": "amplifyDataAmplifyCodegenAssetsAmplifyCodegenAssetsDeploymentCustomResource1536MiB21775929"
           }
         ],
-        "/amplify-cloudstorageapp-Abhi-sandbox-781317f32d/data/DynamoDBModelTableReadIOPS": [
+        "/amplify-aerodrive-Abhi-sandbox-7f301cb65c/data/DynamoDBModelTableReadIOPS": [
           {
             "type": "aws:cdk:logicalId",
             "data": "DynamoDBModelTableReadIOPS"
           }
         ],
-        "/amplify-cloudstorageapp-Abhi-sandbox-781317f32d/data/DynamoDBModelTableWriteIOPS": [
+        "/amplify-aerodrive-Abhi-sandbox-7f301cb65c/data/DynamoDBModelTableWriteIOPS": [
           {
             "type": "aws:cdk:logicalId",
             "data": "DynamoDBModelTableWriteIOPS"
           }
         ],
-        "/amplify-cloudstorageapp-Abhi-sandbox-781317f32d/data/DynamoDBBillingMode": [
+        "/amplify-aerodrive-Abhi-sandbox-7f301cb65c/data/DynamoDBBillingMode": [
           {
             "type": "aws:cdk:logicalId",
             "data": "DynamoDBBillingMode"
           }
         ],
-        "/amplify-cloudstorageapp-Abhi-sandbox-781317f32d/data/DynamoDBEnablePointInTimeRecovery": [
+        "/amplify-aerodrive-Abhi-sandbox-7f301cb65c/data/DynamoDBEnablePointInTimeRecovery": [
           {
             "type": "aws:cdk:logicalId",
             "data": "DynamoDBEnablePointInTimeRecovery"
           }
         ],
-        "/amplify-cloudstorageapp-Abhi-sandbox-781317f32d/data/DynamoDBEnableServerSideEncryption": [
+        "/amplify-aerodrive-Abhi-sandbox-7f301cb65c/data/DynamoDBEnableServerSideEncryption": [
           {
             "type": "aws:cdk:logicalId",
             "data": "DynamoDBEnableServerSideEncryption"
           }
         ],
-        "/amplify-cloudstorageapp-Abhi-sandbox-781317f32d/data/Custom::S3AutoDeleteObjectsCustomResourceProvider": [
+        "/amplify-aerodrive-Abhi-sandbox-7f301cb65c/data/Custom::S3AutoDeleteObjectsCustomResourceProvider": [
           {
             "type": "aws:cdk:is-custom-resource-handler-customResourceProvider",
             "data": true
           }
         ],
-        "/amplify-cloudstorageapp-Abhi-sandbox-781317f32d/data/Custom::S3AutoDeleteObjectsCustomResourceProvider/Role": [
+        "/amplify-aerodrive-Abhi-sandbox-7f301cb65c/data/Custom::S3AutoDeleteObjectsCustomResourceProvider/Role": [
           {
             "type": "aws:cdk:logicalId",
             "data": "CustomS3AutoDeleteObjectsCustomResourceProviderRole3B1BD092"
           }
         ],
-        "/amplify-cloudstorageapp-Abhi-sandbox-781317f32d/data/Custom::S3AutoDeleteObjectsCustomResourceProvider/Handler": [
+        "/amplify-aerodrive-Abhi-sandbox-7f301cb65c/data/Custom::S3AutoDeleteObjectsCustomResourceProvider/Handler": [
           {
             "type": "aws:cdk:logicalId",
             "data": "CustomS3AutoDeleteObjectsCustomResourceProviderHandler9D90184F"
           }
         ],
-        "/amplify-cloudstorageapp-Abhi-sandbox-781317f32d/data/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C1536MiB": [
+        "/amplify-aerodrive-Abhi-sandbox-7f301cb65c/data/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C1536MiB": [
           {
             "type": "aws:cdk:is-custom-resource-handler-singleton",
             "data": true
@@ -1005,296 +1005,296 @@
             "data": 2
           }
         ],
-        "/amplify-cloudstorageapp-Abhi-sandbox-781317f32d/data/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C1536MiB/ServiceRole/Resource": [
+        "/amplify-aerodrive-Abhi-sandbox-7f301cb65c/data/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C1536MiB/ServiceRole/Resource": [
           {
             "type": "aws:cdk:logicalId",
             "data": "CustomCDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C1536MiBServiceRoleA41FC8C2"
           }
         ],
-        "/amplify-cloudstorageapp-Abhi-sandbox-781317f32d/data/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C1536MiB/ServiceRole/DefaultPolicy/Resource": [
+        "/amplify-aerodrive-Abhi-sandbox-7f301cb65c/data/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C1536MiB/ServiceRole/DefaultPolicy/Resource": [
           {
             "type": "aws:cdk:logicalId",
             "data": "CustomCDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C1536MiBServiceRoleDefaultPolicyFF1C635B"
           }
         ],
-        "/amplify-cloudstorageapp-Abhi-sandbox-781317f32d/data/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C1536MiB/Resource": [
+        "/amplify-aerodrive-Abhi-sandbox-7f301cb65c/data/Custom::CDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C1536MiB/Resource": [
           {
             "type": "aws:cdk:logicalId",
             "data": "CustomCDKBucketDeployment8693BB64968944B69AAFB0CC9EB8756C1536MiBC5D8AB21"
           }
         ],
-        "/amplify-cloudstorageapp-Abhi-sandbox-781317f32d/data/modelIntrospectionSchemaBucket/Resource": [
+        "/amplify-aerodrive-Abhi-sandbox-7f301cb65c/data/modelIntrospectionSchemaBucket/Resource": [
           {
             "type": "aws:cdk:logicalId",
             "data": "modelIntrospectionSchemaBucketF566B665"
           }
         ],
-        "/amplify-cloudstorageapp-Abhi-sandbox-781317f32d/data/modelIntrospectionSchemaBucket/Policy/Resource": [
+        "/amplify-aerodrive-Abhi-sandbox-7f301cb65c/data/modelIntrospectionSchemaBucket/Policy/Resource": [
           {
             "type": "aws:cdk:logicalId",
             "data": "modelIntrospectionSchemaBucketPolicy4DAB0D15"
           }
         ],
-        "/amplify-cloudstorageapp-Abhi-sandbox-781317f32d/data/modelIntrospectionSchemaBucket/AutoDeleteObjectsCustomResource/Default": [
+        "/amplify-aerodrive-Abhi-sandbox-7f301cb65c/data/modelIntrospectionSchemaBucket/AutoDeleteObjectsCustomResource/Default": [
           {
             "type": "aws:cdk:logicalId",
             "data": "modelIntrospectionSchemaBucketAutoDeleteObjectsCustomResourceFE57309F"
           }
         ],
-        "/amplify-cloudstorageapp-Abhi-sandbox-781317f32d/data/modelIntrospectionSchemaBucketDeployment/AwsCliLayer/Resource": [
+        "/amplify-aerodrive-Abhi-sandbox-7f301cb65c/data/modelIntrospectionSchemaBucketDeployment/AwsCliLayer/Resource": [
           {
             "type": "aws:cdk:logicalId",
             "data": "modelIntrospectionSchemaBucketDeploymentAwsCliLayer13C432F7"
           }
         ],
-        "/amplify-cloudstorageapp-Abhi-sandbox-781317f32d/data/modelIntrospectionSchemaBucketDeployment/CustomResource-1536MiB/Default": [
+        "/amplify-aerodrive-Abhi-sandbox-7f301cb65c/data/modelIntrospectionSchemaBucketDeployment/CustomResource-1536MiB/Default": [
           {
             "type": "aws:cdk:logicalId",
             "data": "modelIntrospectionSchemaBucketDeploymentCustomResource1536MiB104B97EC"
           }
         ],
-        "/amplify-cloudstorageapp-Abhi-sandbox-781317f32d/data/AMPLIFY_DATA_GRAPHQL_ENDPOINTParameter/Resource": [
+        "/amplify-aerodrive-Abhi-sandbox-7f301cb65c/data/AMPLIFY_DATA_GRAPHQL_ENDPOINTParameter/Resource": [
           {
             "type": "aws:cdk:logicalId",
             "data": "AMPLIFYDATAGRAPHQLENDPOINTParameter1C2CBB16"
           }
         ],
-        "/amplify-cloudstorageapp-Abhi-sandbox-781317f32d/data/AMPLIFY_DATA_MODEL_INTROSPECTION_SCHEMA_BUCKET_NAMEParameter/Resource": [
+        "/amplify-aerodrive-Abhi-sandbox-7f301cb65c/data/AMPLIFY_DATA_MODEL_INTROSPECTION_SCHEMA_BUCKET_NAMEParameter/Resource": [
           {
             "type": "aws:cdk:logicalId",
             "data": "AMPLIFYDATAMODELINTROSPECTIONSCHEMABUCKETNAMEParameter47BF4F44"
           }
         ],
-        "/amplify-cloudstorageapp-Abhi-sandbox-781317f32d/data/AMPLIFY_DATA_MODEL_INTROSPECTION_SCHEMA_KEYParameter/Resource": [
+        "/amplify-aerodrive-Abhi-sandbox-7f301cb65c/data/AMPLIFY_DATA_MODEL_INTROSPECTION_SCHEMA_KEYParameter/Resource": [
           {
             "type": "aws:cdk:logicalId",
             "data": "AMPLIFYDATAMODELINTROSPECTIONSCHEMAKEYParameterB6AEAE8A"
           }
         ],
-        "/amplify-cloudstorageapp-Abhi-sandbox-781317f32d/data/AMPLIFY_DATA_DEFAULT_NAMEParameter/Resource": [
+        "/amplify-aerodrive-Abhi-sandbox-7f301cb65c/data/AMPLIFY_DATA_DEFAULT_NAMEParameter/Resource": [
           {
             "type": "aws:cdk:logicalId",
             "data": "AMPLIFYDATADEFAULTNAMEParameterE7C23CC4"
           }
         ],
-        "/amplify-cloudstorageapp-Abhi-sandbox-781317f32d/data/CDKMetadata/Default": [
+        "/amplify-aerodrive-Abhi-sandbox-7f301cb65c/data/CDKMetadata/Default": [
           {
             "type": "aws:cdk:logicalId",
             "data": "CDKMetadata"
           }
         ],
-        "/amplify-cloudstorageapp-Abhi-sandbox-781317f32d/data/CDKMetadata/Condition": [
+        "/amplify-aerodrive-Abhi-sandbox-7f301cb65c/data/CDKMetadata/Condition": [
           {
             "type": "aws:cdk:logicalId",
             "data": "CDKMetadataAvailable"
           }
         ],
-        "/amplify-cloudstorageapp-Abhi-sandbox-781317f32d/data/reference-to-amplifycloudstorageappAbhisandbox781317f32dauthNestedStackauthNestedStackResource0E7FE14AOutputs.amplifycloudstorageappAbhisandbox781317f32dauthamplifyAuthUserPoolA8EF3AE0Ref": [
+        "/amplify-aerodrive-Abhi-sandbox-7f301cb65c/data/reference-to-amplifyaerodriveAbhisandbox7f301cb65cauthNestedStackauthNestedStackResource36F42F00Outputs.amplifyaerodriveAbhisandbox7f301cb65cauthamplifyAuthUserPoolC75A5366Ref": [
           {
             "type": "aws:cdk:logicalId",
-            "data": "referencetoamplifycloudstorageappAbhisandbox781317f32dauthNestedStackauthNestedStackResource0E7FE14AOutputsamplifycloudstorageappAbhisandbox781317f32dauthamplifyAuthUserPoolA8EF3AE0Ref"
+            "data": "referencetoamplifyaerodriveAbhisandbox7f301cb65cauthNestedStackauthNestedStackResource36F42F00OutputsamplifyaerodriveAbhisandbox7f301cb65cauthamplifyAuthUserPoolC75A5366Ref"
           }
         ],
-        "/amplify-cloudstorageapp-Abhi-sandbox-781317f32d/data/reference-to-amplifycloudstorageappAbhisandbox781317f32dauthNestedStackauthNestedStackResource0E7FE14AOutputs.amplifycloudstorageappAbhisandbox781317f32dauthamplifyAuthauthenticatedUserRole3815BE0CRef": [
+        "/amplify-aerodrive-Abhi-sandbox-7f301cb65c/data/reference-to-amplifyaerodriveAbhisandbox7f301cb65cauthNestedStackauthNestedStackResource36F42F00Outputs.amplifyaerodriveAbhisandbox7f301cb65cauthamplifyAuthauthenticatedUserRoleFC0CB81FRef": [
           {
             "type": "aws:cdk:logicalId",
-            "data": "referencetoamplifycloudstorageappAbhisandbox781317f32dauthNestedStackauthNestedStackResource0E7FE14AOutputsamplifycloudstorageappAbhisandbox781317f32dauthamplifyAuthauthenticatedUserRole3815BE0CRef"
+            "data": "referencetoamplifyaerodriveAbhisandbox7f301cb65cauthNestedStackauthNestedStackResource36F42F00OutputsamplifyaerodriveAbhisandbox7f301cb65cauthamplifyAuthauthenticatedUserRoleFC0CB81FRef"
           }
         ],
-        "/amplify-cloudstorageapp-Abhi-sandbox-781317f32d/data/reference-to-amplifycloudstorageappAbhisandbox781317f32dauthNestedStackauthNestedStackResource0E7FE14AOutputs.amplifycloudstorageappAbhisandbox781317f32dauthamplifyAuthunauthenticatedUserRoleB654AF4ERef": [
+        "/amplify-aerodrive-Abhi-sandbox-7f301cb65c/data/reference-to-amplifyaerodriveAbhisandbox7f301cb65cauthNestedStackauthNestedStackResource36F42F00Outputs.amplifyaerodriveAbhisandbox7f301cb65cauthamplifyAuthunauthenticatedUserRoleAAF80E1DRef": [
           {
             "type": "aws:cdk:logicalId",
-            "data": "referencetoamplifycloudstorageappAbhisandbox781317f32dauthNestedStackauthNestedStackResource0E7FE14AOutputsamplifycloudstorageappAbhisandbox781317f32dauthamplifyAuthunauthenticatedUserRoleB654AF4ERef"
+            "data": "referencetoamplifyaerodriveAbhisandbox7f301cb65cauthNestedStackauthNestedStackResource36F42F00OutputsamplifyaerodriveAbhisandbox7f301cb65cauthamplifyAuthunauthenticatedUserRoleAAF80E1DRef"
           }
         ],
-        "/amplify-cloudstorageapp-Abhi-sandbox-781317f32d/data/reference-to-amplifycloudstorageappAbhisandbox781317f32dauthNestedStackauthNestedStackResource0E7FE14AOutputs.amplifycloudstorageappAbhisandbox781317f32dauthamplifyAuthIdentityPool6A03462ERef": [
+        "/amplify-aerodrive-Abhi-sandbox-7f301cb65c/data/reference-to-amplifyaerodriveAbhisandbox7f301cb65cauthNestedStackauthNestedStackResource36F42F00Outputs.amplifyaerodriveAbhisandbox7f301cb65cauthamplifyAuthIdentityPool71050EF5Ref": [
           {
             "type": "aws:cdk:logicalId",
-            "data": "referencetoamplifycloudstorageappAbhisandbox781317f32dauthNestedStackauthNestedStackResource0E7FE14AOutputsamplifycloudstorageappAbhisandbox781317f32dauthamplifyAuthIdentityPool6A03462ERef"
+            "data": "referencetoamplifyaerodriveAbhisandbox7f301cb65cauthNestedStackauthNestedStackResource36F42F00OutputsamplifyaerodriveAbhisandbox7f301cb65cauthamplifyAuthIdentityPool71050EF5Ref"
           }
         ],
-        "/amplify-cloudstorageapp-Abhi-sandbox-781317f32d/data/amplifycloudstorageappAbhisandbox781317f32ddataamplifyDataGraphQLAPIB9A7220FApiId": [
+        "/amplify-aerodrive-Abhi-sandbox-7f301cb65c/data/amplifyaerodriveAbhisandbox7f301cb65cdataamplifyDataGraphQLAPIE9497DA6ApiId": [
           {
             "type": "aws:cdk:logicalId",
-            "data": "amplifycloudstorageappAbhisandbox781317f32ddataamplifyDataGraphQLAPIB9A7220FApiId"
+            "data": "amplifyaerodriveAbhisandbox7f301cb65cdataamplifyDataGraphQLAPIE9497DA6ApiId"
           }
         ],
-        "/amplify-cloudstorageapp-Abhi-sandbox-781317f32d/data/amplifycloudstorageappAbhisandbox781317f32ddataamplifyDataGraphQLAPIB9A7220FGraphQLUrl": [
+        "/amplify-aerodrive-Abhi-sandbox-7f301cb65c/data/amplifyaerodriveAbhisandbox7f301cb65cdataamplifyDataGraphQLAPIE9497DA6GraphQLUrl": [
           {
             "type": "aws:cdk:logicalId",
-            "data": "amplifycloudstorageappAbhisandbox781317f32ddataamplifyDataGraphQLAPIB9A7220FGraphQLUrl"
+            "data": "amplifyaerodriveAbhisandbox7f301cb65cdataamplifyDataGraphQLAPIE9497DA6GraphQLUrl"
           }
         ],
-        "/amplify-cloudstorageapp-Abhi-sandbox-781317f32d/data/amplifycloudstorageappAbhisandbox781317f32ddataamplifyDataAmplifyCodegenAssetsAmplifyCodegenAssetsDeploymentCustomResource1536MiB082A5C58DestinationBucketArn": [
+        "/amplify-aerodrive-Abhi-sandbox-7f301cb65c/data/amplifyaerodriveAbhisandbox7f301cb65cdataamplifyDataAmplifyCodegenAssetsAmplifyCodegenAssetsDeploymentCustomResource1536MiB9616BE46DestinationBucketArn": [
           {
             "type": "aws:cdk:logicalId",
-            "data": "amplifycloudstorageappAbhisandbox781317f32ddataamplifyDataAmplifyCodegenAssetsAmplifyCodegenAssetsDeploymentCustomResource1536MiB082A5C58DestinationBucketArn"
+            "data": "amplifyaerodriveAbhisandbox7f301cb65cdataamplifyDataAmplifyCodegenAssetsAmplifyCodegenAssetsDeploymentCustomResource1536MiB9616BE46DestinationBucketArn"
           }
         ],
-        "/amplify-cloudstorageapp-Abhi-sandbox-781317f32d/data.NestedStack/data.NestedStackResource": [
+        "/amplify-aerodrive-Abhi-sandbox-7f301cb65c/data.NestedStack/data.NestedStackResource": [
           {
             "type": "aws:cdk:logicalId",
             "data": "data7552DF31"
           }
         ],
-        "/amplify-cloudstorageapp-Abhi-sandbox-781317f32d/awsAppsyncApiId": [
+        "/amplify-aerodrive-Abhi-sandbox-7f301cb65c/awsAppsyncApiId": [
           {
             "type": "aws:cdk:logicalId",
             "data": "awsAppsyncApiId"
           }
         ],
-        "/amplify-cloudstorageapp-Abhi-sandbox-781317f32d/awsAppsyncApiEndpoint": [
+        "/amplify-aerodrive-Abhi-sandbox-7f301cb65c/awsAppsyncApiEndpoint": [
           {
             "type": "aws:cdk:logicalId",
             "data": "awsAppsyncApiEndpoint"
           }
         ],
-        "/amplify-cloudstorageapp-Abhi-sandbox-781317f32d/awsAppsyncAuthenticationType": [
+        "/amplify-aerodrive-Abhi-sandbox-7f301cb65c/awsAppsyncAuthenticationType": [
           {
             "type": "aws:cdk:logicalId",
             "data": "awsAppsyncAuthenticationType"
           }
         ],
-        "/amplify-cloudstorageapp-Abhi-sandbox-781317f32d/awsAppsyncRegion": [
+        "/amplify-aerodrive-Abhi-sandbox-7f301cb65c/awsAppsyncRegion": [
           {
             "type": "aws:cdk:logicalId",
             "data": "awsAppsyncRegion"
           }
         ],
-        "/amplify-cloudstorageapp-Abhi-sandbox-781317f32d/amplifyApiModelSchemaS3Uri": [
+        "/amplify-aerodrive-Abhi-sandbox-7f301cb65c/amplifyApiModelSchemaS3Uri": [
           {
             "type": "aws:cdk:logicalId",
             "data": "amplifyApiModelSchemaS3Uri"
           }
         ],
-        "/amplify-cloudstorageapp-Abhi-sandbox-781317f32d/awsAppsyncAdditionalAuthenticationTypes": [
+        "/amplify-aerodrive-Abhi-sandbox-7f301cb65c/awsAppsyncAdditionalAuthenticationTypes": [
           {
             "type": "aws:cdk:logicalId",
             "data": "awsAppsyncAdditionalAuthenticationTypes"
           }
         ],
-        "/amplify-cloudstorageapp-Abhi-sandbox-781317f32d/storage/cloudStorageAppFiles/Bucket/Resource": [
+        "/amplify-aerodrive-Abhi-sandbox-7f301cb65c/storage/cloudStorageAppFiles/Bucket/Resource": [
           {
             "type": "aws:cdk:logicalId",
             "data": "cloudStorageAppFilesBucketA7F1C67B"
           }
         ],
-        "/amplify-cloudstorageapp-Abhi-sandbox-781317f32d/storage/cloudStorageAppFiles/Bucket/Policy/Resource": [
+        "/amplify-aerodrive-Abhi-sandbox-7f301cb65c/storage/cloudStorageAppFiles/Bucket/Policy/Resource": [
           {
             "type": "aws:cdk:logicalId",
             "data": "cloudStorageAppFilesBucketPolicy0348247F"
           }
         ],
-        "/amplify-cloudstorageapp-Abhi-sandbox-781317f32d/storage/cloudStorageAppFiles/Bucket/AutoDeleteObjectsCustomResource/Default": [
+        "/amplify-aerodrive-Abhi-sandbox-7f301cb65c/storage/cloudStorageAppFiles/Bucket/AutoDeleteObjectsCustomResource/Default": [
           {
             "type": "aws:cdk:logicalId",
             "data": "cloudStorageAppFilesBucketAutoDeleteObjectsCustomResource0EC88462"
           }
         ],
-        "/amplify-cloudstorageapp-Abhi-sandbox-781317f32d/storage/Custom::S3AutoDeleteObjectsCustomResourceProvider": [
+        "/amplify-aerodrive-Abhi-sandbox-7f301cb65c/storage/Custom::S3AutoDeleteObjectsCustomResourceProvider": [
           {
             "type": "aws:cdk:is-custom-resource-handler-customResourceProvider",
             "data": true
           }
         ],
-        "/amplify-cloudstorageapp-Abhi-sandbox-781317f32d/storage/Custom::S3AutoDeleteObjectsCustomResourceProvider/Role": [
+        "/amplify-aerodrive-Abhi-sandbox-7f301cb65c/storage/Custom::S3AutoDeleteObjectsCustomResourceProvider/Role": [
           {
             "type": "aws:cdk:logicalId",
             "data": "CustomS3AutoDeleteObjectsCustomResourceProviderRole3B1BD092"
           }
         ],
-        "/amplify-cloudstorageapp-Abhi-sandbox-781317f32d/storage/Custom::S3AutoDeleteObjectsCustomResourceProvider/Handler": [
+        "/amplify-aerodrive-Abhi-sandbox-7f301cb65c/storage/Custom::S3AutoDeleteObjectsCustomResourceProvider/Handler": [
           {
             "type": "aws:cdk:logicalId",
             "data": "CustomS3AutoDeleteObjectsCustomResourceProviderHandler9D90184F"
           }
         ],
-        "/amplify-cloudstorageapp-Abhi-sandbox-781317f32d/storage/CLOUD_STORAGE_APP_FILES_BUCKET_NAMEParameter/Resource": [
+        "/amplify-aerodrive-Abhi-sandbox-7f301cb65c/storage/CLOUD_STORAGE_APP_FILES_BUCKET_NAMEParameter/Resource": [
           {
             "type": "aws:cdk:logicalId",
             "data": "CLOUDSTORAGEAPPFILESBUCKETNAMEParameter5AE5306A"
           }
         ],
-        "/amplify-cloudstorageapp-Abhi-sandbox-781317f32d/storage/amplify-cloudstorageapp-Abhi-sandbox-781317f32d--storageAccess3/Resource": [
+        "/amplify-aerodrive-Abhi-sandbox-7f301cb65c/storage/amplify-aerodrive-Abhi-sandbox-7f301cb65c--storageAccess3/Resource": [
           {
             "type": "aws:cdk:logicalId",
-            "data": "amplifycloudstorageappAbhisandbox781317f32dstorageAccess34846097D"
+            "data": "amplifyaerodriveAbhisandbox7f301cb65cstorageAccess3436CE97F"
           }
         ],
-        "/amplify-cloudstorageapp-Abhi-sandbox-781317f32d/storage/CDKMetadata/Default": [
+        "/amplify-aerodrive-Abhi-sandbox-7f301cb65c/storage/CDKMetadata/Default": [
           {
             "type": "aws:cdk:logicalId",
             "data": "CDKMetadata"
           }
         ],
-        "/amplify-cloudstorageapp-Abhi-sandbox-781317f32d/storage/CDKMetadata/Condition": [
+        "/amplify-aerodrive-Abhi-sandbox-7f301cb65c/storage/CDKMetadata/Condition": [
           {
             "type": "aws:cdk:logicalId",
             "data": "CDKMetadataAvailable"
           }
         ],
-        "/amplify-cloudstorageapp-Abhi-sandbox-781317f32d/storage/reference-to-amplifycloudstorageappAbhisandbox781317f32dauthNestedStackauthNestedStackResource0E7FE14AOutputs.amplifycloudstorageappAbhisandbox781317f32dauthamplifyAuthauthenticatedUserRole3815BE0CRef": [
+        "/amplify-aerodrive-Abhi-sandbox-7f301cb65c/storage/reference-to-amplifyaerodriveAbhisandbox7f301cb65cauthNestedStackauthNestedStackResource36F42F00Outputs.amplifyaerodriveAbhisandbox7f301cb65cauthamplifyAuthauthenticatedUserRoleFC0CB81FRef": [
           {
             "type": "aws:cdk:logicalId",
-            "data": "referencetoamplifycloudstorageappAbhisandbox781317f32dauthNestedStackauthNestedStackResource0E7FE14AOutputsamplifycloudstorageappAbhisandbox781317f32dauthamplifyAuthauthenticatedUserRole3815BE0CRef"
+            "data": "referencetoamplifyaerodriveAbhisandbox7f301cb65cauthNestedStackauthNestedStackResource36F42F00OutputsamplifyaerodriveAbhisandbox7f301cb65cauthamplifyAuthauthenticatedUserRoleFC0CB81FRef"
           }
         ],
-        "/amplify-cloudstorageapp-Abhi-sandbox-781317f32d/storage/amplifycloudstorageappAbhisandbox781317f32dstoragecloudStorageAppFilesBucket847B1DF2Ref": [
+        "/amplify-aerodrive-Abhi-sandbox-7f301cb65c/storage/amplifyaerodriveAbhisandbox7f301cb65cstoragecloudStorageAppFilesBucketF8245B52Ref": [
           {
             "type": "aws:cdk:logicalId",
-            "data": "amplifycloudstorageappAbhisandbox781317f32dstoragecloudStorageAppFilesBucket847B1DF2Ref"
+            "data": "amplifyaerodriveAbhisandbox7f301cb65cstoragecloudStorageAppFilesBucketF8245B52Ref"
           }
         ],
-        "/amplify-cloudstorageapp-Abhi-sandbox-781317f32d/storage.NestedStack/storage.NestedStackResource": [
+        "/amplify-aerodrive-Abhi-sandbox-7f301cb65c/storage.NestedStack/storage.NestedStackResource": [
           {
             "type": "aws:cdk:logicalId",
             "data": "storage0EC3F24A"
           }
         ],
-        "/amplify-cloudstorageapp-Abhi-sandbox-781317f32d/storageRegion": [
+        "/amplify-aerodrive-Abhi-sandbox-7f301cb65c/storageRegion": [
           {
             "type": "aws:cdk:logicalId",
             "data": "storageRegion"
           }
         ],
-        "/amplify-cloudstorageapp-Abhi-sandbox-781317f32d/bucketName": [
+        "/amplify-aerodrive-Abhi-sandbox-7f301cb65c/bucketName": [
           {
             "type": "aws:cdk:logicalId",
             "data": "bucketName"
           }
         ],
-        "/amplify-cloudstorageapp-Abhi-sandbox-781317f32d/buckets": [
+        "/amplify-aerodrive-Abhi-sandbox-7f301cb65c/buckets": [
           {
             "type": "aws:cdk:logicalId",
             "data": "buckets"
           }
         ],
-        "/amplify-cloudstorageapp-Abhi-sandbox-781317f32d/CDKMetadata/Default": [
+        "/amplify-aerodrive-Abhi-sandbox-7f301cb65c/CDKMetadata/Default": [
           {
             "type": "aws:cdk:logicalId",
             "data": "CDKMetadata"
           }
         ],
-        "/amplify-cloudstorageapp-Abhi-sandbox-781317f32d/CDKMetadata/Condition": [
+        "/amplify-aerodrive-Abhi-sandbox-7f301cb65c/CDKMetadata/Condition": [
           {
             "type": "aws:cdk:logicalId",
             "data": "CDKMetadataAvailable"
           }
         ],
-        "/amplify-cloudstorageapp-Abhi-sandbox-781317f32d/BootstrapVersion": [
+        "/amplify-aerodrive-Abhi-sandbox-7f301cb65c/BootstrapVersion": [
           {
             "type": "aws:cdk:logicalId",
             "data": "BootstrapVersion"
           }
         ],
-        "/amplify-cloudstorageapp-Abhi-sandbox-781317f32d/CheckBootstrapVersion": [
+        "/amplify-aerodrive-Abhi-sandbox-7f301cb65c/CheckBootstrapVersion": [
           {
             "type": "aws:cdk:logicalId",
             "data": "CheckBootstrapVersion"
           }
         ]
       },
-      "displayName": "amplify-cloudstorageapp-Abhi-sandbox-781317f32d"
+      "displayName": "amplify-aerodrive-Abhi-sandbox-7f301cb65c"
     },
     "Tree": {
       "type": "cdk:tree",

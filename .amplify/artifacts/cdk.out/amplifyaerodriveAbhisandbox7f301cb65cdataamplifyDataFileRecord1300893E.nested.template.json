@@ -1,0 +1,2171 @@
+{
+ "Parameters": {
+  "DynamoDBModelTableReadIOPS": {
+   "Type": "Number",
+   "Default": 5,
+   "Description": "The number of read IOPS the table should support."
+  },
+  "DynamoDBModelTableWriteIOPS": {
+   "Type": "Number",
+   "Default": 5,
+   "Description": "The number of write IOPS the table should support."
+  },
+  "DynamoDBBillingMode": {
+   "Type": "String",
+   "Default": "PAY_PER_REQUEST",
+   "AllowedValues": [
+    "PAY_PER_REQUEST",
+    "PROVISIONED"
+   ],
+   "Description": "Configure @model types to create DynamoDB tables with PAY_PER_REQUEST or PROVISIONED billing modes."
+  },
+  "DynamoDBEnablePointInTimeRecovery": {
+   "Type": "String",
+   "Default": "false",
+   "AllowedValues": [
+    "true",
+    "false"
+   ],
+   "Description": "Whether to enable Point in Time Recovery on the table."
+  },
+  "DynamoDBEnableServerSideEncryption": {
+   "Type": "String",
+   "Default": "true",
+   "AllowedValues": [
+    "true",
+    "false"
+   ],
+   "Description": "Enable server side encryption powered by KMS."
+  },
+  "referencetoamplifyaerodriveAbhisandbox7f301cb65cdataamplifyDataAmplifyTableManagerNestedStackAmplifyTableManagerNestedStackResourceCB7B9255OutputsamplifyaerodriveAbhisandbox7f301cb65cdataamplifyDataAmplifyTableManagerTableManagerCustomProviBDB18BF9": {
+   "Type": "String"
+  },
+  "referencetoamplifyaerodriveAbhisandbox7f301cb65cdataamplifyDataGraphQLAPIE9497DA6ApiId": {
+   "Type": "String"
+  },
+  "referencetoamplifyaerodriveAbhisandbox7f301cb65cdataamplifyDataGraphQLAPINONEDS8ECAFBF9Name": {
+   "Type": "String"
+  },
+  "referencetoamplifyaerodriveAbhisandbox7f301cb65cauthNestedStackauthNestedStackResource36F42F00OutputsamplifyaerodriveAbhisandbox7f301cb65cauthamplifyAuthauthenticatedUserRoleFC0CB81FRef": {
+   "Type": "String"
+  },
+  "referencetoamplifyaerodriveAbhisandbox7f301cb65cauthNestedStackauthNestedStackResource36F42F00OutputsamplifyaerodriveAbhisandbox7f301cb65cauthamplifyAuthunauthenticatedUserRoleAAF80E1DRef": {
+   "Type": "String"
+  },
+  "referencetoamplifyaerodriveAbhisandbox7f301cb65cauthNestedStackauthNestedStackResource36F42F00OutputsamplifyaerodriveAbhisandbox7f301cb65cauthamplifyAuthIdentityPool71050EF5Ref": {
+   "Type": "String"
+  }
+ },
+ "Conditions": {
+  "HasEnvironmentParameter": {
+   "Fn::Not": [
+    {
+     "Fn::Equals": [
+      "NONE",
+      "NONE"
+     ]
+    }
+   ]
+  },
+  "ShouldUsePayPerRequestBilling": {
+   "Fn::Equals": [
+    {
+     "Ref": "DynamoDBBillingMode"
+    },
+    "PAY_PER_REQUEST"
+   ]
+  },
+  "ShouldUsePointInTimeRecovery": {
+   "Fn::Equals": [
+    {
+     "Ref": "DynamoDBEnablePointInTimeRecovery"
+    },
+    "true"
+   ]
+  },
+  "CDKMetadataAvailable": {
+   "Fn::Or": [
+    {
+     "Fn::Or": [
+      {
+       "Fn::Equals": [
+        {
+         "Ref": "AWS::Region"
+        },
+        "af-south-1"
+       ]
+      },
+      {
+       "Fn::Equals": [
+        {
+         "Ref": "AWS::Region"
+        },
+        "ap-east-1"
+       ]
+      },
+      {
+       "Fn::Equals": [
+        {
+         "Ref": "AWS::Region"
+        },
+        "ap-northeast-1"
+       ]
+      },
+      {
+       "Fn::Equals": [
+        {
+         "Ref": "AWS::Region"
+        },
+        "ap-northeast-2"
+       ]
+      },
+      {
+       "Fn::Equals": [
+        {
+         "Ref": "AWS::Region"
+        },
+        "ap-northeast-3"
+       ]
+      },
+      {
+       "Fn::Equals": [
+        {
+         "Ref": "AWS::Region"
+        },
+        "ap-south-1"
+       ]
+      },
+      {
+       "Fn::Equals": [
+        {
+         "Ref": "AWS::Region"
+        },
+        "ap-south-2"
+       ]
+      },
+      {
+       "Fn::Equals": [
+        {
+         "Ref": "AWS::Region"
+        },
+        "ap-southeast-1"
+       ]
+      },
+      {
+       "Fn::Equals": [
+        {
+         "Ref": "AWS::Region"
+        },
+        "ap-southeast-2"
+       ]
+      },
+      {
+       "Fn::Equals": [
+        {
+         "Ref": "AWS::Region"
+        },
+        "ap-southeast-3"
+       ]
+      }
+     ]
+    },
+    {
+     "Fn::Or": [
+      {
+       "Fn::Equals": [
+        {
+         "Ref": "AWS::Region"
+        },
+        "ap-southeast-4"
+       ]
+      },
+      {
+       "Fn::Equals": [
+        {
+         "Ref": "AWS::Region"
+        },
+        "ca-central-1"
+       ]
+      },
+      {
+       "Fn::Equals": [
+        {
+         "Ref": "AWS::Region"
+        },
+        "ca-west-1"
+       ]
+      },
+      {
+       "Fn::Equals": [
+        {
+         "Ref": "AWS::Region"
+        },
+        "cn-north-1"
+       ]
+      },
+      {
+       "Fn::Equals": [
+        {
+         "Ref": "AWS::Region"
+        },
+        "cn-northwest-1"
+       ]
+      },
+      {
+       "Fn::Equals": [
+        {
+         "Ref": "AWS::Region"
+        },
+        "eu-central-1"
+       ]
+      },
+      {
+       "Fn::Equals": [
+        {
+         "Ref": "AWS::Region"
+        },
+        "eu-central-2"
+       ]
+      },
+      {
+       "Fn::Equals": [
+        {
+         "Ref": "AWS::Region"
+        },
+        "eu-north-1"
+       ]
+      },
+      {
+       "Fn::Equals": [
+        {
+         "Ref": "AWS::Region"
+        },
+        "eu-south-1"
+       ]
+      },
+      {
+       "Fn::Equals": [
+        {
+         "Ref": "AWS::Region"
+        },
+        "eu-south-2"
+       ]
+      }
+     ]
+    },
+    {
+     "Fn::Or": [
+      {
+       "Fn::Equals": [
+        {
+         "Ref": "AWS::Region"
+        },
+        "eu-west-1"
+       ]
+      },
+      {
+       "Fn::Equals": [
+        {
+         "Ref": "AWS::Region"
+        },
+        "eu-west-2"
+       ]
+      },
+      {
+       "Fn::Equals": [
+        {
+         "Ref": "AWS::Region"
+        },
+        "eu-west-3"
+       ]
+      },
+      {
+       "Fn::Equals": [
+        {
+         "Ref": "AWS::Region"
+        },
+        "il-central-1"
+       ]
+      },
+      {
+       "Fn::Equals": [
+        {
+         "Ref": "AWS::Region"
+        },
+        "me-central-1"
+       ]
+      },
+      {
+       "Fn::Equals": [
+        {
+         "Ref": "AWS::Region"
+        },
+        "me-south-1"
+       ]
+      },
+      {
+       "Fn::Equals": [
+        {
+         "Ref": "AWS::Region"
+        },
+        "sa-east-1"
+       ]
+      },
+      {
+       "Fn::Equals": [
+        {
+         "Ref": "AWS::Region"
+        },
+        "us-east-1"
+       ]
+      },
+      {
+       "Fn::Equals": [
+        {
+         "Ref": "AWS::Region"
+        },
+        "us-east-2"
+       ]
+      },
+      {
+       "Fn::Equals": [
+        {
+         "Ref": "AWS::Region"
+        },
+        "us-west-1"
+       ]
+      }
+     ]
+    },
+    {
+     "Fn::Equals": [
+      {
+       "Ref": "AWS::Region"
+      },
+      "us-west-2"
+     ]
+    }
+   ]
+  }
+ },
+ "Resources": {
+  "FileRecordTable": {
+   "Type": "Custom::AmplifyDynamoDBTable",
+   "Properties": {
+    "ServiceToken": {
+     "Ref": "referencetoamplifyaerodriveAbhisandbox7f301cb65cdataamplifyDataAmplifyTableManagerNestedStackAmplifyTableManagerNestedStackResourceCB7B9255OutputsamplifyaerodriveAbhisandbox7f301cb65cdataamplifyDataAmplifyTableManagerTableManagerCustomProviBDB18BF9"
+    },
+    "tableName": {
+     "Fn::Join": [
+      "",
+      [
+       "FileRecord-",
+       {
+        "Ref": "referencetoamplifyaerodriveAbhisandbox7f301cb65cdataamplifyDataGraphQLAPIE9497DA6ApiId"
+       },
+       "-NONE"
+      ]
+     ]
+    },
+    "attributeDefinitions": [
+     {
+      "attributeName": "id",
+      "attributeType": "S"
+     }
+    ],
+    "keySchema": [
+     {
+      "attributeName": "id",
+      "keyType": "HASH"
+     }
+    ],
+    "provisionedThroughput": {
+     "Fn::If": [
+      "ShouldUsePayPerRequestBilling",
+      {
+       "Ref": "AWS::NoValue"
+      },
+      {
+       "ReadCapacityUnits": {
+        "Ref": "DynamoDBModelTableReadIOPS"
+       },
+       "WriteCapacityUnits": {
+        "Ref": "DynamoDBModelTableWriteIOPS"
+       }
+      }
+     ]
+    },
+    "sseSpecification": {
+     "sseEnabled": false
+    },
+    "streamSpecification": {
+     "streamViewType": "NEW_AND_OLD_IMAGES"
+    },
+    "deletionProtectionEnabled": false,
+    "allowDestructiveGraphqlSchemaUpdates": true,
+    "replaceTableUponGsiUpdate": true,
+    "pointInTimeRecoverySpecification": {
+     "Fn::If": [
+      "ShouldUsePointInTimeRecovery",
+      {
+       "PointInTimeRecoveryEnabled": true
+      },
+      {
+       "Ref": "AWS::NoValue"
+      }
+     ]
+    },
+    "billingMode": {
+     "Fn::If": [
+      "ShouldUsePayPerRequestBilling",
+      "PAY_PER_REQUEST",
+      {
+       "Ref": "AWS::NoValue"
+      }
+     ]
+    }
+   },
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "amplify-aerodrive-Abhi-sandbox-7f301cb65c/data/amplifyData/FileRecord/FileRecordTable/Default/Default"
+   }
+  },
+  "FileRecordIAMRoleE373B141": {
+   "Type": "AWS::IAM::Role",
+   "Properties": {
+    "AssumeRolePolicyDocument": {
+     "Statement": [
+      {
+       "Action": "sts:AssumeRole",
+       "Effect": "Allow",
+       "Principal": {
+        "Service": "appsync.amazonaws.com"
+       }
+      }
+     ],
+     "Version": "2012-10-17"
+    },
+    "Policies": [
+     {
+      "PolicyDocument": {
+       "Statement": [
+        {
+         "Action": [
+          "dynamodb:BatchGetItem",
+          "dynamodb:BatchWriteItem",
+          "dynamodb:PutItem",
+          "dynamodb:DeleteItem",
+          "dynamodb:GetItem",
+          "dynamodb:Scan",
+          "dynamodb:Query",
+          "dynamodb:UpdateItem",
+          "dynamodb:ConditionCheckItem",
+          "dynamodb:DescribeTable",
+          "dynamodb:GetRecords",
+          "dynamodb:GetShardIterator"
+         ],
+         "Effect": "Allow",
+         "Resource": [
+          {
+           "Fn::Sub": [
+            "arn:${AWS::Partition}:dynamodb:${AWS::Region}:${AWS::AccountId}:table/${tablename}",
+            {
+             "tablename": {
+              "Fn::Join": [
+               "",
+               [
+                "FileRecord-",
+                {
+                 "Ref": "referencetoamplifyaerodriveAbhisandbox7f301cb65cdataamplifyDataGraphQLAPIE9497DA6ApiId"
+                },
+                "-NONE"
+               ]
+              ]
+             }
+            }
+           ]
+          },
+          {
+           "Fn::Sub": [
+            "arn:${AWS::Partition}:dynamodb:${AWS::Region}:${AWS::AccountId}:table/${tablename}/*",
+            {
+             "tablename": {
+              "Fn::Join": [
+               "",
+               [
+                "FileRecord-",
+                {
+                 "Ref": "referencetoamplifyaerodriveAbhisandbox7f301cb65cdataamplifyDataGraphQLAPIE9497DA6ApiId"
+                },
+                "-NONE"
+               ]
+              ]
+             }
+            }
+           ]
+          }
+         ]
+        }
+       ],
+       "Version": "2012-10-17"
+      },
+      "PolicyName": "DynamoDBAccess"
+     }
+    ],
+    "RoleName": {
+     "Fn::Join": [
+      "",
+      [
+       "FileRecordIAMRole8a6b14-",
+       {
+        "Ref": "referencetoamplifyaerodriveAbhisandbox7f301cb65cdataamplifyDataGraphQLAPIE9497DA6ApiId"
+       },
+       "-NONE"
+      ]
+     ]
+    },
+    "Tags": [
+     {
+      "Key": "amplify:deployment-type",
+      "Value": "sandbox"
+     },
+     {
+      "Key": "amplify:friendly-name",
+      "Value": "amplifyData"
+     },
+     {
+      "Key": "created-by",
+      "Value": "amplify"
+     }
+    ]
+   },
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "amplify-aerodrive-Abhi-sandbox-7f301cb65c/data/amplifyData/FileRecord/FileRecordIAMRole/Resource"
+   }
+  },
+  "FileRecordDataSource": {
+   "Type": "AWS::AppSync::DataSource",
+   "Properties": {
+    "ApiId": {
+     "Ref": "referencetoamplifyaerodriveAbhisandbox7f301cb65cdataamplifyDataGraphQLAPIE9497DA6ApiId"
+    },
+    "DynamoDBConfig": {
+     "AwsRegion": {
+      "Ref": "AWS::Region"
+     },
+     "TableName": {
+      "Fn::Select": [
+       1,
+       {
+        "Fn::Split": [
+         "/",
+         {
+          "Fn::Select": [
+           5,
+           {
+            "Fn::Split": [
+             ":",
+             {
+              "Fn::GetAtt": [
+               "FileRecordTable",
+               "TableArn"
+              ]
+             }
+            ]
+           }
+          ]
+         }
+        ]
+       }
+      ]
+     }
+    },
+    "Name": "FileRecordTable",
+    "ServiceRoleArn": {
+     "Fn::GetAtt": [
+      "FileRecordIAMRoleE373B141",
+      "Arn"
+     ]
+    },
+    "Type": "AMAZON_DYNAMODB"
+   },
+   "DependsOn": [
+    "FileRecordIAMRoleE373B141"
+   ],
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "amplify-aerodrive-Abhi-sandbox-7f301cb65c/data/amplifyData/FileRecord/FileRecordDataSource/Resource"
+   }
+  },
+  "QuerygetFileRecordauth0FunctionQuerygetFileRecordauth0FunctionAppSyncFunction39C162AC": {
+   "Type": "AWS::AppSync::FunctionConfiguration",
+   "Properties": {
+    "ApiId": {
+     "Ref": "referencetoamplifyaerodriveAbhisandbox7f301cb65cdataamplifyDataGraphQLAPIE9497DA6ApiId"
+    },
+    "DataSourceName": {
+     "Ref": "referencetoamplifyaerodriveAbhisandbox7f301cb65cdataamplifyDataGraphQLAPINONEDS8ECAFBF9Name"
+    },
+    "FunctionVersion": "2018-05-29",
+    "Name": "QuerygetFileRecordauth0Function",
+    "RequestMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/6b25c9b572c67e0f7ad41cb8019a90825f3db4b02a0a15b837c7a82dcb302060.vtl"
+    },
+    "ResponseMappingTemplate": "$util.toJson({})"
+   },
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "amplify-aerodrive-Abhi-sandbox-7f301cb65c/data/amplifyData/FileRecord/QuerygetFileRecordauth0Function/QuerygetFileRecordauth0Function.AppSyncFunction"
+   }
+  },
+  "QuerygetFileRecordpostAuth0FunctionQuerygetFileRecordpostAuth0FunctionAppSyncFunction6463FFB7": {
+   "Type": "AWS::AppSync::FunctionConfiguration",
+   "Properties": {
+    "ApiId": {
+     "Ref": "referencetoamplifyaerodriveAbhisandbox7f301cb65cdataamplifyDataGraphQLAPIE9497DA6ApiId"
+    },
+    "DataSourceName": {
+     "Ref": "referencetoamplifyaerodriveAbhisandbox7f301cb65cdataamplifyDataGraphQLAPINONEDS8ECAFBF9Name"
+    },
+    "FunctionVersion": "2018-05-29",
+    "Name": "QuerygetFileRecordpostAuth0Function",
+    "RequestMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/c1721bcd774e27c514d3454b5be4f9bdd094c0161b57ddf053d618e3b0086a77.vtl"
+    },
+    "ResponseMappingTemplate": "$util.toJson({})"
+   },
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "amplify-aerodrive-Abhi-sandbox-7f301cb65c/data/amplifyData/FileRecord/QuerygetFileRecordpostAuth0Function/QuerygetFileRecordpostAuth0Function.AppSyncFunction"
+   }
+  },
+  "QueryGetFileRecordDataResolverFnQueryGetFileRecordDataResolverFnAppSyncFunction7060C37B": {
+   "Type": "AWS::AppSync::FunctionConfiguration",
+   "Properties": {
+    "ApiId": {
+     "Ref": "referencetoamplifyaerodriveAbhisandbox7f301cb65cdataamplifyDataGraphQLAPIE9497DA6ApiId"
+    },
+    "DataSourceName": {
+     "Fn::GetAtt": [
+      "FileRecordDataSource",
+      "Name"
+     ]
+    },
+    "FunctionVersion": "2018-05-29",
+    "Name": "QueryGetFileRecordDataResolverFn",
+    "RequestMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/08f4d557693d96c1a4efba0f9dc91330e4b19772fd5477c156468843e3d9cb5e.vtl"
+    },
+    "ResponseMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/4c6a2d29f01c6091bd1d9afe16e5849d456c96f17c3b215938c8067399532719.vtl"
+    }
+   },
+   "DependsOn": [
+    "FileRecordDataSource"
+   ],
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "amplify-aerodrive-Abhi-sandbox-7f301cb65c/data/amplifyData/FileRecord/QueryGetFileRecordDataResolverFn/QueryGetFileRecordDataResolverFn.AppSyncFunction"
+   }
+  },
+  "GetFileRecordResolver": {
+   "Type": "AWS::AppSync::Resolver",
+   "Properties": {
+    "ApiId": {
+     "Ref": "referencetoamplifyaerodriveAbhisandbox7f301cb65cdataamplifyDataGraphQLAPIE9497DA6ApiId"
+    },
+    "FieldName": "getFileRecord",
+    "Kind": "PIPELINE",
+    "PipelineConfig": {
+     "Functions": [
+      {
+       "Fn::GetAtt": [
+        "QuerygetFileRecordauth0FunctionQuerygetFileRecordauth0FunctionAppSyncFunction39C162AC",
+        "FunctionId"
+       ]
+      },
+      {
+       "Fn::GetAtt": [
+        "QuerygetFileRecordpostAuth0FunctionQuerygetFileRecordpostAuth0FunctionAppSyncFunction6463FFB7",
+        "FunctionId"
+       ]
+      },
+      {
+       "Fn::GetAtt": [
+        "QueryGetFileRecordDataResolverFnQueryGetFileRecordDataResolverFnAppSyncFunction7060C37B",
+        "FunctionId"
+       ]
+      }
+     ]
+    },
+    "RequestMappingTemplate": {
+     "Fn::Join": [
+      "",
+      [
+       "$util.qr($ctx.stash.put(\"typeName\", \"Query\"))\n$util.qr($ctx.stash.put(\"fieldName\", \"getFileRecord\"))\n$util.qr($ctx.stash.put(\"conditions\", []))\n$util.qr($ctx.stash.put(\"metadata\", {}))\n$util.qr($ctx.stash.metadata.put(\"dataSourceType\", \"AMAZON_DYNAMODB\"))\n$util.qr($ctx.stash.metadata.put(\"apiId\", \"",
+       {
+        "Ref": "referencetoamplifyaerodriveAbhisandbox7f301cb65cdataamplifyDataGraphQLAPIE9497DA6ApiId"
+       },
+       "\"))\n$util.qr($ctx.stash.put(\"connectionAttributes\", {}))\n$util.qr($ctx.stash.put(\"tableName\", \"",
+       {
+        "Fn::Select": [
+         1,
+         {
+          "Fn::Split": [
+           "/",
+           {
+            "Fn::Select": [
+             5,
+             {
+              "Fn::Split": [
+               ":",
+               {
+                "Fn::GetAtt": [
+                 "FileRecordTable",
+                 "TableArn"
+                ]
+               }
+              ]
+             }
+            ]
+           }
+          ]
+         }
+        ]
+       },
+       "\"))\n$util.qr($ctx.stash.put(\"authRole\", \"arn:",
+       {
+        "Ref": "AWS::Partition"
+       },
+       ":sts::",
+       {
+        "Ref": "AWS::AccountId"
+       },
+       ":assumed-role/",
+       {
+        "Ref": "referencetoamplifyaerodriveAbhisandbox7f301cb65cauthNestedStackauthNestedStackResource36F42F00OutputsamplifyaerodriveAbhisandbox7f301cb65cauthamplifyAuthauthenticatedUserRoleFC0CB81FRef"
+       },
+       "/CognitoIdentityCredentials\"))\n$util.qr($ctx.stash.put(\"unauthRole\", \"arn:",
+       {
+        "Ref": "AWS::Partition"
+       },
+       ":sts::",
+       {
+        "Ref": "AWS::AccountId"
+       },
+       ":assumed-role/",
+       {
+        "Ref": "referencetoamplifyaerodriveAbhisandbox7f301cb65cauthNestedStackauthNestedStackResource36F42F00OutputsamplifyaerodriveAbhisandbox7f301cb65cauthamplifyAuthunauthenticatedUserRoleAAF80E1DRef"
+       },
+       "/CognitoIdentityCredentials\"))\n$util.qr($ctx.stash.put(\"identityPoolId\", \"",
+       {
+        "Ref": "referencetoamplifyaerodriveAbhisandbox7f301cb65cauthNestedStackauthNestedStackResource36F42F00OutputsamplifyaerodriveAbhisandbox7f301cb65cauthamplifyAuthIdentityPool71050EF5Ref"
+       },
+       "\"))\n$util.qr($ctx.stash.put(\"adminRoles\", []))\n$util.toJson({})"
+      ]
+     ]
+    },
+    "ResponseMappingTemplate": "$util.toJson($ctx.prev.result)",
+    "TypeName": "Query"
+   },
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "amplify-aerodrive-Abhi-sandbox-7f301cb65c/data/amplifyData/FileRecord/queryGetFileRecordResolver"
+   }
+  },
+  "QuerylistFileRecordsauth0FunctionQuerylistFileRecordsauth0FunctionAppSyncFunction862D37FD": {
+   "Type": "AWS::AppSync::FunctionConfiguration",
+   "Properties": {
+    "ApiId": {
+     "Ref": "referencetoamplifyaerodriveAbhisandbox7f301cb65cdataamplifyDataGraphQLAPIE9497DA6ApiId"
+    },
+    "DataSourceName": {
+     "Ref": "referencetoamplifyaerodriveAbhisandbox7f301cb65cdataamplifyDataGraphQLAPINONEDS8ECAFBF9Name"
+    },
+    "FunctionVersion": "2018-05-29",
+    "Name": "QuerylistFileRecordsauth0Function",
+    "RequestMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/6b25c9b572c67e0f7ad41cb8019a90825f3db4b02a0a15b837c7a82dcb302060.vtl"
+    },
+    "ResponseMappingTemplate": "$util.toJson({})"
+   },
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "amplify-aerodrive-Abhi-sandbox-7f301cb65c/data/amplifyData/FileRecord/QuerylistFileRecordsauth0Function/QuerylistFileRecordsauth0Function.AppSyncFunction"
+   }
+  },
+  "QuerylistFileRecordspostAuth0FunctionQuerylistFileRecordspostAuth0FunctionAppSyncFunction544212F8": {
+   "Type": "AWS::AppSync::FunctionConfiguration",
+   "Properties": {
+    "ApiId": {
+     "Ref": "referencetoamplifyaerodriveAbhisandbox7f301cb65cdataamplifyDataGraphQLAPIE9497DA6ApiId"
+    },
+    "DataSourceName": {
+     "Ref": "referencetoamplifyaerodriveAbhisandbox7f301cb65cdataamplifyDataGraphQLAPINONEDS8ECAFBF9Name"
+    },
+    "FunctionVersion": "2018-05-29",
+    "Name": "QuerylistFileRecordspostAuth0Function",
+    "RequestMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/c1721bcd774e27c514d3454b5be4f9bdd094c0161b57ddf053d618e3b0086a77.vtl"
+    },
+    "ResponseMappingTemplate": "$util.toJson({})"
+   },
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "amplify-aerodrive-Abhi-sandbox-7f301cb65c/data/amplifyData/FileRecord/QuerylistFileRecordspostAuth0Function/QuerylistFileRecordspostAuth0Function.AppSyncFunction"
+   }
+  },
+  "QueryListFileRecordsDataResolverFnQueryListFileRecordsDataResolverFnAppSyncFunction006151BB": {
+   "Type": "AWS::AppSync::FunctionConfiguration",
+   "Properties": {
+    "ApiId": {
+     "Ref": "referencetoamplifyaerodriveAbhisandbox7f301cb65cdataamplifyDataGraphQLAPIE9497DA6ApiId"
+    },
+    "DataSourceName": {
+     "Fn::GetAtt": [
+      "FileRecordDataSource",
+      "Name"
+     ]
+    },
+    "FunctionVersion": "2018-05-29",
+    "Name": "QueryListFileRecordsDataResolverFn",
+    "RequestMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/9fcbe070ecd3023c5bf5b966fa9584757db9762eef123bad0820bd87591b2174.vtl"
+    },
+    "ResponseMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/cc01911d0269d4080ea57505dc445dfc315ef7ad85d3d9d4ea1357858bff451d.vtl"
+    }
+   },
+   "DependsOn": [
+    "FileRecordDataSource"
+   ],
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "amplify-aerodrive-Abhi-sandbox-7f301cb65c/data/amplifyData/FileRecord/QueryListFileRecordsDataResolverFn/QueryListFileRecordsDataResolverFn.AppSyncFunction"
+   }
+  },
+  "ListFileRecordResolver": {
+   "Type": "AWS::AppSync::Resolver",
+   "Properties": {
+    "ApiId": {
+     "Ref": "referencetoamplifyaerodriveAbhisandbox7f301cb65cdataamplifyDataGraphQLAPIE9497DA6ApiId"
+    },
+    "FieldName": "listFileRecords",
+    "Kind": "PIPELINE",
+    "PipelineConfig": {
+     "Functions": [
+      {
+       "Fn::GetAtt": [
+        "QuerylistFileRecordsauth0FunctionQuerylistFileRecordsauth0FunctionAppSyncFunction862D37FD",
+        "FunctionId"
+       ]
+      },
+      {
+       "Fn::GetAtt": [
+        "QuerylistFileRecordspostAuth0FunctionQuerylistFileRecordspostAuth0FunctionAppSyncFunction544212F8",
+        "FunctionId"
+       ]
+      },
+      {
+       "Fn::GetAtt": [
+        "QueryListFileRecordsDataResolverFnQueryListFileRecordsDataResolverFnAppSyncFunction006151BB",
+        "FunctionId"
+       ]
+      }
+     ]
+    },
+    "RequestMappingTemplate": {
+     "Fn::Join": [
+      "",
+      [
+       "$util.qr($ctx.stash.put(\"typeName\", \"Query\"))\n$util.qr($ctx.stash.put(\"fieldName\", \"listFileRecords\"))\n$util.qr($ctx.stash.put(\"conditions\", []))\n$util.qr($ctx.stash.put(\"metadata\", {}))\n$util.qr($ctx.stash.metadata.put(\"dataSourceType\", \"AMAZON_DYNAMODB\"))\n$util.qr($ctx.stash.metadata.put(\"apiId\", \"",
+       {
+        "Ref": "referencetoamplifyaerodriveAbhisandbox7f301cb65cdataamplifyDataGraphQLAPIE9497DA6ApiId"
+       },
+       "\"))\n$util.qr($ctx.stash.put(\"connectionAttributes\", {}))\n$util.qr($ctx.stash.put(\"tableName\", \"",
+       {
+        "Fn::Select": [
+         1,
+         {
+          "Fn::Split": [
+           "/",
+           {
+            "Fn::Select": [
+             5,
+             {
+              "Fn::Split": [
+               ":",
+               {
+                "Fn::GetAtt": [
+                 "FileRecordTable",
+                 "TableArn"
+                ]
+               }
+              ]
+             }
+            ]
+           }
+          ]
+         }
+        ]
+       },
+       "\"))\n$util.qr($ctx.stash.put(\"authRole\", \"arn:",
+       {
+        "Ref": "AWS::Partition"
+       },
+       ":sts::",
+       {
+        "Ref": "AWS::AccountId"
+       },
+       ":assumed-role/",
+       {
+        "Ref": "referencetoamplifyaerodriveAbhisandbox7f301cb65cauthNestedStackauthNestedStackResource36F42F00OutputsamplifyaerodriveAbhisandbox7f301cb65cauthamplifyAuthauthenticatedUserRoleFC0CB81FRef"
+       },
+       "/CognitoIdentityCredentials\"))\n$util.qr($ctx.stash.put(\"unauthRole\", \"arn:",
+       {
+        "Ref": "AWS::Partition"
+       },
+       ":sts::",
+       {
+        "Ref": "AWS::AccountId"
+       },
+       ":assumed-role/",
+       {
+        "Ref": "referencetoamplifyaerodriveAbhisandbox7f301cb65cauthNestedStackauthNestedStackResource36F42F00OutputsamplifyaerodriveAbhisandbox7f301cb65cauthamplifyAuthunauthenticatedUserRoleAAF80E1DRef"
+       },
+       "/CognitoIdentityCredentials\"))\n$util.qr($ctx.stash.put(\"identityPoolId\", \"",
+       {
+        "Ref": "referencetoamplifyaerodriveAbhisandbox7f301cb65cauthNestedStackauthNestedStackResource36F42F00OutputsamplifyaerodriveAbhisandbox7f301cb65cauthamplifyAuthIdentityPool71050EF5Ref"
+       },
+       "\"))\n$util.qr($ctx.stash.put(\"adminRoles\", []))\n$util.toJson({})"
+      ]
+     ]
+    },
+    "ResponseMappingTemplate": "$util.toJson($ctx.prev.result)",
+    "TypeName": "Query"
+   },
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "amplify-aerodrive-Abhi-sandbox-7f301cb65c/data/amplifyData/FileRecord/queryListFileRecordsResolver"
+   }
+  },
+  "MutationcreateFileRecordinit0FunctionMutationcreateFileRecordinit0FunctionAppSyncFunction1531750C": {
+   "Type": "AWS::AppSync::FunctionConfiguration",
+   "Properties": {
+    "ApiId": {
+     "Ref": "referencetoamplifyaerodriveAbhisandbox7f301cb65cdataamplifyDataGraphQLAPIE9497DA6ApiId"
+    },
+    "DataSourceName": {
+     "Ref": "referencetoamplifyaerodriveAbhisandbox7f301cb65cdataamplifyDataGraphQLAPINONEDS8ECAFBF9Name"
+    },
+    "FunctionVersion": "2018-05-29",
+    "Name": "MutationcreateFileRecordinit0Function",
+    "RequestMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/a183ddccbd956316c38ef97177b8f088ef0826f62023323f5ae6053d348ccffc.vtl"
+    },
+    "ResponseMappingTemplate": "$util.toJson({})"
+   },
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "amplify-aerodrive-Abhi-sandbox-7f301cb65c/data/amplifyData/FileRecord/MutationcreateFileRecordinit0Function/MutationcreateFileRecordinit0Function.AppSyncFunction"
+   }
+  },
+  "MutationcreateFileRecordauth0FunctionMutationcreateFileRecordauth0FunctionAppSyncFunctionDAC159F2": {
+   "Type": "AWS::AppSync::FunctionConfiguration",
+   "Properties": {
+    "ApiId": {
+     "Ref": "referencetoamplifyaerodriveAbhisandbox7f301cb65cdataamplifyDataGraphQLAPIE9497DA6ApiId"
+    },
+    "DataSourceName": {
+     "Ref": "referencetoamplifyaerodriveAbhisandbox7f301cb65cdataamplifyDataGraphQLAPINONEDS8ECAFBF9Name"
+    },
+    "FunctionVersion": "2018-05-29",
+    "Name": "MutationcreateFileRecordauth0Function",
+    "RequestMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/2ec6512037e6c09f44beedd2bdf8f470f198dffc77a617b3c33df3a3adf317d8.vtl"
+    },
+    "ResponseMappingTemplate": "$util.toJson({})"
+   },
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "amplify-aerodrive-Abhi-sandbox-7f301cb65c/data/amplifyData/FileRecord/MutationcreateFileRecordauth0Function/MutationcreateFileRecordauth0Function.AppSyncFunction"
+   }
+  },
+  "MutationcreateFileRecordpostAuth0FunctionMutationcreateFileRecordpostAuth0FunctionAppSyncFunction57C2C02B": {
+   "Type": "AWS::AppSync::FunctionConfiguration",
+   "Properties": {
+    "ApiId": {
+     "Ref": "referencetoamplifyaerodriveAbhisandbox7f301cb65cdataamplifyDataGraphQLAPIE9497DA6ApiId"
+    },
+    "DataSourceName": {
+     "Ref": "referencetoamplifyaerodriveAbhisandbox7f301cb65cdataamplifyDataGraphQLAPINONEDS8ECAFBF9Name"
+    },
+    "FunctionVersion": "2018-05-29",
+    "Name": "MutationcreateFileRecordpostAuth0Function",
+    "RequestMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/c1721bcd774e27c514d3454b5be4f9bdd094c0161b57ddf053d618e3b0086a77.vtl"
+    },
+    "ResponseMappingTemplate": "$util.toJson({})"
+   },
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "amplify-aerodrive-Abhi-sandbox-7f301cb65c/data/amplifyData/FileRecord/MutationcreateFileRecordpostAuth0Function/MutationcreateFileRecordpostAuth0Function.AppSyncFunction"
+   }
+  },
+  "MutationCreateFileRecordDataResolverFnMutationCreateFileRecordDataResolverFnAppSyncFunction4423A66D": {
+   "Type": "AWS::AppSync::FunctionConfiguration",
+   "Properties": {
+    "ApiId": {
+     "Ref": "referencetoamplifyaerodriveAbhisandbox7f301cb65cdataamplifyDataGraphQLAPIE9497DA6ApiId"
+    },
+    "DataSourceName": {
+     "Fn::GetAtt": [
+      "FileRecordDataSource",
+      "Name"
+     ]
+    },
+    "FunctionVersion": "2018-05-29",
+    "Name": "MutationCreateFileRecordDataResolverFn",
+    "RequestMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/4035bf3345e02817ee49b3f7328efa3eaf4605dcff4661dc254035f84e1cf353.vtl"
+    },
+    "ResponseMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/f4a52b72209a9dfa197b5e7367a5c378c5bb86de6e29ddd9e48b49a3fe54b249.vtl"
+    }
+   },
+   "DependsOn": [
+    "FileRecordDataSource"
+   ],
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "amplify-aerodrive-Abhi-sandbox-7f301cb65c/data/amplifyData/FileRecord/MutationCreateFileRecordDataResolverFn/MutationCreateFileRecordDataResolverFn.AppSyncFunction"
+   }
+  },
+  "CreateFileRecordResolver": {
+   "Type": "AWS::AppSync::Resolver",
+   "Properties": {
+    "ApiId": {
+     "Ref": "referencetoamplifyaerodriveAbhisandbox7f301cb65cdataamplifyDataGraphQLAPIE9497DA6ApiId"
+    },
+    "FieldName": "createFileRecord",
+    "Kind": "PIPELINE",
+    "PipelineConfig": {
+     "Functions": [
+      {
+       "Fn::GetAtt": [
+        "MutationcreateFileRecordinit0FunctionMutationcreateFileRecordinit0FunctionAppSyncFunction1531750C",
+        "FunctionId"
+       ]
+      },
+      {
+       "Fn::GetAtt": [
+        "MutationcreateFileRecordauth0FunctionMutationcreateFileRecordauth0FunctionAppSyncFunctionDAC159F2",
+        "FunctionId"
+       ]
+      },
+      {
+       "Fn::GetAtt": [
+        "MutationcreateFileRecordpostAuth0FunctionMutationcreateFileRecordpostAuth0FunctionAppSyncFunction57C2C02B",
+        "FunctionId"
+       ]
+      },
+      {
+       "Fn::GetAtt": [
+        "MutationCreateFileRecordDataResolverFnMutationCreateFileRecordDataResolverFnAppSyncFunction4423A66D",
+        "FunctionId"
+       ]
+      }
+     ]
+    },
+    "RequestMappingTemplate": {
+     "Fn::Join": [
+      "",
+      [
+       "$util.qr($ctx.stash.put(\"typeName\", \"Mutation\"))\n$util.qr($ctx.stash.put(\"fieldName\", \"createFileRecord\"))\n$util.qr($ctx.stash.put(\"conditions\", []))\n$util.qr($ctx.stash.put(\"metadata\", {}))\n$util.qr($ctx.stash.metadata.put(\"dataSourceType\", \"AMAZON_DYNAMODB\"))\n$util.qr($ctx.stash.metadata.put(\"apiId\", \"",
+       {
+        "Ref": "referencetoamplifyaerodriveAbhisandbox7f301cb65cdataamplifyDataGraphQLAPIE9497DA6ApiId"
+       },
+       "\"))\n$util.qr($ctx.stash.put(\"connectionAttributes\", {}))\n$util.qr($ctx.stash.put(\"tableName\", \"",
+       {
+        "Fn::Select": [
+         1,
+         {
+          "Fn::Split": [
+           "/",
+           {
+            "Fn::Select": [
+             5,
+             {
+              "Fn::Split": [
+               ":",
+               {
+                "Fn::GetAtt": [
+                 "FileRecordTable",
+                 "TableArn"
+                ]
+               }
+              ]
+             }
+            ]
+           }
+          ]
+         }
+        ]
+       },
+       "\"))\n$util.qr($ctx.stash.put(\"authRole\", \"arn:",
+       {
+        "Ref": "AWS::Partition"
+       },
+       ":sts::",
+       {
+        "Ref": "AWS::AccountId"
+       },
+       ":assumed-role/",
+       {
+        "Ref": "referencetoamplifyaerodriveAbhisandbox7f301cb65cauthNestedStackauthNestedStackResource36F42F00OutputsamplifyaerodriveAbhisandbox7f301cb65cauthamplifyAuthauthenticatedUserRoleFC0CB81FRef"
+       },
+       "/CognitoIdentityCredentials\"))\n$util.qr($ctx.stash.put(\"unauthRole\", \"arn:",
+       {
+        "Ref": "AWS::Partition"
+       },
+       ":sts::",
+       {
+        "Ref": "AWS::AccountId"
+       },
+       ":assumed-role/",
+       {
+        "Ref": "referencetoamplifyaerodriveAbhisandbox7f301cb65cauthNestedStackauthNestedStackResource36F42F00OutputsamplifyaerodriveAbhisandbox7f301cb65cauthamplifyAuthunauthenticatedUserRoleAAF80E1DRef"
+       },
+       "/CognitoIdentityCredentials\"))\n$util.qr($ctx.stash.put(\"identityPoolId\", \"",
+       {
+        "Ref": "referencetoamplifyaerodriveAbhisandbox7f301cb65cauthNestedStackauthNestedStackResource36F42F00OutputsamplifyaerodriveAbhisandbox7f301cb65cauthamplifyAuthIdentityPool71050EF5Ref"
+       },
+       "\"))\n$util.qr($ctx.stash.put(\"adminRoles\", []))\n$util.toJson({})"
+      ]
+     ]
+    },
+    "ResponseMappingTemplate": "$util.toJson($ctx.prev.result)",
+    "TypeName": "Mutation"
+   },
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "amplify-aerodrive-Abhi-sandbox-7f301cb65c/data/amplifyData/FileRecord/mutationCreateFileRecordResolver"
+   }
+  },
+  "MutationupdateFileRecordinit0FunctionMutationupdateFileRecordinit0FunctionAppSyncFunction6989E85E": {
+   "Type": "AWS::AppSync::FunctionConfiguration",
+   "Properties": {
+    "ApiId": {
+     "Ref": "referencetoamplifyaerodriveAbhisandbox7f301cb65cdataamplifyDataGraphQLAPIE9497DA6ApiId"
+    },
+    "DataSourceName": {
+     "Ref": "referencetoamplifyaerodriveAbhisandbox7f301cb65cdataamplifyDataGraphQLAPINONEDS8ECAFBF9Name"
+    },
+    "FunctionVersion": "2018-05-29",
+    "Name": "MutationupdateFileRecordinit0Function",
+    "RequestMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/06db846fd14e6fc371f22b12b5545ba8e2dbfeda85d8c8d586c71c282166657b.vtl"
+    },
+    "ResponseMappingTemplate": "$util.toJson({})"
+   },
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "amplify-aerodrive-Abhi-sandbox-7f301cb65c/data/amplifyData/FileRecord/MutationupdateFileRecordinit0Function/MutationupdateFileRecordinit0Function.AppSyncFunction"
+   }
+  },
+  "MutationupdateFileRecordauth0FunctionMutationupdateFileRecordauth0FunctionAppSyncFunctionF7DA8AFA": {
+   "Type": "AWS::AppSync::FunctionConfiguration",
+   "Properties": {
+    "ApiId": {
+     "Ref": "referencetoamplifyaerodriveAbhisandbox7f301cb65cdataamplifyDataGraphQLAPIE9497DA6ApiId"
+    },
+    "DataSourceName": {
+     "Fn::GetAtt": [
+      "FileRecordDataSource",
+      "Name"
+     ]
+    },
+    "FunctionVersion": "2018-05-29",
+    "Name": "MutationupdateFileRecordauth0Function",
+    "RequestMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/1f5fed297da9c32ae3af922bf3a38ccf23b956078887d16891ec06c20c64722c.vtl"
+    },
+    "ResponseMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/54dbc3ee2057aa1b8d9b5e3d09beeb562fa03cdf4ae433931badeb094892b041.vtl"
+    }
+   },
+   "DependsOn": [
+    "FileRecordDataSource"
+   ],
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "amplify-aerodrive-Abhi-sandbox-7f301cb65c/data/amplifyData/FileRecord/MutationupdateFileRecordauth0Function/MutationupdateFileRecordauth0Function.AppSyncFunction"
+   }
+  },
+  "MutationupdateFileRecordpostAuth0FunctionMutationupdateFileRecordpostAuth0FunctionAppSyncFunction50F2ED5B": {
+   "Type": "AWS::AppSync::FunctionConfiguration",
+   "Properties": {
+    "ApiId": {
+     "Ref": "referencetoamplifyaerodriveAbhisandbox7f301cb65cdataamplifyDataGraphQLAPIE9497DA6ApiId"
+    },
+    "DataSourceName": {
+     "Ref": "referencetoamplifyaerodriveAbhisandbox7f301cb65cdataamplifyDataGraphQLAPINONEDS8ECAFBF9Name"
+    },
+    "FunctionVersion": "2018-05-29",
+    "Name": "MutationupdateFileRecordpostAuth0Function",
+    "RequestMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/c1721bcd774e27c514d3454b5be4f9bdd094c0161b57ddf053d618e3b0086a77.vtl"
+    },
+    "ResponseMappingTemplate": "$util.toJson({})"
+   },
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "amplify-aerodrive-Abhi-sandbox-7f301cb65c/data/amplifyData/FileRecord/MutationupdateFileRecordpostAuth0Function/MutationupdateFileRecordpostAuth0Function.AppSyncFunction"
+   }
+  },
+  "MutationUpdateFileRecordDataResolverFnMutationUpdateFileRecordDataResolverFnAppSyncFunctionAB8BDD6A": {
+   "Type": "AWS::AppSync::FunctionConfiguration",
+   "Properties": {
+    "ApiId": {
+     "Ref": "referencetoamplifyaerodriveAbhisandbox7f301cb65cdataamplifyDataGraphQLAPIE9497DA6ApiId"
+    },
+    "DataSourceName": {
+     "Fn::GetAtt": [
+      "FileRecordDataSource",
+      "Name"
+     ]
+    },
+    "FunctionVersion": "2018-05-29",
+    "Name": "MutationUpdateFileRecordDataResolverFn",
+    "RequestMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/474bf0776ec2164a13191d1a0a9e057154931e4918fea5086f49850d02a5371b.vtl"
+    },
+    "ResponseMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/f4a52b72209a9dfa197b5e7367a5c378c5bb86de6e29ddd9e48b49a3fe54b249.vtl"
+    }
+   },
+   "DependsOn": [
+    "FileRecordDataSource"
+   ],
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "amplify-aerodrive-Abhi-sandbox-7f301cb65c/data/amplifyData/FileRecord/MutationUpdateFileRecordDataResolverFn/MutationUpdateFileRecordDataResolverFn.AppSyncFunction"
+   }
+  },
+  "UpdateFileRecordResolver": {
+   "Type": "AWS::AppSync::Resolver",
+   "Properties": {
+    "ApiId": {
+     "Ref": "referencetoamplifyaerodriveAbhisandbox7f301cb65cdataamplifyDataGraphQLAPIE9497DA6ApiId"
+    },
+    "FieldName": "updateFileRecord",
+    "Kind": "PIPELINE",
+    "PipelineConfig": {
+     "Functions": [
+      {
+       "Fn::GetAtt": [
+        "MutationupdateFileRecordinit0FunctionMutationupdateFileRecordinit0FunctionAppSyncFunction6989E85E",
+        "FunctionId"
+       ]
+      },
+      {
+       "Fn::GetAtt": [
+        "MutationupdateFileRecordauth0FunctionMutationupdateFileRecordauth0FunctionAppSyncFunctionF7DA8AFA",
+        "FunctionId"
+       ]
+      },
+      {
+       "Fn::GetAtt": [
+        "MutationupdateFileRecordpostAuth0FunctionMutationupdateFileRecordpostAuth0FunctionAppSyncFunction50F2ED5B",
+        "FunctionId"
+       ]
+      },
+      {
+       "Fn::GetAtt": [
+        "MutationUpdateFileRecordDataResolverFnMutationUpdateFileRecordDataResolverFnAppSyncFunctionAB8BDD6A",
+        "FunctionId"
+       ]
+      }
+     ]
+    },
+    "RequestMappingTemplate": {
+     "Fn::Join": [
+      "",
+      [
+       "$util.qr($ctx.stash.put(\"typeName\", \"Mutation\"))\n$util.qr($ctx.stash.put(\"fieldName\", \"updateFileRecord\"))\n$util.qr($ctx.stash.put(\"conditions\", []))\n$util.qr($ctx.stash.put(\"metadata\", {}))\n$util.qr($ctx.stash.metadata.put(\"dataSourceType\", \"AMAZON_DYNAMODB\"))\n$util.qr($ctx.stash.metadata.put(\"apiId\", \"",
+       {
+        "Ref": "referencetoamplifyaerodriveAbhisandbox7f301cb65cdataamplifyDataGraphQLAPIE9497DA6ApiId"
+       },
+       "\"))\n$util.qr($ctx.stash.put(\"connectionAttributes\", {}))\n$util.qr($ctx.stash.put(\"tableName\", \"",
+       {
+        "Fn::Select": [
+         1,
+         {
+          "Fn::Split": [
+           "/",
+           {
+            "Fn::Select": [
+             5,
+             {
+              "Fn::Split": [
+               ":",
+               {
+                "Fn::GetAtt": [
+                 "FileRecordTable",
+                 "TableArn"
+                ]
+               }
+              ]
+             }
+            ]
+           }
+          ]
+         }
+        ]
+       },
+       "\"))\n$util.qr($ctx.stash.put(\"authRole\", \"arn:",
+       {
+        "Ref": "AWS::Partition"
+       },
+       ":sts::",
+       {
+        "Ref": "AWS::AccountId"
+       },
+       ":assumed-role/",
+       {
+        "Ref": "referencetoamplifyaerodriveAbhisandbox7f301cb65cauthNestedStackauthNestedStackResource36F42F00OutputsamplifyaerodriveAbhisandbox7f301cb65cauthamplifyAuthauthenticatedUserRoleFC0CB81FRef"
+       },
+       "/CognitoIdentityCredentials\"))\n$util.qr($ctx.stash.put(\"unauthRole\", \"arn:",
+       {
+        "Ref": "AWS::Partition"
+       },
+       ":sts::",
+       {
+        "Ref": "AWS::AccountId"
+       },
+       ":assumed-role/",
+       {
+        "Ref": "referencetoamplifyaerodriveAbhisandbox7f301cb65cauthNestedStackauthNestedStackResource36F42F00OutputsamplifyaerodriveAbhisandbox7f301cb65cauthamplifyAuthunauthenticatedUserRoleAAF80E1DRef"
+       },
+       "/CognitoIdentityCredentials\"))\n$util.qr($ctx.stash.put(\"identityPoolId\", \"",
+       {
+        "Ref": "referencetoamplifyaerodriveAbhisandbox7f301cb65cauthNestedStackauthNestedStackResource36F42F00OutputsamplifyaerodriveAbhisandbox7f301cb65cauthamplifyAuthIdentityPool71050EF5Ref"
+       },
+       "\"))\n$util.qr($ctx.stash.put(\"adminRoles\", []))\n$util.toJson({})"
+      ]
+     ]
+    },
+    "ResponseMappingTemplate": "$util.toJson($ctx.prev.result)",
+    "TypeName": "Mutation"
+   },
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "amplify-aerodrive-Abhi-sandbox-7f301cb65c/data/amplifyData/FileRecord/mutationUpdateFileRecordResolver"
+   }
+  },
+  "MutationdeleteFileRecordauth0FunctionMutationdeleteFileRecordauth0FunctionAppSyncFunctionFD8A4ACF": {
+   "Type": "AWS::AppSync::FunctionConfiguration",
+   "Properties": {
+    "ApiId": {
+     "Ref": "referencetoamplifyaerodriveAbhisandbox7f301cb65cdataamplifyDataGraphQLAPIE9497DA6ApiId"
+    },
+    "DataSourceName": {
+     "Fn::GetAtt": [
+      "FileRecordDataSource",
+      "Name"
+     ]
+    },
+    "FunctionVersion": "2018-05-29",
+    "Name": "MutationdeleteFileRecordauth0Function",
+    "RequestMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/1f5fed297da9c32ae3af922bf3a38ccf23b956078887d16891ec06c20c64722c.vtl"
+    },
+    "ResponseMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/867fb7d7eb8e4127b6d0136b82c5c3f74a52eb410297086859986f8e7e4b02aa.vtl"
+    }
+   },
+   "DependsOn": [
+    "FileRecordDataSource"
+   ],
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "amplify-aerodrive-Abhi-sandbox-7f301cb65c/data/amplifyData/FileRecord/MutationdeleteFileRecordauth0Function/MutationdeleteFileRecordauth0Function.AppSyncFunction"
+   }
+  },
+  "MutationdeleteFileRecordpostAuth0FunctionMutationdeleteFileRecordpostAuth0FunctionAppSyncFunctionF27AE68E": {
+   "Type": "AWS::AppSync::FunctionConfiguration",
+   "Properties": {
+    "ApiId": {
+     "Ref": "referencetoamplifyaerodriveAbhisandbox7f301cb65cdataamplifyDataGraphQLAPIE9497DA6ApiId"
+    },
+    "DataSourceName": {
+     "Ref": "referencetoamplifyaerodriveAbhisandbox7f301cb65cdataamplifyDataGraphQLAPINONEDS8ECAFBF9Name"
+    },
+    "FunctionVersion": "2018-05-29",
+    "Name": "MutationdeleteFileRecordpostAuth0Function",
+    "RequestMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/c1721bcd774e27c514d3454b5be4f9bdd094c0161b57ddf053d618e3b0086a77.vtl"
+    },
+    "ResponseMappingTemplate": "$util.toJson({})"
+   },
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "amplify-aerodrive-Abhi-sandbox-7f301cb65c/data/amplifyData/FileRecord/MutationdeleteFileRecordpostAuth0Function/MutationdeleteFileRecordpostAuth0Function.AppSyncFunction"
+   }
+  },
+  "MutationDeleteFileRecordDataResolverFnMutationDeleteFileRecordDataResolverFnAppSyncFunctionBBEE89D5": {
+   "Type": "AWS::AppSync::FunctionConfiguration",
+   "Properties": {
+    "ApiId": {
+     "Ref": "referencetoamplifyaerodriveAbhisandbox7f301cb65cdataamplifyDataGraphQLAPIE9497DA6ApiId"
+    },
+    "DataSourceName": {
+     "Fn::GetAtt": [
+      "FileRecordDataSource",
+      "Name"
+     ]
+    },
+    "FunctionVersion": "2018-05-29",
+    "Name": "MutationDeleteFileRecordDataResolverFn",
+    "RequestMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/4f7907d1209a2c9953a0c053df402c634e359546d70c7cc5c2e8e21ea734880f.vtl"
+    },
+    "ResponseMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/f4a52b72209a9dfa197b5e7367a5c378c5bb86de6e29ddd9e48b49a3fe54b249.vtl"
+    }
+   },
+   "DependsOn": [
+    "FileRecordDataSource"
+   ],
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "amplify-aerodrive-Abhi-sandbox-7f301cb65c/data/amplifyData/FileRecord/MutationDeleteFileRecordDataResolverFn/MutationDeleteFileRecordDataResolverFn.AppSyncFunction"
+   }
+  },
+  "DeleteFileRecordResolver": {
+   "Type": "AWS::AppSync::Resolver",
+   "Properties": {
+    "ApiId": {
+     "Ref": "referencetoamplifyaerodriveAbhisandbox7f301cb65cdataamplifyDataGraphQLAPIE9497DA6ApiId"
+    },
+    "FieldName": "deleteFileRecord",
+    "Kind": "PIPELINE",
+    "PipelineConfig": {
+     "Functions": [
+      {
+       "Fn::GetAtt": [
+        "MutationdeleteFileRecordauth0FunctionMutationdeleteFileRecordauth0FunctionAppSyncFunctionFD8A4ACF",
+        "FunctionId"
+       ]
+      },
+      {
+       "Fn::GetAtt": [
+        "MutationdeleteFileRecordpostAuth0FunctionMutationdeleteFileRecordpostAuth0FunctionAppSyncFunctionF27AE68E",
+        "FunctionId"
+       ]
+      },
+      {
+       "Fn::GetAtt": [
+        "MutationDeleteFileRecordDataResolverFnMutationDeleteFileRecordDataResolverFnAppSyncFunctionBBEE89D5",
+        "FunctionId"
+       ]
+      }
+     ]
+    },
+    "RequestMappingTemplate": {
+     "Fn::Join": [
+      "",
+      [
+       "$util.qr($ctx.stash.put(\"typeName\", \"Mutation\"))\n$util.qr($ctx.stash.put(\"fieldName\", \"deleteFileRecord\"))\n$util.qr($ctx.stash.put(\"conditions\", []))\n$util.qr($ctx.stash.put(\"metadata\", {}))\n$util.qr($ctx.stash.metadata.put(\"dataSourceType\", \"AMAZON_DYNAMODB\"))\n$util.qr($ctx.stash.metadata.put(\"apiId\", \"",
+       {
+        "Ref": "referencetoamplifyaerodriveAbhisandbox7f301cb65cdataamplifyDataGraphQLAPIE9497DA6ApiId"
+       },
+       "\"))\n$util.qr($ctx.stash.put(\"connectionAttributes\", {}))\n$util.qr($ctx.stash.put(\"tableName\", \"",
+       {
+        "Fn::Select": [
+         1,
+         {
+          "Fn::Split": [
+           "/",
+           {
+            "Fn::Select": [
+             5,
+             {
+              "Fn::Split": [
+               ":",
+               {
+                "Fn::GetAtt": [
+                 "FileRecordTable",
+                 "TableArn"
+                ]
+               }
+              ]
+             }
+            ]
+           }
+          ]
+         }
+        ]
+       },
+       "\"))\n$util.qr($ctx.stash.put(\"authRole\", \"arn:",
+       {
+        "Ref": "AWS::Partition"
+       },
+       ":sts::",
+       {
+        "Ref": "AWS::AccountId"
+       },
+       ":assumed-role/",
+       {
+        "Ref": "referencetoamplifyaerodriveAbhisandbox7f301cb65cauthNestedStackauthNestedStackResource36F42F00OutputsamplifyaerodriveAbhisandbox7f301cb65cauthamplifyAuthauthenticatedUserRoleFC0CB81FRef"
+       },
+       "/CognitoIdentityCredentials\"))\n$util.qr($ctx.stash.put(\"unauthRole\", \"arn:",
+       {
+        "Ref": "AWS::Partition"
+       },
+       ":sts::",
+       {
+        "Ref": "AWS::AccountId"
+       },
+       ":assumed-role/",
+       {
+        "Ref": "referencetoamplifyaerodriveAbhisandbox7f301cb65cauthNestedStackauthNestedStackResource36F42F00OutputsamplifyaerodriveAbhisandbox7f301cb65cauthamplifyAuthunauthenticatedUserRoleAAF80E1DRef"
+       },
+       "/CognitoIdentityCredentials\"))\n$util.qr($ctx.stash.put(\"identityPoolId\", \"",
+       {
+        "Ref": "referencetoamplifyaerodriveAbhisandbox7f301cb65cauthNestedStackauthNestedStackResource36F42F00OutputsamplifyaerodriveAbhisandbox7f301cb65cauthamplifyAuthIdentityPool71050EF5Ref"
+       },
+       "\"))\n$util.qr($ctx.stash.put(\"adminRoles\", []))\n$util.toJson({})"
+      ]
+     ]
+    },
+    "ResponseMappingTemplate": "$util.toJson($ctx.prev.result)",
+    "TypeName": "Mutation"
+   },
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "amplify-aerodrive-Abhi-sandbox-7f301cb65c/data/amplifyData/FileRecord/mutationDeleteFileRecordResolver"
+   }
+  },
+  "SubscriptiononCreateFileRecordauth0FunctionSubscriptiononCreateFileRecordauth0FunctionAppSyncFunction0824A5CD": {
+   "Type": "AWS::AppSync::FunctionConfiguration",
+   "Properties": {
+    "ApiId": {
+     "Ref": "referencetoamplifyaerodriveAbhisandbox7f301cb65cdataamplifyDataGraphQLAPIE9497DA6ApiId"
+    },
+    "DataSourceName": {
+     "Ref": "referencetoamplifyaerodriveAbhisandbox7f301cb65cdataamplifyDataGraphQLAPINONEDS8ECAFBF9Name"
+    },
+    "FunctionVersion": "2018-05-29",
+    "Name": "SubscriptiononCreateFileRecordauth0Function",
+    "RequestMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/3b6d810ef43cdbd93ef462c40b0df0328b89e04f1473a4f82f1178da1f1d5aa0.vtl"
+    },
+    "ResponseMappingTemplate": "$util.toJson({})"
+   },
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "amplify-aerodrive-Abhi-sandbox-7f301cb65c/data/amplifyData/FileRecord/SubscriptiononCreateFileRecordauth0Function/SubscriptiononCreateFileRecordauth0Function.AppSyncFunction"
+   }
+  },
+  "SubscriptiononCreateFileRecordpostAuth0FunctionSubscriptiononCreateFileRecordpostAuth0FunctionAppSyncFunction59E5134E": {
+   "Type": "AWS::AppSync::FunctionConfiguration",
+   "Properties": {
+    "ApiId": {
+     "Ref": "referencetoamplifyaerodriveAbhisandbox7f301cb65cdataamplifyDataGraphQLAPIE9497DA6ApiId"
+    },
+    "DataSourceName": {
+     "Ref": "referencetoamplifyaerodriveAbhisandbox7f301cb65cdataamplifyDataGraphQLAPINONEDS8ECAFBF9Name"
+    },
+    "FunctionVersion": "2018-05-29",
+    "Name": "SubscriptiononCreateFileRecordpostAuth0Function",
+    "RequestMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/c1721bcd774e27c514d3454b5be4f9bdd094c0161b57ddf053d618e3b0086a77.vtl"
+    },
+    "ResponseMappingTemplate": "$util.toJson({})"
+   },
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "amplify-aerodrive-Abhi-sandbox-7f301cb65c/data/amplifyData/FileRecord/SubscriptiononCreateFileRecordpostAuth0Function/SubscriptiononCreateFileRecordpostAuth0Function.AppSyncFunction"
+   }
+  },
+  "SubscriptionOnCreateFileRecordDataResolverFnSubscriptionOnCreateFileRecordDataResolverFnAppSyncFunctionC6A54E78": {
+   "Type": "AWS::AppSync::FunctionConfiguration",
+   "Properties": {
+    "ApiId": {
+     "Ref": "referencetoamplifyaerodriveAbhisandbox7f301cb65cdataamplifyDataGraphQLAPIE9497DA6ApiId"
+    },
+    "DataSourceName": {
+     "Ref": "referencetoamplifyaerodriveAbhisandbox7f301cb65cdataamplifyDataGraphQLAPINONEDS8ECAFBF9Name"
+    },
+    "FunctionVersion": "2018-05-29",
+    "Name": "SubscriptionOnCreateFileRecordDataResolverFn",
+    "RequestMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/fe3c43ada4b9d681a5e2312663ef7a73386424d73b73e51f8e2e9d4b50f7c502.vtl"
+    },
+    "ResponseMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/e0cff47fb007f0bbf2a4e43ca256d6aa7ec109821769fd79fa7c5e83f0e7f9fc.vtl"
+    }
+   },
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "amplify-aerodrive-Abhi-sandbox-7f301cb65c/data/amplifyData/FileRecord/SubscriptionOnCreateFileRecordDataResolverFn/SubscriptionOnCreateFileRecordDataResolverFn.AppSyncFunction"
+   }
+  },
+  "SubscriptiononCreateFileRecordResolver": {
+   "Type": "AWS::AppSync::Resolver",
+   "Properties": {
+    "ApiId": {
+     "Ref": "referencetoamplifyaerodriveAbhisandbox7f301cb65cdataamplifyDataGraphQLAPIE9497DA6ApiId"
+    },
+    "FieldName": "onCreateFileRecord",
+    "Kind": "PIPELINE",
+    "PipelineConfig": {
+     "Functions": [
+      {
+       "Fn::GetAtt": [
+        "SubscriptiononCreateFileRecordauth0FunctionSubscriptiononCreateFileRecordauth0FunctionAppSyncFunction0824A5CD",
+        "FunctionId"
+       ]
+      },
+      {
+       "Fn::GetAtt": [
+        "SubscriptiononCreateFileRecordpostAuth0FunctionSubscriptiononCreateFileRecordpostAuth0FunctionAppSyncFunction59E5134E",
+        "FunctionId"
+       ]
+      },
+      {
+       "Fn::GetAtt": [
+        "SubscriptionOnCreateFileRecordDataResolverFnSubscriptionOnCreateFileRecordDataResolverFnAppSyncFunctionC6A54E78",
+        "FunctionId"
+       ]
+      }
+     ]
+    },
+    "RequestMappingTemplate": {
+     "Fn::Join": [
+      "",
+      [
+       "$util.qr($ctx.stash.put(\"typeName\", \"Subscription\"))\n$util.qr($ctx.stash.put(\"fieldName\", \"onCreateFileRecord\"))\n$util.qr($ctx.stash.put(\"conditions\", []))\n$util.qr($ctx.stash.put(\"metadata\", {}))\n$util.qr($ctx.stash.metadata.put(\"dataSourceType\", \"NONE\"))\n$util.qr($ctx.stash.metadata.put(\"apiId\", \"",
+       {
+        "Ref": "referencetoamplifyaerodriveAbhisandbox7f301cb65cdataamplifyDataGraphQLAPIE9497DA6ApiId"
+       },
+       "\"))\n$util.qr($ctx.stash.put(\"connectionAttributes\", {}))\n\n$util.qr($ctx.stash.put(\"authRole\", \"arn:",
+       {
+        "Ref": "AWS::Partition"
+       },
+       ":sts::",
+       {
+        "Ref": "AWS::AccountId"
+       },
+       ":assumed-role/",
+       {
+        "Ref": "referencetoamplifyaerodriveAbhisandbox7f301cb65cauthNestedStackauthNestedStackResource36F42F00OutputsamplifyaerodriveAbhisandbox7f301cb65cauthamplifyAuthauthenticatedUserRoleFC0CB81FRef"
+       },
+       "/CognitoIdentityCredentials\"))\n$util.qr($ctx.stash.put(\"unauthRole\", \"arn:",
+       {
+        "Ref": "AWS::Partition"
+       },
+       ":sts::",
+       {
+        "Ref": "AWS::AccountId"
+       },
+       ":assumed-role/",
+       {
+        "Ref": "referencetoamplifyaerodriveAbhisandbox7f301cb65cauthNestedStackauthNestedStackResource36F42F00OutputsamplifyaerodriveAbhisandbox7f301cb65cauthamplifyAuthunauthenticatedUserRoleAAF80E1DRef"
+       },
+       "/CognitoIdentityCredentials\"))\n$util.qr($ctx.stash.put(\"identityPoolId\", \"",
+       {
+        "Ref": "referencetoamplifyaerodriveAbhisandbox7f301cb65cauthNestedStackauthNestedStackResource36F42F00OutputsamplifyaerodriveAbhisandbox7f301cb65cauthamplifyAuthIdentityPool71050EF5Ref"
+       },
+       "\"))\n$util.qr($ctx.stash.put(\"adminRoles\", []))\n$util.toJson({})"
+      ]
+     ]
+    },
+    "ResponseMappingTemplate": "$util.toJson($ctx.prev.result)",
+    "TypeName": "Subscription"
+   },
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "amplify-aerodrive-Abhi-sandbox-7f301cb65c/data/amplifyData/FileRecord/subscriptionOnCreateFileRecordResolver"
+   }
+  },
+  "SubscriptiononUpdateFileRecordauth0FunctionSubscriptiononUpdateFileRecordauth0FunctionAppSyncFunction75A5D9F0": {
+   "Type": "AWS::AppSync::FunctionConfiguration",
+   "Properties": {
+    "ApiId": {
+     "Ref": "referencetoamplifyaerodriveAbhisandbox7f301cb65cdataamplifyDataGraphQLAPIE9497DA6ApiId"
+    },
+    "DataSourceName": {
+     "Ref": "referencetoamplifyaerodriveAbhisandbox7f301cb65cdataamplifyDataGraphQLAPINONEDS8ECAFBF9Name"
+    },
+    "FunctionVersion": "2018-05-29",
+    "Name": "SubscriptiononUpdateFileRecordauth0Function",
+    "RequestMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/3b6d810ef43cdbd93ef462c40b0df0328b89e04f1473a4f82f1178da1f1d5aa0.vtl"
+    },
+    "ResponseMappingTemplate": "$util.toJson({})"
+   },
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "amplify-aerodrive-Abhi-sandbox-7f301cb65c/data/amplifyData/FileRecord/SubscriptiononUpdateFileRecordauth0Function/SubscriptiononUpdateFileRecordauth0Function.AppSyncFunction"
+   }
+  },
+  "SubscriptiononUpdateFileRecordpostAuth0FunctionSubscriptiononUpdateFileRecordpostAuth0FunctionAppSyncFunction05C07AB1": {
+   "Type": "AWS::AppSync::FunctionConfiguration",
+   "Properties": {
+    "ApiId": {
+     "Ref": "referencetoamplifyaerodriveAbhisandbox7f301cb65cdataamplifyDataGraphQLAPIE9497DA6ApiId"
+    },
+    "DataSourceName": {
+     "Ref": "referencetoamplifyaerodriveAbhisandbox7f301cb65cdataamplifyDataGraphQLAPINONEDS8ECAFBF9Name"
+    },
+    "FunctionVersion": "2018-05-29",
+    "Name": "SubscriptiononUpdateFileRecordpostAuth0Function",
+    "RequestMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/c1721bcd774e27c514d3454b5be4f9bdd094c0161b57ddf053d618e3b0086a77.vtl"
+    },
+    "ResponseMappingTemplate": "$util.toJson({})"
+   },
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "amplify-aerodrive-Abhi-sandbox-7f301cb65c/data/amplifyData/FileRecord/SubscriptiononUpdateFileRecordpostAuth0Function/SubscriptiononUpdateFileRecordpostAuth0Function.AppSyncFunction"
+   }
+  },
+  "SubscriptionOnUpdateFileRecordDataResolverFnSubscriptionOnUpdateFileRecordDataResolverFnAppSyncFunction016BA76D": {
+   "Type": "AWS::AppSync::FunctionConfiguration",
+   "Properties": {
+    "ApiId": {
+     "Ref": "referencetoamplifyaerodriveAbhisandbox7f301cb65cdataamplifyDataGraphQLAPIE9497DA6ApiId"
+    },
+    "DataSourceName": {
+     "Ref": "referencetoamplifyaerodriveAbhisandbox7f301cb65cdataamplifyDataGraphQLAPINONEDS8ECAFBF9Name"
+    },
+    "FunctionVersion": "2018-05-29",
+    "Name": "SubscriptionOnUpdateFileRecordDataResolverFn",
+    "RequestMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/fe3c43ada4b9d681a5e2312663ef7a73386424d73b73e51f8e2e9d4b50f7c502.vtl"
+    },
+    "ResponseMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/e0cff47fb007f0bbf2a4e43ca256d6aa7ec109821769fd79fa7c5e83f0e7f9fc.vtl"
+    }
+   },
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "amplify-aerodrive-Abhi-sandbox-7f301cb65c/data/amplifyData/FileRecord/SubscriptionOnUpdateFileRecordDataResolverFn/SubscriptionOnUpdateFileRecordDataResolverFn.AppSyncFunction"
+   }
+  },
+  "SubscriptiononUpdateFileRecordResolver": {
+   "Type": "AWS::AppSync::Resolver",
+   "Properties": {
+    "ApiId": {
+     "Ref": "referencetoamplifyaerodriveAbhisandbox7f301cb65cdataamplifyDataGraphQLAPIE9497DA6ApiId"
+    },
+    "FieldName": "onUpdateFileRecord",
+    "Kind": "PIPELINE",
+    "PipelineConfig": {
+     "Functions": [
+      {
+       "Fn::GetAtt": [
+        "SubscriptiononUpdateFileRecordauth0FunctionSubscriptiononUpdateFileRecordauth0FunctionAppSyncFunction75A5D9F0",
+        "FunctionId"
+       ]
+      },
+      {
+       "Fn::GetAtt": [
+        "SubscriptiononUpdateFileRecordpostAuth0FunctionSubscriptiononUpdateFileRecordpostAuth0FunctionAppSyncFunction05C07AB1",
+        "FunctionId"
+       ]
+      },
+      {
+       "Fn::GetAtt": [
+        "SubscriptionOnUpdateFileRecordDataResolverFnSubscriptionOnUpdateFileRecordDataResolverFnAppSyncFunction016BA76D",
+        "FunctionId"
+       ]
+      }
+     ]
+    },
+    "RequestMappingTemplate": {
+     "Fn::Join": [
+      "",
+      [
+       "$util.qr($ctx.stash.put(\"typeName\", \"Subscription\"))\n$util.qr($ctx.stash.put(\"fieldName\", \"onUpdateFileRecord\"))\n$util.qr($ctx.stash.put(\"conditions\", []))\n$util.qr($ctx.stash.put(\"metadata\", {}))\n$util.qr($ctx.stash.metadata.put(\"dataSourceType\", \"NONE\"))\n$util.qr($ctx.stash.metadata.put(\"apiId\", \"",
+       {
+        "Ref": "referencetoamplifyaerodriveAbhisandbox7f301cb65cdataamplifyDataGraphQLAPIE9497DA6ApiId"
+       },
+       "\"))\n$util.qr($ctx.stash.put(\"connectionAttributes\", {}))\n\n$util.qr($ctx.stash.put(\"authRole\", \"arn:",
+       {
+        "Ref": "AWS::Partition"
+       },
+       ":sts::",
+       {
+        "Ref": "AWS::AccountId"
+       },
+       ":assumed-role/",
+       {
+        "Ref": "referencetoamplifyaerodriveAbhisandbox7f301cb65cauthNestedStackauthNestedStackResource36F42F00OutputsamplifyaerodriveAbhisandbox7f301cb65cauthamplifyAuthauthenticatedUserRoleFC0CB81FRef"
+       },
+       "/CognitoIdentityCredentials\"))\n$util.qr($ctx.stash.put(\"unauthRole\", \"arn:",
+       {
+        "Ref": "AWS::Partition"
+       },
+       ":sts::",
+       {
+        "Ref": "AWS::AccountId"
+       },
+       ":assumed-role/",
+       {
+        "Ref": "referencetoamplifyaerodriveAbhisandbox7f301cb65cauthNestedStackauthNestedStackResource36F42F00OutputsamplifyaerodriveAbhisandbox7f301cb65cauthamplifyAuthunauthenticatedUserRoleAAF80E1DRef"
+       },
+       "/CognitoIdentityCredentials\"))\n$util.qr($ctx.stash.put(\"identityPoolId\", \"",
+       {
+        "Ref": "referencetoamplifyaerodriveAbhisandbox7f301cb65cauthNestedStackauthNestedStackResource36F42F00OutputsamplifyaerodriveAbhisandbox7f301cb65cauthamplifyAuthIdentityPool71050EF5Ref"
+       },
+       "\"))\n$util.qr($ctx.stash.put(\"adminRoles\", []))\n$util.toJson({})"
+      ]
+     ]
+    },
+    "ResponseMappingTemplate": "$util.toJson($ctx.prev.result)",
+    "TypeName": "Subscription"
+   },
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "amplify-aerodrive-Abhi-sandbox-7f301cb65c/data/amplifyData/FileRecord/subscriptionOnUpdateFileRecordResolver"
+   }
+  },
+  "SubscriptiononDeleteFileRecordauth0FunctionSubscriptiononDeleteFileRecordauth0FunctionAppSyncFunctionE7C2C257": {
+   "Type": "AWS::AppSync::FunctionConfiguration",
+   "Properties": {
+    "ApiId": {
+     "Ref": "referencetoamplifyaerodriveAbhisandbox7f301cb65cdataamplifyDataGraphQLAPIE9497DA6ApiId"
+    },
+    "DataSourceName": {
+     "Ref": "referencetoamplifyaerodriveAbhisandbox7f301cb65cdataamplifyDataGraphQLAPINONEDS8ECAFBF9Name"
+    },
+    "FunctionVersion": "2018-05-29",
+    "Name": "SubscriptiononDeleteFileRecordauth0Function",
+    "RequestMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/3b6d810ef43cdbd93ef462c40b0df0328b89e04f1473a4f82f1178da1f1d5aa0.vtl"
+    },
+    "ResponseMappingTemplate": "$util.toJson({})"
+   },
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "amplify-aerodrive-Abhi-sandbox-7f301cb65c/data/amplifyData/FileRecord/SubscriptiononDeleteFileRecordauth0Function/SubscriptiononDeleteFileRecordauth0Function.AppSyncFunction"
+   }
+  },
+  "SubscriptiononDeleteFileRecordpostAuth0FunctionSubscriptiononDeleteFileRecordpostAuth0FunctionAppSyncFunction59A700AD": {
+   "Type": "AWS::AppSync::FunctionConfiguration",
+   "Properties": {
+    "ApiId": {
+     "Ref": "referencetoamplifyaerodriveAbhisandbox7f301cb65cdataamplifyDataGraphQLAPIE9497DA6ApiId"
+    },
+    "DataSourceName": {
+     "Ref": "referencetoamplifyaerodriveAbhisandbox7f301cb65cdataamplifyDataGraphQLAPINONEDS8ECAFBF9Name"
+    },
+    "FunctionVersion": "2018-05-29",
+    "Name": "SubscriptiononDeleteFileRecordpostAuth0Function",
+    "RequestMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/c1721bcd774e27c514d3454b5be4f9bdd094c0161b57ddf053d618e3b0086a77.vtl"
+    },
+    "ResponseMappingTemplate": "$util.toJson({})"
+   },
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "amplify-aerodrive-Abhi-sandbox-7f301cb65c/data/amplifyData/FileRecord/SubscriptiononDeleteFileRecordpostAuth0Function/SubscriptiononDeleteFileRecordpostAuth0Function.AppSyncFunction"
+   }
+  },
+  "SubscriptionOnDeleteFileRecordDataResolverFnSubscriptionOnDeleteFileRecordDataResolverFnAppSyncFunction2807A3AC": {
+   "Type": "AWS::AppSync::FunctionConfiguration",
+   "Properties": {
+    "ApiId": {
+     "Ref": "referencetoamplifyaerodriveAbhisandbox7f301cb65cdataamplifyDataGraphQLAPIE9497DA6ApiId"
+    },
+    "DataSourceName": {
+     "Ref": "referencetoamplifyaerodriveAbhisandbox7f301cb65cdataamplifyDataGraphQLAPINONEDS8ECAFBF9Name"
+    },
+    "FunctionVersion": "2018-05-29",
+    "Name": "SubscriptionOnDeleteFileRecordDataResolverFn",
+    "RequestMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/fe3c43ada4b9d681a5e2312663ef7a73386424d73b73e51f8e2e9d4b50f7c502.vtl"
+    },
+    "ResponseMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/e0cff47fb007f0bbf2a4e43ca256d6aa7ec109821769fd79fa7c5e83f0e7f9fc.vtl"
+    }
+   },
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "amplify-aerodrive-Abhi-sandbox-7f301cb65c/data/amplifyData/FileRecord/SubscriptionOnDeleteFileRecordDataResolverFn/SubscriptionOnDeleteFileRecordDataResolverFn.AppSyncFunction"
+   }
+  },
+  "SubscriptiononDeleteFileRecordResolver": {
+   "Type": "AWS::AppSync::Resolver",
+   "Properties": {
+    "ApiId": {
+     "Ref": "referencetoamplifyaerodriveAbhisandbox7f301cb65cdataamplifyDataGraphQLAPIE9497DA6ApiId"
+    },
+    "FieldName": "onDeleteFileRecord",
+    "Kind": "PIPELINE",
+    "PipelineConfig": {
+     "Functions": [
+      {
+       "Fn::GetAtt": [
+        "SubscriptiononDeleteFileRecordauth0FunctionSubscriptiononDeleteFileRecordauth0FunctionAppSyncFunctionE7C2C257",
+        "FunctionId"
+       ]
+      },
+      {
+       "Fn::GetAtt": [
+        "SubscriptiononDeleteFileRecordpostAuth0FunctionSubscriptiononDeleteFileRecordpostAuth0FunctionAppSyncFunction59A700AD",
+        "FunctionId"
+       ]
+      },
+      {
+       "Fn::GetAtt": [
+        "SubscriptionOnDeleteFileRecordDataResolverFnSubscriptionOnDeleteFileRecordDataResolverFnAppSyncFunction2807A3AC",
+        "FunctionId"
+       ]
+      }
+     ]
+    },
+    "RequestMappingTemplate": {
+     "Fn::Join": [
+      "",
+      [
+       "$util.qr($ctx.stash.put(\"typeName\", \"Subscription\"))\n$util.qr($ctx.stash.put(\"fieldName\", \"onDeleteFileRecord\"))\n$util.qr($ctx.stash.put(\"conditions\", []))\n$util.qr($ctx.stash.put(\"metadata\", {}))\n$util.qr($ctx.stash.metadata.put(\"dataSourceType\", \"NONE\"))\n$util.qr($ctx.stash.metadata.put(\"apiId\", \"",
+       {
+        "Ref": "referencetoamplifyaerodriveAbhisandbox7f301cb65cdataamplifyDataGraphQLAPIE9497DA6ApiId"
+       },
+       "\"))\n$util.qr($ctx.stash.put(\"connectionAttributes\", {}))\n\n$util.qr($ctx.stash.put(\"authRole\", \"arn:",
+       {
+        "Ref": "AWS::Partition"
+       },
+       ":sts::",
+       {
+        "Ref": "AWS::AccountId"
+       },
+       ":assumed-role/",
+       {
+        "Ref": "referencetoamplifyaerodriveAbhisandbox7f301cb65cauthNestedStackauthNestedStackResource36F42F00OutputsamplifyaerodriveAbhisandbox7f301cb65cauthamplifyAuthauthenticatedUserRoleFC0CB81FRef"
+       },
+       "/CognitoIdentityCredentials\"))\n$util.qr($ctx.stash.put(\"unauthRole\", \"arn:",
+       {
+        "Ref": "AWS::Partition"
+       },
+       ":sts::",
+       {
+        "Ref": "AWS::AccountId"
+       },
+       ":assumed-role/",
+       {
+        "Ref": "referencetoamplifyaerodriveAbhisandbox7f301cb65cauthNestedStackauthNestedStackResource36F42F00OutputsamplifyaerodriveAbhisandbox7f301cb65cauthamplifyAuthunauthenticatedUserRoleAAF80E1DRef"
+       },
+       "/CognitoIdentityCredentials\"))\n$util.qr($ctx.stash.put(\"identityPoolId\", \"",
+       {
+        "Ref": "referencetoamplifyaerodriveAbhisandbox7f301cb65cauthNestedStackauthNestedStackResource36F42F00OutputsamplifyaerodriveAbhisandbox7f301cb65cauthamplifyAuthIdentityPool71050EF5Ref"
+       },
+       "\"))\n$util.qr($ctx.stash.put(\"adminRoles\", []))\n$util.toJson({})"
+      ]
+     ]
+    },
+    "ResponseMappingTemplate": "$util.toJson($ctx.prev.result)",
+    "TypeName": "Subscription"
+   },
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "amplify-aerodrive-Abhi-sandbox-7f301cb65c/data/amplifyData/FileRecord/subscriptionOnDeleteFileRecordResolver"
+   }
+  },
+  "FileRecordOwnerDataResolverFnFileRecordOwnerDataResolverFnAppSyncFunctionCF483681": {
+   "Type": "AWS::AppSync::FunctionConfiguration",
+   "Properties": {
+    "ApiId": {
+     "Ref": "referencetoamplifyaerodriveAbhisandbox7f301cb65cdataamplifyDataGraphQLAPIE9497DA6ApiId"
+    },
+    "DataSourceName": {
+     "Ref": "referencetoamplifyaerodriveAbhisandbox7f301cb65cdataamplifyDataGraphQLAPINONEDS8ECAFBF9Name"
+    },
+    "FunctionVersion": "2018-05-29",
+    "Name": "FileRecordOwnerDataResolverFn",
+    "RequestMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/041534e5fd916595f752318f161512d7c7f83b9f2cf32d0f0be381c12253ff68.vtl"
+    },
+    "ResponseMappingTemplateS3Location": {
+     "Fn::Sub": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/064303962e481067b44300212516363b99aaee539b6bafaf756fdd83ff0b60f0.vtl"
+    }
+   },
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "amplify-aerodrive-Abhi-sandbox-7f301cb65c/data/amplifyData/FileRecord/FileRecordOwnerDataResolverFn/FileRecordOwnerDataResolverFn.AppSyncFunction"
+   }
+  },
+  "FileRecordownerResolver": {
+   "Type": "AWS::AppSync::Resolver",
+   "Properties": {
+    "ApiId": {
+     "Ref": "referencetoamplifyaerodriveAbhisandbox7f301cb65cdataamplifyDataGraphQLAPIE9497DA6ApiId"
+    },
+    "FieldName": "owner",
+    "Kind": "PIPELINE",
+    "PipelineConfig": {
+     "Functions": [
+      {
+       "Fn::GetAtt": [
+        "FileRecordOwnerDataResolverFnFileRecordOwnerDataResolverFnAppSyncFunctionCF483681",
+        "FunctionId"
+       ]
+      }
+     ]
+    },
+    "RequestMappingTemplate": {
+     "Fn::Join": [
+      "",
+      [
+       "$util.qr($ctx.stash.put(\"typeName\", \"FileRecord\"))\n$util.qr($ctx.stash.put(\"fieldName\", \"owner\"))\n$util.qr($ctx.stash.put(\"conditions\", []))\n$util.qr($ctx.stash.put(\"metadata\", {}))\n$util.qr($ctx.stash.metadata.put(\"dataSourceType\", \"NONE\"))\n$util.qr($ctx.stash.metadata.put(\"apiId\", \"",
+       {
+        "Ref": "referencetoamplifyaerodriveAbhisandbox7f301cb65cdataamplifyDataGraphQLAPIE9497DA6ApiId"
+       },
+       "\"))\n$util.qr($ctx.stash.put(\"connectionAttributes\", {}))\n\n$util.qr($ctx.stash.put(\"authRole\", \"arn:",
+       {
+        "Ref": "AWS::Partition"
+       },
+       ":sts::",
+       {
+        "Ref": "AWS::AccountId"
+       },
+       ":assumed-role/",
+       {
+        "Ref": "referencetoamplifyaerodriveAbhisandbox7f301cb65cauthNestedStackauthNestedStackResource36F42F00OutputsamplifyaerodriveAbhisandbox7f301cb65cauthamplifyAuthauthenticatedUserRoleFC0CB81FRef"
+       },
+       "/CognitoIdentityCredentials\"))\n$util.qr($ctx.stash.put(\"unauthRole\", \"arn:",
+       {
+        "Ref": "AWS::Partition"
+       },
+       ":sts::",
+       {
+        "Ref": "AWS::AccountId"
+       },
+       ":assumed-role/",
+       {
+        "Ref": "referencetoamplifyaerodriveAbhisandbox7f301cb65cauthNestedStackauthNestedStackResource36F42F00OutputsamplifyaerodriveAbhisandbox7f301cb65cauthamplifyAuthunauthenticatedUserRoleAAF80E1DRef"
+       },
+       "/CognitoIdentityCredentials\"))\n$util.qr($ctx.stash.put(\"identityPoolId\", \"",
+       {
+        "Ref": "referencetoamplifyaerodriveAbhisandbox7f301cb65cauthNestedStackauthNestedStackResource36F42F00OutputsamplifyaerodriveAbhisandbox7f301cb65cauthamplifyAuthIdentityPool71050EF5Ref"
+       },
+       "\"))\n$util.qr($ctx.stash.put(\"adminRoles\", []))\n$util.toJson({})"
+      ]
+     ]
+    },
+    "ResponseMappingTemplate": "$util.toJson($ctx.prev.result)",
+    "TypeName": "FileRecord"
+   },
+   "UpdateReplacePolicy": "Delete",
+   "DeletionPolicy": "Delete",
+   "Metadata": {
+    "aws:cdk:path": "amplify-aerodrive-Abhi-sandbox-7f301cb65c/data/amplifyData/FileRecord/fileRecordOwnerResolver"
+   }
+  },
+  "CDKMetadata": {
+   "Type": "AWS::CDK::Metadata",
+   "Properties": {
+    "Analytics": "v2:deflate64:H4sIAAAAAAAA/1WOQW6DQAxFz5L9xFWgPUAD6jKtoPvIzBg0ATxo7EkUIe5eQapUXX0/+cn+GWT5Kxx2eJO9df1+8A3MJxIlVyva3hQtf2HEkZTiCkVg59UHNhVJSNGSKZJoGP+w5eeMNznP7s44BtfANzYDHVHIeBxhrsLwsMNAi8FpkjtbmMtNL5sSFevnyf/0kdiuJYrAre9SxK3R7+fhSnExkp9RhFTgfQ0jORyT7UnXAsvqfiadkpptXSt2nrvFcHAEF3m5Zm+QwWF3Ee/3MbH6kaB65A8Hh4RpNQEAAA=="
+   },
+   "Metadata": {
+    "aws:cdk:path": "amplify-aerodrive-Abhi-sandbox-7f301cb65c/data/amplifyData/FileRecord/CDKMetadata/Default"
+   },
+   "Condition": "CDKMetadataAvailable"
+  }
+ },
+ "Outputs": {
+  "GetAttFileRecordTableStreamArn": {
+   "Description": "Your DynamoDB table StreamArn.",
+   "Value": {
+    "Fn::GetAtt": [
+     "FileRecordTable",
+     "TableStreamArn"
+    ]
+   },
+   "Export": {
+    "Name": {
+     "Fn::Join": [
+      ":",
+      [
+       {
+        "Ref": "referencetoamplifyaerodriveAbhisandbox7f301cb65cdataamplifyDataGraphQLAPIE9497DA6ApiId"
+       },
+       "GetAtt:FileRecordTable:StreamArn"
+      ]
+     ]
+    }
+   }
+  },
+  "GetAttFileRecordTableName": {
+   "Description": "Your DynamoDB table name.",
+   "Value": {
+    "Fn::Join": [
+     "",
+     [
+      "FileRecord-",
+      {
+       "Ref": "referencetoamplifyaerodriveAbhisandbox7f301cb65cdataamplifyDataGraphQLAPIE9497DA6ApiId"
+      },
+      "-NONE"
+     ]
+    ]
+   },
+   "Export": {
+    "Name": {
+     "Fn::Join": [
+      ":",
+      [
+       {
+        "Ref": "referencetoamplifyaerodriveAbhisandbox7f301cb65cdataamplifyDataGraphQLAPIE9497DA6ApiId"
+       },
+       "GetAtt:FileRecordTable:Name"
+      ]
+     ]
+    }
+   }
+  }
+ }
+}
