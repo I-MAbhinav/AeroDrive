@@ -130,7 +130,7 @@ const LandingPage = ({ onLoginClick }: LandingPageProps) => {
             <p>Lead Developer</p>
           </div>
           <div className="team-card glass-panel">
-            <img src="https://i.pravatar.cc/150?img=32" alt="Team Member 2" className="team-avatar" />
+            <img src="https://i.pravatar.cc/150?img=12" alt="Team Member 2" className="team-avatar" />
             <h3>[Harshit Saharan]</h3>
             <p>Frontend Developer</p>
           </div>
@@ -140,7 +140,7 @@ const LandingPage = ({ onLoginClick }: LandingPageProps) => {
             <p>Backend Developer</p>
           </div>
           <div className="team-card glass-panel">
-            <img src="https://i.pravatar.cc/150?img=12" alt="Team Member 4" className="team-avatar" />
+            <img src="https://i.pravatar.cc/150?img=32" alt="Team Member 4" className="team-avatar" />
             <h3>[Jasleen Kaur]</h3>
             <p>UI/UX Designer</p>
           </div>
