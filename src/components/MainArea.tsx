@@ -1,6 +1,6 @@
-import { FileText, Image as ImageIcon, Video, Folder, MoreVertical, UploadCloud, ChevronRight, FolderPlus, Loader2 } from 'lucide-react';
+import { FileText, Image as ImageIcon, Video, Folder, MoreVertical, UploadCloud, ChevronRight, FolderPlus, Loader2, Download, Trash2 } from 'lucide-react';
 import { useState, useEffect, useRef } from 'react';
-import { uploadData, remove, getUrl } from 'aws-amplify/storage';
+import { uploadData, remove, getUrl, downloadData } from 'aws-amplify/storage';
 import { generateClient } from 'aws-amplify/data';
 import type { Schema } from '../../amplify/data/resource';
 
@@ -46,6 +46,8 @@ const MainArea = ({ currentView, searchQuery }: MainAreaProps) => {
     const [currentPath, setCurrentPath] = useState<string>('root');
     const [fileTypeFilter, setFileTypeFilter] = useState<string>('all');
     const fileInputRef = useRef<HTMLInputElement>(null);
+    const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+    const [fileToDelete, setFileToDelete] = useState<StorageFile | null>(null);
 
     const fetchFiles = async () => {
         setIsLoading(true);
@@ -138,6 +140,12 @@ const MainArea = ({ currentView, searchQuery }: MainAreaProps) => {
                 fileInputRef.current.click();
             }
         };
+        useEffect(() => {
+            const handleClickOutside = () => setActiveDropdown(null);
+            document.addEventListener('click', handleClickOutside);
+            return () => document.removeEventListener('click', handleClickOutside);
+        }, []);
+
         document.addEventListener('trigger-upload', handleForceUpload);
         return () => document.removeEventListener('trigger-upload', handleForceUpload);
     }, []);
@@ -193,20 +201,44 @@ const MainArea = ({ currentView, searchQuery }: MainAreaProps) => {
         }
     };
 
-    const handleDelete = async (file: StorageFile) => {
-        if (!confirm(`Are you sure you want to delete ${file.name}?`)) return;
+    const confirmDelete = async () => {
+        if (!fileToDelete) return;
         try {
-            if (file.type === 'file') {
-                const pathResolver = ({ identityId }: { identityId: string }) => file.key.replace('${identityId}', identityId);
+            if (fileToDelete.type === 'file') {
+                const pathResolver = ({ identityId }: { identityId: string }) => fileToDelete.key.replace('${identityId}', identityId);
                 await remove({ path: pathResolver as any });
             }
-
-            await client.models.FileRecord.delete({ id: file.id });
-            setFiles(files.filter(f => f.id !== file.id));
+            await client.models.FileRecord.delete({ id: fileToDelete.id });
+            setFiles(files.filter(f => f.id !== fileToDelete.id));
         } catch (err) {
             console.error('Error deleting:', err);
+        } finally {
+            setFileToDelete(null); // Close the popup
         }
     };
+
+    const handleDownload = async (file: StorageFile) => {
+        if (file.type === 'folder') return;
+        try {
+            const pathResolver = ({ identityId }: { identityId: string }) => file.key.replace('${identityId}', identityId);
+            const { body } = await downloadData({ path: pathResolver as any }).result;
+            const blob = await body.blob();
+
+            // Force the browser to start downloading the file Blob
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = file.name;
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+        } catch (error) {
+            console.error("Error downloading file", error);
+            alert("Failed to download file.");
+        }
+    };
+
 
     const navigateTo = (folderName: string) => {
         setCurrentPath(currentPath === 'root' ? folderName : `${currentPath}/${folderName}`);
@@ -350,9 +382,52 @@ const MainArea = ({ currentView, searchQuery }: MainAreaProps) => {
                         >
                             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
                                 {getIcon(file.type, file.name)}
-                                <div style={{ cursor: 'pointer', padding: '0.25rem' }} onClick={() => handleDelete(file)}>
-                                    <MoreVertical size={16} style={{ color: 'var(--text-secondary)' }} />
+                                <div style={{ position: 'relative' }}>
+                                    <div
+                                        style={{ cursor: 'pointer', padding: '0.25rem' }}
+                                        onClick={(e) => {
+                                            e.stopPropagation();
+                                            setActiveDropdown(activeDropdown === file.id ? null : file.id);
+                                        }}
+                                    >
+                                        <MoreVertical size={16} style={{ color: 'var(--text-secondary)' }} />
+                                    </div>
+
+                                    {activeDropdown === file.id && (
+                                        <div style={{
+                                            position: 'absolute',
+                                            right: 0,
+                                            top: '100%',
+                                            background: 'var(--bg-glass)',
+                                            border: '1px solid var(--border)',
+                                            borderRadius: '8px',
+                                            padding: '0.5rem',
+                                            zIndex: 10,
+                                            display: 'flex',
+                                            flexDirection: 'column',
+                                            gap: '0.5rem',
+                                            minWidth: '120px',
+                                            boxShadow: '0 4px 6px rgba(0,0,0,0.3)',
+                                            backdropFilter: 'blur(10px)'
+                                        }}>
+                                            {file.type !== 'folder' && (
+                                                <button
+                                                    onClick={(e) => { e.stopPropagation(); handleDownload(file); setActiveDropdown(null); }}
+                                                    style={{ background: 'transparent', border: 'none', color: 'var(--text-primary)', display: 'flex', alignItems: 'center', gap: '0.5rem', cursor: 'pointer', padding: '0.25rem', textAlign: 'left', width: '100%', fontSize: '0.875rem' }}
+                                                >
+                                                    <Download size={14} /> Download
+                                                </button>
+                                            )}
+                                            <button
+                                                onClick={(e) => { e.stopPropagation(); setFileToDelete(file); setActiveDropdown(null); }}
+                                                style={{ background: 'transparent', border: 'none', color: '#ef4444', display: 'flex', alignItems: 'center', gap: '0.5rem', cursor: 'pointer', padding: '0.25rem', textAlign: 'left', width: '100%', fontSize: '0.875rem' }}
+                                            >
+                                                <Trash2 size={14} /> Delete
+                                            </button>
+                                        </div>
+                                    )}
                                 </div>
+
                             </div>
 
                             <div style={{ flexGrow: 1 }}>
@@ -377,8 +452,51 @@ const MainArea = ({ currentView, searchQuery }: MainAreaProps) => {
                     ))}
                 </div>
             )}
+                   {/* ... rest of your file grid ... */}
+            {fileToDelete && (
+                <div style={{
+                    position: 'fixed',
+                    top: 0, left: 0, right: 0, bottom: 0,
+                    background: 'rgba(0,0,0,0.6)',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    zIndex: 1000,
+                    backdropFilter: 'blur(4px)'
+                }}>
+                    <div className="glass-panel fade-in" style={{
+                        background: 'var(--bg-glass)',
+                        padding: '2rem',
+                        borderRadius: '12px',
+                        border: '1px solid var(--border)',
+                        maxWidth: '400px',
+                        width: '90%',
+                        textAlign: 'center'
+                    }}>
+                        <h3 style={{ marginTop: 0, marginBottom: '0.5rem', fontSize: '1.25rem', fontWeight: 600 }}>Delete File</h3>
+                        <p style={{ color: 'var(--text-secondary)', marginBottom: '1.5rem', lineHeight: 1.5 }}>
+                            Are you sure you want to delete <strong>{fileToDelete.name}</strong>? This action cannot be undone.
+                        </p>
+                        <div style={{ display: 'flex', justifyContent: 'center', gap: '1rem' }}>
+                            <button 
+                                onClick={() => setFileToDelete(null)}
+                                style={{ padding: '0.5rem 1.25rem', borderRadius: '6px', border: '1px solid var(--border)', background: 'transparent', color: 'var(--text-primary)', cursor: 'pointer', fontWeight: 500 }}
+                            >
+                                Cancel
+                            </button>
+                            <button 
+                                onClick={confirmDelete}
+                                style={{ padding: '0.5rem 1.25rem', borderRadius: '6px', border: 'none', background: '#ef4444', color: 'white', cursor: 'pointer', fontWeight: 500 }}
+                            >
+                                Delete
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            )}
         </main>
     );
 };
 
 export default MainArea;
+
