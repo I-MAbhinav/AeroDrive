@@ -140,14 +140,15 @@ const MainArea = ({ currentView, searchQuery }: MainAreaProps) => {
                 fileInputRef.current.click();
             }
         };
-        useEffect(() => {
-            const handleClickOutside = () => setActiveDropdown(null);
-            document.addEventListener('click', handleClickOutside);
-            return () => document.removeEventListener('click', handleClickOutside);
-        }, []);
 
         document.addEventListener('trigger-upload', handleForceUpload);
         return () => document.removeEventListener('trigger-upload', handleForceUpload);
+    }, []);
+
+    useEffect(() => {
+        const handleClickOutside = () => setActiveDropdown(null);
+        document.addEventListener('click', handleClickOutside);
+        return () => document.removeEventListener('click', handleClickOutside);
     }, []);
 
     const handleFileUpload = async (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -452,7 +453,6 @@ const MainArea = ({ currentView, searchQuery }: MainAreaProps) => {
                     ))}
                 </div>
             )}
-                   {/* ... rest of your file grid ... */}
             {fileToDelete && (
                 <div style={{
                     position: 'fixed',
