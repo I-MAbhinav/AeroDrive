@@ -125,22 +125,22 @@ const LandingPage = ({ onLoginClick }: LandingPageProps) => {
         <div className="team-grid">
           {/* PLACEHOLDERS for Team Members */}
           <div className="team-card glass-panel">
-            <img src="/Abhinav.jpeg" alt="Abhinav Shakya" className="team-avatar" />
+            <img src={`${import.meta.env.BASE_URL}Abhinav.jpeg`} alt="Abhinav Shakya" className="team-avatar" />
             <h3>Abhinav Shakya</h3>
             <p>Lead Developer</p>
           </div>
           <div className="team-card glass-panel">
-            <img src="/Harshit.jpeg" alt="Team Member 2" className="team-avatar" />
+            <img src={`${import.meta.env.BASE_URL}Harshit.jpeg`} alt="Team Member 2" className="team-avatar" />
             <h3>Harshit Saharan</h3>
             <p>Frontend Developer</p>
           </div>
           <div className="team-card glass-panel">
-            <img src="/Aman.jpeg" alt="Team Member 3" className="team-avatar" />
+            <img src={`${import.meta.env.BASE_URL}Aman.jpeg`} alt="Team Member 3" className="team-avatar" />
             <h3>Aman Arora</h3>
             <p>Backend Developer</p>
           </div>
           <div className="team-card glass-panel">
-            <img src="/jas.jpeg" alt="Team Member 4" className="team-avatar" />
+            <img src={`${import.meta.env.BASE_URL}jas.jpeg`} alt="Team Member 4" className="team-avatar" />
             <h3>Jasleen Kaur</h3>
             <p>UI/UX Designer</p>
           </div>
